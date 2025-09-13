@@ -1,0 +1,738 @@
+{
+  "appName": "أكاديمية التفوق",
+  "loginTitle": "تسجيل الدخول",
+  "username": "اسم المستخدم",
+  "password": "كلمة المرور",
+  "rememberMe": "تذكرني",
+  "signIn": "تسجيل الدخول",
+  "signingIn": "جاري التسجيل...",
+  "incorrectCredentials": "اسم المستخدم أو كلمة المرور غير صحيحة.",
+
+  "pageBookshop": "المكتبة",
+  "pageKindergarten": "الحضانة",
+
+  "navStudentReg": "تسجيل الطلاب",
+  "navOrders": "الطلبات",
+  "navItems": "المخزون",
+  "navTransfer": "نقل المخزون",
+  "navReports": "التقارير",
+  "navKgReg": "تسجيل الحضانة",
+  "navKgOrders": "طلبات الحضانة",
+  "navKgItems": "أصناف ومخزون الحضانة",
+  "navKgReports": "تقارير الحضانة",
+
+  "menuAddTeacher": "إضافة مدرس",
+  "menuSettings": "الإعدادات",
+  "menuLogout": "تسجيل الخروج",
+
+  "students": "الطلاب",
+  "register": "تسجيل",
+  "edit": "تعديل",
+  "studentName": "اسم الطالب",
+  "invalidName": "اسم غلط",
+  "invalidNameDesc": "اكتب الاسم ثنائي فقط",
+  "invalidPhone": "رقم غلط",
+  "invalidPhoneDesc": "اكتب 11 رقم فقط",
+  "invalidParentPhone": "رقم ولى الامر غلط",
+  "invalidParentPhoneDesc": "اكتب 11 رقم فقط",
+  "schoolNameReq": "اسم المدرسة مطلوب",
+  "schoolNameReqDesc": "اكتب اسم المدرسة الجديدة",
+  "schoolReq": "المدرسة مطلوبة",
+  "schoolReqDesc": "اختار مدرسة او دوس على 'إضافة مدرسة جديدة' عشان تضيف مدرسة لأول مرة",
+  "studentCreated": "تم إنشاء الطالب",
+  "messageQueued": "الرسائل مستنية تتبعت",
+  "messageQueuedDesc": "الطالب و ولى الامر وصلهم الرسائل",
+  "WAfailed": "حصلت مشكلة فى الواتساب",
+  "createStudentFail": "تسجيل الطالب فشل",
+  "noMatch":"مش موجود",
+  "noMatchDesc":"الطالب مش موجود",
+  "searchFailed":"البحث مش شغال",
+  "studentUpdated": "تم تحديث بيانات الطالب",
+  "studentUpdatedFail": "فشل تحديث بيانات الطالب",
+  "studentPhone": "رقم هاتف الطالب",
+  "parentPhone": "رقم هاتف ولي الأمر",
+  "school": "المدرسة",
+  "selectSchool": "اختر مدرسة…",
+  "addNewSchool": "-- إضافة مدرسة جديدة --",
+  "newSchoolName": "اسم المدرسة الجديدة",
+  "typeNewSchoolName": "اكتب الاسم الكامل للمدرسة الجديدة",
+  "gender": "النوع",
+  "male": "ذكر",
+  "female": "أنثى",
+  "grade": "الصف الدراسي",
+  "selectGrade": "اختر الصف الدراسي...",
+  "grade1": "الصف الأول",
+  "grade2": "الصف الثاني",
+  "grade3": "الصف الثالث",
+  "section": "الشعبة",
+  "selectSection": "اختر شعبة...",
+  "section_literature": "أدبي",
+  "section_science": "علمي علوم",
+  "section_math": "علمي رياضة",
+  "allowWPMessages": "السماح برسائل الواتساب",
+  "yes": "نعم",
+  "no": "لا",
+  "createStudent": "إنشاء طالب",
+  "created": "تم إنشاء:",
+  "searchStudent": "بحث (بالرقم التعريفي / الهاتف / الاسم)",
+  "searchStudentDesc": "احمد محمد  او  0123  او  12",
+  "search": "بحث",
+  "updateinfo": "تعديل البيانات",
+  "searching": "جاري البحث...",
+  "saveChanges": "حفظ التغييرات",
+  "cancel": "إلغاء",
+  "name": "الاسم",
+  "phone": "رقم الهاتف",
+  "parent": "رقم ولى الامر",
+  "actions": "الافعال",
+
+  "settingsTitle": "الإعدادات",
+  "language": "اللغة",
+  "adminSettings": "إعدادات المسؤول",
+  "manageBranch": "إدارة الفرع",
+  "manageBranchHelper": "اختر الفرع الذي تريد عرضه وإدارته حاليًا.",
+  "notificationsTitle": "الإشعارات والقوالب",
+
+  "createTeacher": "تم إنشاء المدرس",
+  "createTeacherFail": "لم يتم إنشاء المدرس",  
+  "teachers": "المدرسون",
+  "teacherName": "الاسم",
+  "subject": "المادة",
+  "selectSubject": "اختر مادة...",
+  "teacherCreate": "إنشاء المدرس",
+  "subject_arabic": "العربية",
+  "subject_english": "الإنجليزية",
+  "subject_chemistry": "الكيمياء",
+  "subject_physics": "الفيزياء",
+  "subject_biology": "الأحياء",
+  "subject_geology": "الجيولوجيا",
+  "subject_math": "الرياضيات",
+  "subject_history": "التاريخ",
+  "subject_geography": "الجغرافيا",
+  "subject_psychology": "علم النفس",
+  "subject_computer_science": "علوم الحاسب",
+  "subject_religion": "التربية الدينية",
+  "subject_french": "الفرنسية",
+  "subject_german": "الألمانية",
+  "subject_italian": "الإيطالية",
+  "subject_spanish": "الإسبانية",
+  "subject_chinese": "الصينية",
+  "lastTeacher": "اخر معلم:",
+
+  "title": "التقارير",
+  "tabs": {
+    "summary": "الملخص",
+    "detailed": "تقرير تفصيلي"
+  },
+  "period": {
+    "title": "فترة التقرير",
+    "mode": "الوضع",
+    "mode_day": "يوم",
+    "mode_week": "أسبوع",
+    "select_day": "اختر اليوم",
+    "pick_any_day_in_week": "اختر أي يوم في الأسبوع"
+  },
+  "adjustments": {
+    "title": "تعديلات الإيراد اليومي",
+    "amount_label": "المبلغ (ج.م)",
+    "amount_ph": "مثال: 50.00",
+    "reason_label": "السبب / ملاحظة",
+    "reason_ph": "مثال: مستلزمات المكتب",
+    "add": "إضافة (+)",
+    "subtract": "خصم (-)",
+    "table": {
+      "time": "الوقت",
+      "amount": "المبلغ (ج.م)",
+      "reason": "السبب"
+    }
+  },
+  "summary": {
+    "title": "ملخص المبيعات اليومي",
+    "refresh": "تحديث",
+    "loading": "جاري تحميل التقرير..."
+  },
+  "detailed": {
+    "title": "تقرير المبيعات التفصيلي",
+    "generate": "إنشاء التقرير",
+    "loading": "جاري التحميل...",
+    "table": {
+      "teacher": "المعلم",
+      "item_grade": "العنصر (الصف)",
+      "item_with_grade": "{{item}} (الصف {{grade}})",
+      "payment_method": "طريقة الدفع",
+      "qty": "الكمية المباعة",
+      "total_egp": "الإجمالي (ج.م)"
+    }
+  },
+  "stats": {
+    "gross": "إجمالي المبيعات (من الطلبات)",
+    "adjustments": "التعديلات",
+    "net": "صافي الإيراد (الإجمالي)",
+    "transactions": "عدد العمليات"
+  },
+  "toasts": {
+    "load_daily_failed_title": "فشل في تحميل التقرير اليومي",
+    "load_summary_failed_title": "فشل في تحميل تقرير الملخص",
+    "error_desc": "{{message}}",
+    "invalid_adjustment_title": "تعديل غير صالح",
+    "invalid_adjustment_desc": "يجب أن يكون المبلغ غير صفري ويجب إدخال السبب.",
+    "adjustment_saved_title": "تم حفظ التعديل",
+    "save_adjustment_failed_title": "فشل في حفظ التعديل",
+    "branch_not_loaded_title": "لم يتم تحميل الفرع",
+    "branch_not_loaded_desc": "يرجى الانتظار قليلاً ثم المحاولة مرة أخرى.",
+    "detailed_failed_title": "فشل في إنشاء التقرير التفصيلي"
+  },
+
+  "title_transfers": "نقل المخزون",
+  "fields": {
+    "from_branch": "فرع المصدر",
+    "to_branch": "الفرع الوجهة",
+    "teacher": "المعلم",
+    "item": "العنصر",
+    "item_loading": "العنصر (جارٍ التحميل...)",
+    "qty_to_transfer": "الكمية المراد نقلها"
+  },
+  "helpers": {
+    "available": "المتاح للنقل: <strong>{{count}}</strong>",
+    "remaining": "المتبقي في المصدر: <strong>{{count}}</strong>"
+  },
+  "selects": {
+    "source_ph": "اختر المصدر...",
+    "destination_ph": "اختر الوجهة...",
+    "teacher_ph": "اختر المعلم...",
+    "item_ph": "اختر عنصرًا متاحًا بالمخزون..."
+  },
+  "options": {
+    "branch_label": "{{name}} ({{code}})",
+    "item_with_grade": "{{name}} (الصف {{grade}})"
+  },
+  "buttons": {
+    "execute": "تنفيذ النقل",
+    "transferring": "جارٍ النقل..."
+  },
+  "toasts_transfers": {
+    "inv_load_failed_title": "فشل تحميل مخزون الفرع",
+    "transfer_success_title": "تم النقل بنجاح!",
+    "transfer_success_desc": "تم نقل {{qty}} × {{item}}.",
+    "transfer_failed_title": "فشل النقل",
+    "all_required": "جميع الحقول مطلوبة",
+    "qty_positive": "يجب أن تكون الكمية موجبة",
+    "qty_exceeds": "لا يمكن نقل كمية أكبر من المخزون المتاح",
+    "error_desc": "{{message}}"
+  },
+
+  "title_items": "الموارد والمخزون",
+  "tabs_items": {
+    "create": "إنشاء مورد",
+    "receive": "استلام مخزون",
+    "inventory": "المخزون"
+  },
+  "create": {
+    "teacher": "المعلم",
+    "teacher_ph": "اختر معلّمًا…",
+    "resource_type": "نوع المورد",
+    "resource_type_options": {
+      "book": "كتاب",
+      "code": "كود",
+      "other": "أخرى"
+    },
+    "helper_displayed_as": "يُعرض كـ <0>{{typeGrade}}</0> مثال: <0>{{example}}</0> في المخزون.",
+    "grade": "الصف",
+    "item_name": "اسم العنصر",
+    "item_name_ph": "مثال: Ch1, MechanicsA, …",
+    "helper_saved_as": "سيتم حفظه كـ <0>{{fullName}}</0>",
+    "price": "السعر (ج.م)",
+    "price_ph": "مثال: 45.00",
+    "create_btn": "إنشاء مورد"
+  },
+  "receive": {
+    "teacher_filter": "المعلم (مرشح اختياري)",
+    "teacher_all": "جميع المعلمين…",
+    "item": "العنصر",
+    "item_ph": "اختر عنصرًا…",
+    "item_option_with_grade_price": "{{name}} (الصف {{grade}}) • {{price}} ج.م",
+    "qty": "الكمية",
+    "receive_btn": "استلام إلى المخزون"
+  },
+  "inventory": {
+    "filter_teacher": "تصفية حسب المعلم",
+    "filter_teacher_all": "الكل",
+    "filter_item": "تصفية حسب العنصر",
+    "filter_item_ph": "اكتب جزءًا من الاسم أو الكود…",
+    "show_oos": "عرض غير المتوفر",
+    "refresh": "تحديث",
+    "loading": "جارٍ التحميل…",
+    "table": {
+      "teacher": "المعلم",
+      "resource": "المورد",
+      "qty": "الكمية",
+      "price": "السعر (ج.م)"
+    },
+    "empty": "لا توجد عناصر مطابقة لمرشحاتك."
+  },
+  "toasts_items": {
+    "teacher_required": "المعلم مطلوب",
+    "item_name_required": "اسم العنصر مطلوب",
+    "resource_created": "تم إنشاء المورد",
+    "resource_created_desc": "{{sku}} • {{name}}",
+    "fetched_existing": "تم جلب العنصر الموجود",
+    "fetched_existing_desc": "{{sku}}",
+    "create_get_failed": "فشل إنشاء/جلب العنصر",
+    "create_item_failed": "فشل إنشاء العنصر",
+    "pick_item": "اختر عنصرًا",
+    "qty_gt_zero": "يجب أن تكون الكمية أكبر من 0",
+    "stock_received": "تم استلام المخزون",
+    "stock_received_desc": "المتوفر={{onHand}}، المتاح={{available}}",
+    "receive_failed": "فشل الاستلام",
+    "inv_load_failed": "فشل تحميل المخزون",
+    "error_desc": "{{message}}"
+  },
+
+  "brand": "أكاديمية التفوق",
+  "sign_in": "تسجيل الدخول",
+  "title_login": "{{brand}} - {{signIn}}",
+  "fields_login": {
+    "username": "اسم المستخدم",
+    "username_ph": "أدخل اسم المستخدم",
+    "password": "كلمة المرور",
+    "password_ph": "أدخل كلمة المرور",
+    "remember_me": "تذكرني"
+  },
+  "buttons_login": {
+    "sign_in": "تسجيل الدخول",
+    "signing_in": "جارٍ تسجيل الدخول..."
+  },
+  "errors": {
+    "incorrect_credentials": "اسم المستخدم أو كلمة المرور غير صحيحة."
+  },
+  "aria": {
+    "toggle_password": "إظهار/إخفاء كلمة المرور"
+  },
+
+  "title_kg_reports": "عناصر الحضانة والمخزون",
+  "tabs_kg_reports": {
+    "create": "إنشاء عنصر",
+    "receive": "استلام مخزون"
+  },
+  "create_kg_reports": {
+    "item_name": "اسم العنصر",
+    "item_name_ph": "مثال: مصروف شهري - أكتوبر",
+    "sku_helper": "سيكون رمز التخزين (SKU): <0>{{sku}}</0>",
+    "price": "السعر الافتراضي (ج.م)",
+    "price_ph": "مثال: 500.00",
+    "item_type": "نوع العنصر",
+    "item_type_options": {
+      "service": "خدمة (مثل المصروفات، الرحلات - كمية غير محدودة)",
+      "good": "سلعة (مثل التيشيرت، الكتاب - كمية متتبعة)"
+    },
+    "create_btn": "إنشاء عنصر"
+  },
+  "receive_kg_reports": {
+    "item_to_receive": "عنصر للاستلام",
+    "item_ph": "اختر سلعة فعلية...",
+    "helper_physical_only": "تظهر هنا السلع المادية التي تتطلب تتبعًا للمخزون فقط.",
+    "qty_received": "الكمية المستلمة",
+    "receive_btn": "استلام المخزون"
+  },
+  "toasts_kg_reports": {
+    "name_price_required": "الاسم والسعر مطلوبان.",
+    "created": "تم إنشاء العنصر",
+    "created_desc": "{{name}}",
+    "creation_failed": "فشل الإنشاء",
+    "select_and_qty": "يرجى اختيار عنصر وإدخال كمية صالحة.",
+    "stock_received": "تم استلام المخزون",
+    "stock_received_desc": "تمت إضافة {{qty}} إلى المخزون.",
+    "receive_failed": "فشل استلام المخزون",
+    "error_desc": "{{message}}"
+  },
+
+  "title_kg_orders": "طلبات الحضانة",
+  "steps": {
+    "find": "١. ابحث عن الطالب",
+    "select": "٢. اختر الطالب"
+  },
+  "search_kg_orders": {
+    "ph": "ابحث بالاسم، الرقم القومي، أو هاتف ولي الأمر...",
+    "btn": "بحث",
+    "loading": "..."
+  },
+  "student": {
+    "father": "الأب: {{name}}"
+  },
+  "order": {
+    "new_for": "طلب جديد لـ: {{name}}",
+    "change_student": "تغيير الطالب",
+    "available_items": "العناصر المتاحة",
+    "cart": "السلة",
+    "cart_empty": "السلة فارغة.",
+    "table": {
+      "item": "العنصر",
+      "qty": "الكمية",
+      "price": "السعر"
+    },
+    "total_label": "الإجمالي:",
+    "currency": "ج.م",
+    "price_with_currency": "{{amount}} {{currency}}",
+    "total_with_currency": "الإجمالي: {{amount}} {{currency}}",
+    "complete_cash": "إتمام الشراء (نقدًا)"
+  },
+  "toasts_kg_orders": {
+    "no_students": "لا يوجد طلاب مطابقون.",
+    "search_failed": "فشل البحث",
+    "purchase_complete": "تم إتمام الشراء!",
+    "purchase_failed": "فشل إتمام الشراء"
+  },
+
+  "title_kg_items": "تقارير الحضانة",
+  "tabs_kg_items": {
+    "summary": "الملخص",
+    "detailed": "تقرير تفصيلي"
+  },
+  "period_kg_items": {
+    "title": "فترة التقرير",
+    "mode": "الوضع",
+    "mode_day": "يوم",
+    "mode_week": "أسبوع",
+    "select_day": "اختر اليوم",
+    "pick_any_day_in_week": "اختر أي يوم في الأسبوع"
+  },
+  "adjustments_kg_items": {
+    "title": "تعديلات الإيراد",
+    "amount_label": "المبلغ (ج.م)",
+    "amount_ph": "مثال: 50.00",
+    "reason_label": "السبب / ملاحظة",
+    "reason_ph": "مثال: مستلزمات المكتب",
+    "add": "إضافة (+)",
+    "subtract": "خصم (-)",
+    "table": {
+      "time": "الوقت",
+      "amount": "المبلغ (ج.م)",
+      "reason": "السبب"
+    }
+  },
+  "summary_kg_items": {
+    "title": "ملخص المبيعات",
+    "refresh": "تحديث",
+    "loading": "جاري تحميل التقرير..."
+  },
+  "detailed_kg_items": {
+    "title": "تقرير المبيعات التفصيلي",
+    "generate": "إنشاء التقرير",
+    "loading": "جارٍ التحميل...",
+    "table": {
+      "item": "العنصر",
+      "qty": "الكمية المباعة",
+      "total_egp": "الإجمالي (ج.م)"
+    }
+  },
+  "stats_kg_items": {
+    "gross": "إجمالي المبيعات (من الطلبات)",
+    "adjustments": "التعديلات",
+    "net": "صافي الإيراد (الإجمالي)",
+    "transactions": "عدد العمليات"
+  },
+  "toasts_kg_items": {
+    "summary_failed_title": "فشل تحميل الملخص",
+    "invalid_adj_title": "تعديل غير صالح",
+    "invalid_adj_desc": "يجب أن يكون المبلغ غير صفري ويجب إدخال السبب.",
+    "adj_saved_title": "تم حفظ التعديل",
+    "save_adj_failed_title": "فشل حفظ التعديل",
+    "detailed_failed_title": "فشل إنشاء التقرير التفصيلي",
+    "error_desc": "{{message}}"
+  },
+
+  "title_kg_students": "إدارة الحضانة",
+  "tabs_kg_students": {
+    "register": "تسجيل",
+    "edit": "بحث وتعديل",
+    "acceptance": "طلبات قيد القبول"
+  },
+
+  "register_kg_students": {
+    "child_info_title": "بيانات الطفل",
+    "labels": {
+      "full_name": "الاسم رباعي إلى سباعي",
+      "national_id": "الرقم القومي (14 رقمًا)",
+      "nationality": "الجنسية",
+      "religion": "الديانة",
+      "religion_muslim": "مسلم",
+      "religion_christian": "مسيحي",
+      "dob": "تاريخ الميلاد",
+      "pob": "مكان الميلاد",
+      "address": "العنوان",
+      "attendance_title": "فترة الحضور",
+      "attendance_morning": "صباحية (8 ص - 2 م)",
+      "attendance_evening": "مسائية (2 م - 6 م)",
+      "attendance_both": "الفترتان",
+      "age_oct_title": "العمر في 1 أكتوبر",
+      "age_years_ph": "سنوات",
+      "age_months_ph": "أشهر",
+      "age_days_ph": "أيام"
+    },
+
+    "parents_title": "بيانات ولي الأمر",
+    "parents": {
+      "father_name": "اسم الأب رباعي",
+      "father_national_id": "الرقم القومي للأب (14 رقمًا)",
+      "father_profession": "مهنة الأب",
+      "father_phone": "هاتف الأب (11 رقمًا)",
+      "father_whatsapp": "واتساب الأب (11 رقمًا)",
+      "mother_phone": "هاتف الأم (11 رقمًا)"
+    },
+
+    "guardian_title": "بيانات الوصي (إن وُجد)",
+    "guardian": {
+      "name": "اسم الوصي رباعي",
+      "national_id": "الرقم القومي للوصي (14 رقمًا)",
+      "relation": "صلة القرابة",
+      "phone": "هاتف الوصي (11 رقمًا)",
+      "whatsapp": "واتساب الوصي (11 رقمًا)"
+    },
+
+    "additional_title": "معلومات إضافية",
+    "additional": {
+      "has_illness": "هل لدى الطفل أمراض مزمنة؟",
+      "illness_desc": "اذكر التفاصيل:",
+      "attended_prev": "هل التحق بحضانة سابقة؟",
+      "prev_name": "اسم الحضانة:",
+      "needs_bus": "بحاجة لاشتراك باص؟",
+      "alt_transport": "وسيلة نقل بديلة:"
+    },
+
+    "pickups": {
+      "title": "الأشخاص المصرح لهم باستلام الطفل:",
+      "ph1": "1. الاسم",
+      "ph2": "2. الاسم",
+      "ph3": "3. الاسم"
+    },
+
+    "presub": {
+      "box_title": "معلومات مهمة",
+      "fees_title": "الفترات والرسوم:",
+      "fees_morning": "الفترة الصباحية: 8 ص → 2 م (500 ج.م)",
+      "fees_evening": "الفترة المسائية: 2 م → 6 م (300 ج.م)",
+      "fees_diff": "الاختلافات تشمل الأنشطة والرحلات والساعات. أنشطة الفترة المسائية تكون يوم الخميس فقط.",
+      "fees_age": "تقبل الأكاديمية الأطفال من سن عامين.",
+
+      "transport_title": "المواصلات:",
+      "transport_text": "يتوفر باص، وتُحدد الأجرة حسب الموقع. يرجى التواصل مباشرة مع السائقين:",
+      "driver_1": "الأستاذ هيثم: 01065447709",
+      "driver_2": "الأستاذ أشرف: 01288449193",
+      "driver_3": "الأستاذ محمد: 01222398324",
+
+      "uniform_title": "الزي:",
+      "uniform_text": "الزي عبارة عن تيشيرت وبنطال جينز (من طرفكم). يمكن شراء التيشيرت من الأكاديمية بسعر 110 ج.م.",
+
+      "docs_title": "المستندات المطلوبة:",
+      "docs_text": "يرجى إحضار المستندات التالية في أول زيارة بعد التسجيل الإلكتروني:",
+      "doc_1": "4 صور شخصية للطفل.",
+      "doc_2": "صورة من شهادة الميلاد.",
+      "doc_3": "صورة من سجل تطعيمات الطفل مرفقة بالأصل.",
+      "doc_4": "صورة من بطاقة الرقم القومي لكلا الوالدين."
+    },
+
+    "submit_btn": "إرسال الطلب"
+  },
+
+  "edit_kg_students": {
+    "search_label": "ابحث بالاسم أو الرقم القومي أو هاتف ولي الأمر",
+    "ph": "أدخل عبارة البحث...",
+    "searching": "جارٍ البحث...",
+    "search": "بحث",
+    "card_edit": "تعديل",
+    "card": {
+      "father": "الأب:",
+      "mother_phone": "هاتف الأم:",
+      "transport": "وسيلة النقل:",
+      "bus": "باص",
+      "private": "خاصة",
+      "auth_pickups": "المصرح لهم بالاستلام:",
+      "none_listed": "لا يوجد",
+      "illness": "المرض:"
+    },
+    "editing_title": "تعديل: {{name}}",
+    "editable_info_title": "بيانات قابلة للتعديل",
+    "attendance_label": "فترة الحضور",
+    "phones": {
+      "father_phone": "هاتف الأب",
+      "father_whatsapp": "واتساب الأب",
+      "mother_phone": "هاتف الأم",
+      "guardian_phone": "هاتف الوصي",
+      "guardian_whatsapp": "واتساب الوصي"
+    },
+    "flags": {
+      "needs_bus": "بحاجة لاشتراك باص؟",
+      "has_illness": "هل لديه مرض مزمن؟"
+    },
+    "illness_desc": "وصف المرض:",
+    "pickups_title": "الأشخاص المصرح لهم باستلام الطفل:",
+    "pickups_ph1": "1. الاسم",
+    "pickups_ph2": "2. الاسم",
+    "pickups_ph3": "3. الاسم",
+    "save": "حفظ التغييرات",
+    "cancel": "إلغاء"
+  },
+
+  "acceptance": {
+    "title": "طلبات قيد القبول",
+    "loading": "جارٍ تحميل الطلبات...",
+    "empty": "لا توجد طلبات قيد الانتظار.",
+    "applied_on": "تاريخ التقديم: {{date}}",
+    "age_oct": "العمر (1 أكتوبر):",
+    "age_suffix": { "y": "س", "m": "ش", "d": "ي" },
+    "period": "الفترة:",
+    "father": "الأب:"
+  },
+
+  "toasts_kg_students": {
+    "pending_failed": "فشل تحميل الطلبات المعلقة",
+    "no_students": "لا يوجد طلاب مطابقون.",
+    "search_failed": "فشل البحث",
+    "student_updated": "تم تحديث بيانات الطالب",
+    "update_failed": "فشل التحديث",
+    "validation_title": "خطأ في التحقق",
+    "invalid_phone_title": "رقم هاتف غير صالح",
+    "invalid_phone_desc": "يرجى مراجعة {{field}}. يجب أن يكون 11 رقمًا.",
+    "dob_required": "تاريخ ميلاد الطفل مطلوب.",
+    "reg_success": "تم التسجيل بنجاح",
+    "reg_success_desc": "تم تسجيل الطالب {{name}}.",
+    "reg_failed": "فشل التسجيل",
+    "status_failed": "فشل تحديث الحالة",
+    "student_accepted": "تم قبول الطالب",
+    "student_rejected": "تم رفض الطالب"
+  },
+
+  "validation": {
+    "child_full_name": "يجب إدخال الاسم رباعي إلى سباعي.",
+    "child_nid": "يجب أن يكون الرقم القومي للطفل 14 رقمًا.",
+    "father_full_name": "يجب إدخال اسم الأب رباعي إلى سباعي.",
+    "guardian_full_name": "يجب إدخال اسم الوصي رباعي إلى سباعي.",
+    "father_nid": "يجب أن يكون الرقم القومي للأب 14 رقمًا.",
+    "guardian_nid": "يجب أن يكون الرقم القومي للوصي 14 رقمًا."
+  },
+
+  "confirms": {
+    "accept": "يرجى التأكد من استلام جميع المستندات المطلوبة وسداد أول شهر قبل قبول هذا الطالب.",
+    "reject": "هل أنت متأكد من رفض هذا الطالب؟ هذا الإجراء لا يمكن التراجع عنه."
+  },
+
+  "title_orders": "الطلبات",
+  "tabs_orders": {
+    "order": "بيع فوري",
+    "reserve": "حجز",
+    "delete": "حذف",
+    "receive": "استلام الحجز",
+    "review": "مراجعة الكل"
+  },
+
+  "steps_orders": {
+    "find_student": "1) ابحث عن الطالب",
+    "choose_item": "2) اختر المعلم والعنصر والكمية",
+    "cart": "3) السلة",
+    "payment": "4) الدفع",
+    "deposit_payment": "3) المقدم وطريقة الدفع",
+    "reserved_for_student": "2) العناصر المحجوزة لهذا الطالب",
+    "orders_today": "طلبات اليوم",
+    "open_reservations": "كل الحجوزات (مفتوحة)",
+    "summary": "ملخص"
+  },
+
+  "placeholders": {
+    "search_student": "الرقم/الهاتف/هاتف ولي الأمر/الاسم الرباعي",
+    "sender_phone": "01XXXXXXXXX",
+    "deposit_egp": "مثال: 50.00",
+    "select_item": "اختر عنصرًا…",
+    "all_teachers": "كل المعلمين…"
+  },
+
+  "buttons_orders": {
+    "search": "بحث",
+    "searching": "جارٍ البحث…",
+    "select": "اختيار",
+    "change_student": "تغيير الطالب",
+    "add_to_cart": "إضافة إلى السلة",
+    "remove": "إزالة",
+    "clear_cart": "تفريغ السلة",
+    "purchase": "شراء",
+    "uploading": "جارٍ الرفع…",
+    "reserve": "حجز",
+    "refresh": "تحديث",
+    "delete": "حذف",
+    "receive": "استلام"
+  },
+
+  "labels": {
+    "teacher": "المعلم",
+    "item": "العنصر",
+    "item_with_grade": "{{sku}} — {{name}} (الصف {{grade}})",
+    "qty": "الكمية",
+    "payment_method": "طريقة الدفع",
+    "sender_phone": "رقم المُرسِل (11 رقمًا)",
+    "upload_proof": "رفع إثبات الدفع (صورة)",
+    "deposit_egp": "المقدم (ج.م)"
+  },
+
+  "helpers_orders": {
+    "selected": "المختار: {{name}} — رقم: {{id}}",
+    "selected_with_grade": "المختار: {{name}} — رقم: {{id}} • الصف: {{grade}}",
+    "price_availability": "السعر الافتراضي: {{price}} ج.م • المتاح: {{available}}",
+    "pick_teacher_first": "اختر المعلم أولًا لتصفية العناصر (اختياري).",
+    "cart_total": "الإجمالي: {{total}} ج.م",
+    "only_same_day": "فقط عمليات اليوم تظهر هنا.",
+    "no_active_reservations": "لا توجد حجوزات نشطة لهذا الطالب.",
+    "reserve_totals": "الإجمالي: {{total}} ج.م • المدفوع: {{paid}} ج.م • المتبقي: {{remaining}} ج.م"
+  },
+
+  "tables": {
+    "search": { "id": "#", "name": "الاسم", "phone": "الهاتف", "parent": "ولي الأمر", "action": "إجراء" },
+    "cart": { "item": "العنصر", "qty": "الكمية", "unit": "السعر", "subtotal": "المجموع", "blank": "" },
+    "today": { "time": "الوقت", "student": "الطالب", "item": "العنصر", "qty": "الكمية", "total": "الإجمالي (ج.م)", "blank": "" },
+    "receive": { "student_id": "رقم الطالب", "teacher": "المعلم", "item": "العنصر", "qty": "الكمية", "total": "الإجمالي (ج.م)", "paid": "المدفوع (ج.م)", "remaining": "المتبقي (ج.م)", "blank": "" },
+    "review_open": { "student_id": "رقم الطالب", "teacher": "المعلم", "item": "العنصر", "qty": "الكمية", "paid": "المدفوع (ج.م)", "remaining": "المتبقي (ج.م)" },
+    "review_summary": { "teacher": "المعلم", "item": "العنصر", "qty": "الكمية المحجوزة", "total_branch": "إجمالي المبلغ في الفرع" }
+  },
+
+  "methods": {
+    "cash": "نقدًا",
+    "vodafone_cash": "فودافون كاش",
+    "instapay": "انستاباي"
+  },
+
+  "toasts_orders": {
+    "no_match_title": "لا يوجد تطابق",
+    "no_match_desc": "لم يتم العثور على طالب.",
+    "search_failed": "فشل البحث",
+    "required_student_item": "الطالب والعنصر مطلوبان",
+    "invalid_number_title": "رقم غير صالح",
+    "invalid_number_desc": "أدخل 11 رقمًا.",
+    "invalid_number_desc_payer": "أدخل 11 رقمًا لهاتف المُرسل.",
+    "missing_proof_title": "لا يوجد إثبات",
+    "missing_proof_desc": "قم برفع لقطة شاشة/صورة.",
+    "missing_proof_desc_vfc": "قم برفع لقطة شاشة للتحويل.",
+    "upload_failed": "فشل الرفع",
+    "order_completed": "تمت عملية الشراء",
+    "order_failed": "فشلت العملية",
+    "pick_item": "اختر عنصرًا",
+    "added_to_cart": "تمت الإضافة إلى السلة",
+    "pick_student_first": "اختر الطالب أولًا",
+    "cart_empty": "السلة فارغة",
+    "out_of_stock_title": "غير متاح",
+    "out_of_stock_desc": "الكمية غير كافية لإضافة هذا العنصر.",
+    "purchase_success": "تم الشراء بنجاح",
+    "purchase_failed": "فشل الشراء",
+    "deposit_capped": "تم تقليص المقدم إلى الإجمالي",
+    "load_today_failed": "فشل تحميل طلبات اليوم",
+    "delete_failed": "فشل الحذف",
+    "order_deleted": "تم حذف العملية",
+    "received": "تم الاستلام",
+    "receive_failed": "فشل الاستلام",
+    "load_reservations_failed": "فشل تحميل الحجوزات",
+    "reserve_failed": "فشل الحجز",
+    "reserved": "تم الحجز",
+    "queued": "معلّق (بانتظار المخزون)"
+  },
+
+  "confirm": {
+    "delete": "هل أنت متأكد من حذف العملية؟\nالطالب: {{student}}\nالعنصر: {{item}}\nالكمية: {{qty}}\nالإجمالي: {{total}} ج.م\nالوقت: {{time}}"
+  }
+}

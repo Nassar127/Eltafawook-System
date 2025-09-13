@@ -1,0 +1,738 @@
+{
+  "appName": "Eltafawook Academy",
+  "loginTitle": "Login",
+  "username": "Username",
+  "password": "Password",
+  "rememberMe": "Remember me",
+  "signIn": "Sign In",
+  "signingIn": "Signing In...",
+  "incorrectCredentials": "Incorrect username or password.",
+
+  "pageBookshop": "Bookshop",
+  "pageKindergarten": "Kindergarten",
+
+  "navStudentReg": "Student Registration",
+  "navOrders": "Orders",
+  "navItems": "Items & Stock",
+  "navTransfer": "Stock Transfer",
+  "navReports": "Reports",
+  "navKgReg": "KG Registration",
+  "navKgOrders": "KG Orders",
+  "navKgItems": "KG Items & Stock",
+  "navKgReports": "KG Reports",
+
+  "menuAddTeacher": "Add Teacher",
+  "menuSettings": "Settings",
+  "menuLogout": "Logout",
+  
+  "students": "Students",
+  "register": "Register",
+  "edit": "Edit",
+  "studentName": "Student Name",
+  "invalidName": "Invalide Name",
+  "invalidNameDesc": "Enter first and last name only.",
+  "invalidPhone": "Invalid phone",
+  "invalidPhoneDesc": "Use 11 digits like 01XXXXXXXXX.",
+  "invalidParentPhone": "Invalid parent phone",
+  "invalidParentPhoneDesc": "Use 11 digits like 01XXXXXXXXX.",
+  "schoolNameReq": "School name required",
+  "schoolNameReqDesc": "Please enter the name for the new school.",
+  "schoolReq": "School is required",
+  "schoolReqDesc": "Please select a school or choose 'Add new school' to add a new one.",
+  "studentCreated": "Student created",
+  "messageQueued": "Messages queued",
+  "messageQueuedDesc": "Student & parent notified",
+  "WAfailed": "WA queue failed",
+  "createStudentFail": "Create student failed",
+  "noMatch":"No match",
+  "noMatchDesc":"No student found.",
+  "searchFailed":"Search failed",
+  "studentUpdated": "Student updated",
+  "studentUpdatedFail": "Update failed",
+  "studentPhone": "Student Phone Number",
+  "parentPhone": "Parent Phone Number",
+  "school": "School",
+  "selectSchool": "Select school…",
+  "addNewSchool": "-- Add New School --",
+  "newSchoolName": "New School Name",
+  "typeNewSchoolName": "Type the full name of the new school",
+  "gender": "Gender",
+  "male": "Male",
+  "female": "Female",
+  "grade": "Grade",
+  "selectGrade": "Select a grade...",
+  "grade1": "1st Grade",
+  "grade2": "2nd Grade",
+  "grade3": "3rd Grade",
+  "section": "Section",
+  "selectSection": "Select a section...",
+  "section_literature": "Literature",
+  "section_science": "Science",
+  "section_math": "Math",
+  "allowWPMessages": "Allow WhatsApp Messages",
+  "yes": "Yes",
+  "no": "No",
+  "createStudent": "Create Student",
+  "created": "Created:",
+  "searchStudent": "Search (ID / Phone / Name)",
+  "searchStudentDesc": "e.g. 12  or  0123…  or  +20123…  or  Ahmed Mohamed",
+  "search": "Search",
+  "updateinfo": "Update Info",
+  "searching": "Searching...",
+  "saveChanges": "Save Changes",
+  "cancel": "Cancel",
+  "name": "Name",
+  "phone": "Phone",
+  "parent": "Parent",
+  "actions": "Actions",
+
+  "settingsTitle": "Settings",
+  "language": "Language",
+  "adminSettings": "Admin Settings",
+  "manageBranch": "Manage Branch",
+  "manageBranchHelper": "Select the branch you want to currently view and manage.",
+  "notificationsTitle": "Notifications & Templates",
+
+  "createTeacher": "Teacher created",
+  "createTeacherFail": "Create teacher failed",
+  "teachers": "Teachers",
+  "teacherName": "Name",
+  "subject": "Subject",
+  "selectSubject": "Select a subject...",
+  "teacherCreate": "Create Teacher",
+  "subject_arabic": "Arabic",
+  "subject_english": "English",
+  "subject_chemistry": "Chemistry",
+  "subject_physics": "Physics",
+  "subject_biology": "Biology",
+  "subject_geology": "Geology",
+  "subject_math": "Math",
+  "subject_history": "History",
+  "subject_geography": "Geography",
+  "subject_psychology": "Psychology",
+  "subject_computer_science": "Computer Science",
+  "subject_religion": "Religion",
+  "subject_french": "French",
+  "subject_german": "German",
+  "subject_italian": "Italian",
+  "subject_spanish": "Spanish",
+  "subject_chinese": "Chinese",
+  "lastTeacher": "Last Teacher: ",
+
+  "title": "Reports",
+  "tabs": {
+    "summary": "Summary",
+    "detailed": "Detailed Report"
+  },
+  "period": {
+    "title": "Report Period",
+    "mode": "Mode",
+    "mode_day": "Day",
+    "mode_week": "Week",
+    "select_day": "Select Day",
+    "pick_any_day_in_week": "Pick any day in the week"
+  },
+  "adjustments": {
+    "title": "Daily Revenue Adjustments",
+    "amount_label": "Amount (EGP)",
+    "amount_ph": "e.g., 50.00",
+    "reason_label": "Reason / Note",
+    "reason_ph": "e.g., Office supplies",
+    "add": "Add (+)",
+    "subtract": "Subtract (-)",
+    "table": {
+      "time": "Time",
+      "amount": "Amount (EGP)",
+      "reason": "Reason"
+    }
+  },
+  "summary": {
+    "title": "Daily Sales Summary",
+    "refresh": "Refresh",
+    "loading": "Loading report..."
+  },
+  "detailed": {
+    "title": "Detailed Sales Report",
+    "generate": "Generate Report",
+    "loading": "Loading...",
+    "table": {
+      "teacher": "Teacher",
+      "item_grade": "Item (Grade)",
+      "item_with_grade": "{{item}} (Grade {{grade}})",
+      "payment_method": "Payment Method",
+      "qty": "Qty Sold",
+      "total_egp": "Total (EGP)"
+    }
+  },
+  "stats": {
+    "gross": "Gross Sales (from orders)",
+    "adjustments": "Adjustments",
+    "net": "Net Revenue (Total)",
+    "transactions": "Transactions"
+  },
+  "toasts": {
+    "load_daily_failed_title": "Failed to load daily report",
+    "load_summary_failed_title": "Failed to load summary report",
+    "error_desc": "{{message}}",
+    "invalid_adjustment_title": "Invalid Adjustment",
+    "invalid_adjustment_desc": "Amount must be non-zero and reason is required.",
+    "adjustment_saved_title": "Adjustment Saved",
+    "save_adjustment_failed_title": "Failed to save adjustment",
+    "branch_not_loaded_title": "Branch not loaded",
+    "branch_not_loaded_desc": "Please wait a moment and try again.",
+    "detailed_failed_title": "Failed to generate detailed report"
+  },
+
+  "title_transfers": "Transfer Stock",
+  "fields": {
+    "from_branch": "From Branch",
+    "to_branch": "To Branch",
+    "teacher": "Teacher",
+    "item": "Item",
+    "item_loading": "Item (Loading...)",
+    "qty_to_transfer": "Quantity to Transfer"
+  },
+  "helpers": {
+    "available": "Available to transfer: <strong>{{count}}</strong>",
+    "remaining": "Remaining in source: <strong>{{count}}</strong>"
+  },
+  "selects": {
+    "source_ph": "Select source...",
+    "destination_ph": "Select destination...",
+    "teacher_ph": "Select teacher...",
+    "item_ph": "Select item with available stock..."
+  },
+  "options": {
+    "branch_label": "{{name}} ({{code}})",
+    "item_with_grade": "{{name}} (Grade {{grade}})"
+  },
+  "buttons": {
+    "execute": "Execute Transfer",
+    "transferring": "Transferring..."
+  },
+  "toasts_transfers": {
+    "inv_load_failed_title": "Failed to load branch inventory",
+    "transfer_success_title": "Transfer Successful!",
+    "transfer_success_desc": "{{qty}} × {{item}} moved.",
+    "transfer_failed_title": "Transfer Failed",
+    "all_required": "All fields are required",
+    "qty_positive": "Quantity must be positive",
+    "qty_exceeds": "Cannot transfer more than available stock",
+    "error_desc": "{{message}}"
+  },
+
+  "title_items": "Resources & Inventory",
+  "tabs_items": {
+    "create": "Create Resource",
+    "receive": "Receive Stock",
+    "inventory": "Inventory"
+  },
+  "create": {
+    "teacher": "Teacher",
+    "teacher_ph": "Select a teacher…",
+    "resource_type": "Resource Type",
+    "resource_type_options": {
+      "book": "Book",
+      "code": "Code",
+      "other": "Other"
+    },
+    "helper_displayed_as": "Displayed as <0>{{typeGrade}}</0> e.g. <0>{{example}}</0> in inventory.",
+    "grade": "Grade",
+    "item_name": "Item Name",
+    "item_name_ph": "e.g. Ch1, MechanicsA, …",
+    "helper_saved_as": "Will be saved as <0>{{fullName}}</0>",
+    "price": "Price (EGP)",
+    "price_ph": "e.g. 45.00",
+    "create_btn": "Create Resource"
+  },
+  "receive": {
+    "teacher_filter": "Teacher (optional filter)",
+    "teacher_all": "All teachers…",
+    "item": "Item",
+    "item_ph": "Select an item…",
+    "item_option_with_grade_price": "{{name}} (Grade {{grade}}) • {{price}} EGP",
+    "qty": "Quantity",
+    "receive_btn": "Receive to Stock"
+  },
+  "inventory": {
+    "filter_teacher": "Filter by Teacher",
+    "filter_teacher_all": "All",
+    "filter_item": "Filter by Item",
+    "filter_item_ph": "Type part of name or code…",
+    "show_oos": "Show out-of-stock",
+    "refresh": "Refresh",
+    "loading": "Loading…",
+    "table": {
+      "teacher": "Teacher",
+      "resource": "Resource",
+      "qty": "Quantity",
+      "price": "Price (EGP)"
+    },
+    "empty": "No items match your filters."
+  },
+  "toasts_items": {
+    "teacher_required": "Teacher required",
+    "item_name_required": "Item name required",
+    "resource_created": "Resource created",
+    "resource_created_desc": "{{sku}} • {{name}}",
+    "fetched_existing": "Fetched existing item",
+    "fetched_existing_desc": "{{sku}}",
+    "create_get_failed": "Create/get item failed",
+    "create_item_failed": "Create item failed",
+    "pick_item": "Pick an item",
+    "qty_gt_zero": "Quantity must be > 0",
+    "stock_received": "Stock received",
+    "stock_received_desc": "on_hand={{onHand}}, available={{available}}",
+    "receive_failed": "Receive failed",
+    "inv_load_failed": "Inventory load failed",
+    "error_desc": "{{message}}"
+  },
+
+  "brand": "Eltafawook Academy",
+  "sign_in": "Sign In",
+  "title_login": "{{brand}} - {{signIn}}",
+  "fields_login": {
+    "username": "Username",
+    "username_ph": "Enter your username",
+    "password": "Password",
+    "password_ph": "Enter your password",
+    "remember_me": "Remember me"
+  },
+  "buttons_login": {
+    "sign_in": "Sign In",
+    "signing_in": "Signing In..."
+  },
+  "errors": {
+    "incorrect_credentials": "Incorrect username or password."
+  },
+  "aria": {
+    "toggle_password": "Show or hide password"
+  },
+
+  "title_kg_reports": "Kindergarten Items & Stock",
+  "tabs_kg_reports": {
+    "create": "Create Item",
+    "receive": "Receive Stock"
+  },
+  "create_kg_reports": {
+    "item_name": "Item Name",
+    "item_name_ph": "e.g., Monthly Fee - October",
+    "sku_helper": "SKU will be: <0>{{sku}}</0>",
+    "price": "Default Price (EGP)",
+    "price_ph": "e.g., 500.00",
+    "item_type": "Item Type",
+    "item_type_options": {
+      "service": "Service (e.g., Fees, Trips - unlimited qty)",
+      "good": "Good (e.g., T-Shirt, Book - tracked qty)"
+    },
+    "create_btn": "Create Item"
+  },
+  "receive_kg_reports": {
+    "item_to_receive": "Item to Receive",
+    "item_ph": "Select a physical item...",
+    "helper_physical_only": "Only physical goods that require inventory tracking appear here.",
+    "qty_received": "Quantity Received",
+    "receive_btn": "Receive Stock"
+  },
+  "toasts_kg_reports": {
+    "name_price_required": "Name and Price are required.",
+    "created": "Item Created",
+    "created_desc": "{{name}}",
+    "creation_failed": "Creation Failed",
+    "select_and_qty": "Please select an item and enter a valid quantity.",
+    "stock_received": "Stock Received",
+    "stock_received_desc": "Added {{qty}} to inventory.",
+    "receive_failed": "Failed to Receive Stock",
+    "error_desc": "{{message}}"
+  },
+
+  "title_kg_orders": "Kindergarten Orders",
+  "steps": {
+    "find": "1. Find Student",
+    "select": "2. Select Student"
+  },
+  "search_kg_orders": {
+    "ph": "Search by Name, National ID, or Parent Phone...",
+    "btn": "Search",
+    "loading": "..."
+  },
+  "student": {
+    "father": "Father: {{name}}"
+  },
+  "order": {
+    "new_for": "New Order for: {{name}}",
+    "change_student": "Change Student",
+    "available_items": "Available Items",
+    "cart": "Cart",
+    "cart_empty": "Cart is empty.",
+    "table": {
+      "item": "Item",
+      "qty": "Qty",
+      "price": "Price"
+    },
+    "total_label": "Total:",
+    "currency": "EGP",
+    "price_with_currency": "{{amount}} {{currency}}",
+    "total_with_currency": "Total: {{amount}} {{currency}}",
+    "complete_cash": "Complete Purchase (Cash)"
+  },
+  "toasts_kg_orders": {
+    "no_students": "No students found.",
+    "search_failed": "Search Failed",
+    "purchase_complete": "Purchase Complete!",
+    "purchase_failed": "Purchase Failed"
+  },
+
+  "title_kg_items": "Kindergarten Reports",
+  "tabs_kg_items": {
+    "summary": "Summary",
+    "detailed": "Detailed Report"
+  },
+  "period_kg_items": {
+    "title": "Report Period",
+    "mode": "Mode",
+    "mode_day": "Day",
+    "mode_week": "Week",
+    "select_day": "Select Day",
+    "pick_any_day_in_week": "Pick any day in the week"
+  },
+  "adjustments_kg_items": {
+    "title": "Revenue Adjustments",
+    "amount_label": "Amount (EGP)",
+    "amount_ph": "e.g., 50.00",
+    "reason_label": "Reason / Note",
+    "reason_ph": "e.g., Office supplies",
+    "add": "Add (+)",
+    "subtract": "Subtract (-)",
+    "table": {
+      "time": "Time",
+      "amount": "Amount (EGP)",
+      "reason": "Reason"
+    }
+  },
+  "summary_kg_items": {
+    "title": "Sales Summary",
+    "refresh": "Refresh",
+    "loading": "Loading report..."
+  },
+  "detailed_kg_items": {
+    "title": "Detailed Sales Report",
+    "generate": "Generate Report",
+    "loading": "Loading...",
+    "table": {
+      "item": "Item",
+      "qty": "Qty Sold",
+      "total_egp": "Total (EGP)"
+    }
+  },
+  "stats_kg_items": {
+    "gross": "Gross Sales (from orders)",
+    "adjustments": "Adjustments",
+    "net": "Net Revenue (Total)",
+    "transactions": "Transactions"
+  },
+  "toasts_kg_items": {
+    "summary_failed_title": "Failed to load summary",
+    "invalid_adj_title": "Invalid Adjustment",
+    "invalid_adj_desc": "Amount must be non-zero and reason is required.",
+    "adj_saved_title": "Adjustment Saved",
+    "save_adj_failed_title": "Failed to save adjustment",
+    "detailed_failed_title": "Failed to generate detailed report",
+    "error_desc": "{{message}}"
+  },
+
+  "title_kg_students": "Kindergarten Management",
+  "tabs_kg_students": {
+    "register": "Register",
+    "edit": "Search & Edit",
+    "acceptance": "Pending Acceptance"
+  },
+
+  "register_kg_students": {
+    "child_info_title": "Child's Information",
+    "labels": {
+      "full_name": "Full Name (4 to 7 names)",
+      "national_id": "National ID (14 digits)",
+      "nationality": "Nationality",
+      "religion": "Religion",
+      "religion_muslim": "Muslim",
+      "religion_christian": "Christian",
+      "dob": "Date of Birth",
+      "pob": "Place of Birth",
+      "address": "Address",
+      "attendance_title": "Attendance Period",
+      "attendance_morning": "Morning (8 AM - 2 PM)",
+      "attendance_evening": "Evening (2 PM - 6 PM)",
+      "attendance_both": "Both Periods",
+      "age_oct_title": "Age on October 1st",
+      "age_years_ph": "Years",
+      "age_months_ph": "Months",
+      "age_days_ph": "Days"
+    },
+
+    "parents_title": "Parent's Information",
+    "parents": {
+      "father_name": "Father's Full Name",
+      "father_national_id": "Father's National ID (14 digits)",
+      "father_profession": "Father's Profession",
+      "father_phone": "Father's Phone (11 digits)",
+      "father_whatsapp": "Father's WhatsApp (11 digits)",
+      "mother_phone": "Mother's Phone (11 digits)"
+    },
+
+    "guardian_title": "Guardian's Information (if different)",
+    "guardian": {
+      "name": "Guardian's Full Name",
+      "national_id": "Guardian's National ID (14 digits)",
+      "relation": "Relation to Child",
+      "phone": "Guardian's Phone (11 digits)",
+      "whatsapp": "Guardian's WhatsApp (11 digits)"
+    },
+
+    "additional_title": "Additional Information",
+    "additional": {
+      "has_illness": "Does the child have any chronic illnesses?",
+      "illness_desc": "Please describe:",
+      "attended_prev": "Attended a previous nursery?",
+      "prev_name": "Nursery Name:",
+      "needs_bus": "Needs bus subscription?",
+      "alt_transport": "Alternative Transport:"
+    },
+
+    "pickups": {
+      "title": "Persons authorized to pick up the child:",
+      "ph1": "1. Name",
+      "ph2": "2. Name",
+      "ph3": "3. Name"
+    },
+
+    "presub": {
+      "box_title": "Important Information",
+      "fees_title": "Periods & Fees:",
+      "fees_morning": "Morning Period: 8 AM → 2 PM (500 EGP)",
+      "fees_evening": "Evening Period: 2 PM → 6 PM (300 EGP)",
+      "fees_diff": "Differences include activities, trips, and hours. Evening period activities are on Thursdays only.",
+      "fees_age": "The academy accepts children from the age of 2 years.",
+
+      "transport_title": "Transportation:",
+      "transport_text": "A bus is available. Fares are determined by location. Please contact the drivers directly:",
+      "driver_1": "Mr. Haitham: 01065447709",
+      "driver_2": "Mr. Ashraf: 01288449193",
+      "driver_3": "Mr. Mohamed: 01222398324",
+
+      "uniform_title": "Uniform:",
+      "uniform_text": "The academy uniform is a T-shirt and jeans (provided by you). The T-shirt can be purchased from the academy for 110 EGP.",
+
+      "docs_title": "Required Documents:",
+      "docs_text": "Please bring the following documents to the academy on your first visit after online registration:",
+      "doc_1": "4 personal photos of the child.",
+      "doc_2": "A photocopy of the birth certificate.",
+      "doc_3": "A photocopy of the child's vaccination record, attached to the original.",
+      "doc_4": "A photocopy of both parents' National ID cards."
+    },
+
+    "submit_btn": "Submit Application"
+  },
+
+  "edit_kg_students": {
+    "search_label": "Search by Name, National ID, or Parent Phone",
+    "ph": "Enter search term...",
+    "searching": "Searching...",
+    "search": "Search",
+    "card_edit": "Edit",
+    "card": {
+      "father": "Father:",
+      "mother_phone": "Mother's Phone:",
+      "transport": "Transport:",
+      "bus": "Bus",
+      "private": "Private",
+      "auth_pickups": "Authorized Pickups:",
+      "none_listed": "None listed",
+      "illness": "Illness:"
+    },
+    "editing_title": "Editing: {{name}}",
+    "editable_info_title": "Editable Information",
+    "attendance_label": "Attendance Period",
+    "phones": {
+      "father_phone": "Father's Phone",
+      "father_whatsapp": "Father's WhatsApp",
+      "mother_phone": "Mother's Phone",
+      "guardian_phone": "Guardian's Phone",
+      "guardian_whatsapp": "Guardian's WhatsApp"
+    },
+    "flags": {
+      "needs_bus": "Needs bus subscription?",
+      "has_illness": "Has chronic illness?"
+    },
+    "illness_desc": "Illness Description:",
+    "pickups_title": "Persons authorized to pick up the child:",
+    "pickups_ph1": "1. Name",
+    "pickups_ph2": "2. Name",
+    "pickups_ph3": "3. Name",
+    "save": "Save Changes",
+    "cancel": "Cancel"
+  },
+
+  "acceptance": {
+    "title": "Pending Applications",
+    "loading": "Loading applications...",
+    "empty": "There are no pending applications.",
+    "applied_on": "Applied on: {{date}}",
+    "age_oct": "Age (Oct 1st):",
+    "age_suffix": { "y": "y", "m": "m", "d": "d" },
+    "period": "Period:",
+    "father": "Father:"
+  },
+
+  "toasts_kg_students": {
+    "pending_failed": "Failed to load pending students",
+    "no_students": "No students found.",
+    "search_failed": "Search failed",
+    "student_updated": "Student Updated",
+    "update_failed": "Update Failed",
+    "validation_title": "Validation Error",
+    "invalid_phone_title": "Invalid Phone Number",
+    "invalid_phone_desc": "Please check the {{field}}. It must be 11 digits.",
+    "dob_required": "Child's date of birth is required.",
+    "reg_success": "Registration Successful",
+    "reg_success_desc": "Student {{name}} has been registered.",
+    "reg_failed": "Registration Failed",
+    "status_failed": "Status update failed",
+    "student_accepted": "Student accepted",
+    "student_rejected": "Student rejected"
+  },
+
+  "validation": {
+    "child_full_name": "Child's name must be the full name (4 to 7 names).",
+    "child_nid": "Child's National ID must be 14 digits.",
+    "father_full_name": "Father's name must be the full name (4 to 7 names).",
+    "guardian_full_name": "Guardian's name must be the full name (4 to 7 names).",
+    "father_nid": "Father's National ID must be 14 digits.",
+    "guardian_nid": "Guardian's National ID must be 14 digits."
+  },
+
+  "confirms": {
+    "accept": "Please confirm that you have received all required documents and the first month's payment before accepting this student.",
+    "reject": "Are you sure you want to reject this student? This action cannot be undone."
+  },
+
+  "title_orders": "Orders",
+  "tabs_orders": {
+    "order": "Order",
+    "reserve": "Reserve",
+    "delete": "Delete",
+    "receive": "Receive Reservation",
+    "review": "Review All"
+  },
+
+  "steps_orders": {
+    "find_student": "1) Find student",
+    "choose_item": "2) Choose teacher, item & qty",
+    "cart": "3) Cart",
+    "payment": "4) Payment",
+    "deposit_payment": "3) Deposit & Payment",
+    "reserved_for_student": "2) Reserved items for this student",
+    "orders_today": "Orders done today",
+    "open_reservations": "All Reservations (open)",
+    "summary": "Summary"
+  },
+
+  "placeholders": {
+    "search_student": "ID / Phone / Parent Phone / Full Name",
+    "sender_phone": "01XXXXXXXXX",
+    "deposit_egp": "e.g. 50.00",
+    "select_item": "Select item…",
+    "all_teachers": "All teachers…"
+  },
+
+  "buttons_orders": {
+    "search": "Search",
+    "searching": "Searching…",
+    "select": "Select",
+    "change_student": "Change student",
+    "add_to_cart": "Add to cart",
+    "remove": "Remove",
+    "clear_cart": "Clear cart",
+    "purchase": "Purchase",
+    "uploading": "Uploading…",
+    "reserve": "Reserve",
+    "refresh": "Refresh",
+    "delete": "Delete",
+    "receive": "Receive"
+  },
+
+  "labels": {
+    "teacher": "Teacher",
+    "item": "Item",
+    "item_with_grade": "{{sku}} — {{name}} (Grade {{grade}})",
+    "qty": "Qty",
+    "payment_method": "Payment method",
+    "sender_phone": "Sender phone (11 digits)",
+    "upload_proof": "Upload payment proof (image)",
+    "deposit_egp": "Deposit (EGP)"
+  },
+
+  "helpers_orders": {
+    "selected": "Selected: {{name}} — id: {{id}}",
+    "selected_with_grade": "Selected: {{name}} — id: {{id}} • Grade: {{grade}}",
+    "price_availability": "Default price: {{price}} EGP • Available: {{available}}",
+    "pick_teacher_first": "Pick teacher first to filter items (optional).",
+    "cart_total": "Total: {{total}} EGP",
+    "only_same_day": "Only same-day orders appear here.",
+    "no_active_reservations": "No active reservations for this student.",
+    "reserve_totals": "Total: {{total}} EGP • Paid: {{paid}} EGP • Remaining: {{remaining}} EGP"
+  },
+
+  "tables": {
+    "search": { "id": "#", "name": "Name", "phone": "Phone", "parent": "Parent", "action": "Action" },
+    "cart": { "item": "Item", "qty": "Qty", "unit": "Unit", "subtotal": "Subtotal", "blank": "" },
+    "today": { "time": "Time", "student": "Student", "item": "Item", "qty": "Qty", "total": "Total (EGP)", "blank": "" },
+    "receive": { "student_id": "Student ID", "teacher": "Teacher", "item": "Item", "qty": "Qty", "total": "Total (EGP)", "paid": "Paid (EGP)", "remaining": "Remaining (EGP)", "blank": "" },
+    "review_open": { "student_id": "Student ID", "teacher": "Teacher", "item": "Item", "qty": "Qty", "paid": "Paid (EGP)", "remaining": "Remaining (EGP)" },
+    "review_summary": { "teacher": "Teacher", "item": "Item", "qty": "Quantity Reserved", "total_branch": "Total amount in branch" }
+  },
+
+  "methods": {
+    "cash": "Cash",
+    "vodafone_cash": "Vodafone Cash",
+    "instapay": "InstaPay"
+  },
+
+  "toasts_orders": {
+    "no_match_title": "No match",
+    "no_match_desc": "No student found.",
+    "search_failed": "Search failed",
+    "required_student_item": "Student and item are required",
+    "invalid_number_title": "Invalid number",
+    "invalid_number_desc": "Enter 11 digits.",
+    "invalid_number_desc_payer": "Enter 11 digits for the payer phone.",
+    "missing_proof_title": "Missing proof",
+    "missing_proof_desc": "Upload a screenshot/photo.",
+    "missing_proof_desc_vfc": "Upload a screenshot for the transfer.",
+    "upload_failed": "Upload failed",
+    "order_completed": "Order completed",
+    "order_failed": "Order failed",
+    "pick_item": "Pick an item",
+    "added_to_cart": "Added to cart",
+    "pick_student_first": "Pick a student first",
+    "cart_empty": "Cart is empty",
+    "out_of_stock_title": "Out of stock",
+    "out_of_stock_desc": "Not enough stock to add this item to the cart.",
+    "purchase_success": "Purchase successful",
+    "purchase_failed": "Purchase failed",
+    "deposit_capped": "Deposit capped to total",
+    "load_today_failed": "Load today's orders failed",
+    "delete_failed": "Delete failed",
+    "order_deleted": "Order deleted",
+    "received": "Received",
+    "receive_failed": "Receive failed",
+    "load_reservations_failed": "Load reservations failed",
+    "reserve_failed": "Reserve failed",
+    "reserved": "Reserved",
+    "queued": "Queued (waiting for stock)"
+  },
+
+  "confirm": {
+    "delete": "Are you sure you want to delete this transaction?\nStudent: {{student}}\nItem: {{item}}\nQty: {{qty}}\nTotal: {{total}} EGP\nTime: {{time}}"
+  }
+}
