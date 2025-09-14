@@ -61,10 +61,10 @@ export default function KgReports({ apiBase, authToken, toast, branchId, current
     };
     
     useEffect(() => {
-    if (tab === 'summary' && branchId) {
-        fetchSummaryData();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        if (tab === 'dailySales' && branchId) {
+            fetchSummaryData();
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [reportDay, reportWeekAnchor, reportMode, tab, branchId]);
 
     const handleCreateAdjustment = async (multiplier) => {
