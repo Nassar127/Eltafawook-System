@@ -22,7 +22,7 @@ import { StudentIcon, OrdersIcon, ItemsIcon, TransferIcon, ReportsIcon, KgIcon }
 import logo from './assets/logo.png';
 
 export default function App() {
-  const [apiBase, setApiBase] = useState(() => localStorage.getItem("apiBase") || "http://localhost:8000/api/v1");
+  const [apiBase, setApiBase] = useState(() => localStorage.getItem("apiBase") || "https://eltafawook-system.onrender.com/api/v1");
   const [authToken, setAuthToken] = useState(() => localStorage.getItem("authToken") || sessionStorage.getItem("authToken"));
   const [currentUser, setCurrentUser] = useState(null);
   const [settings, setSettings] = useState(loadSettings());
