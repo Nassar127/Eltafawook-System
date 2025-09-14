@@ -44,8 +44,6 @@ def create_reservation_route(payload: ReservationCreate, db: Session = Depends(g
     if (data.prepaid_cents or 0) > 0 and data.payment_method in ("vodafone_cash", "instapay"):
         if not payer_ref:
             raise HTTPException(status_code=400, detail="payer_reference (or payer_phone) is required for non-cash prepaid")
-        if not proof_url:
-            raise HTTPException(status_code=400, detail="payment_proof_url (or proof_media_url) is required for non-cash prepaid")
 
     res_id = rsvc.create_reservation(
         db,

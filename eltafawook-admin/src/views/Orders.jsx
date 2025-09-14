@@ -1153,17 +1153,6 @@ export default function Orders({
                               }}
                             />
                           </div>
-                          <div>
-                            <Label>{t("labels.upload_proof")}</Label>
-                            <input
-                              type="file"
-                              accept="image/*"
-                              onChange={(e) =>
-                                setPaymentFile(e.target.files?.[0] || null)
-                              }
-                              style={{ display: "block" }}
-                            />
-                          </div>
                         </>
                       )}
                     </Row>
