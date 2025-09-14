@@ -101,7 +101,7 @@ export default function KgReports({ apiBase, authToken, toast, branchId, current
         setDetailedData(null);
         try {
             const { startDate, endDate } = getReportDateRange();
-            const data = await apiFetch(apiBase, `/kg-reports/detailed-sales?branch_id=${branchId}&start_date=${startDate}&end_date=${endDate}`, { authToken });
+            const data = await apiFetch(apiBase, `/reports/detailed-sales?branch_id=${branchId}&start_date=${startDate}&end_date=${endDate}`, { authToken });
             setDetailedData(data);
         } catch (e) {
             toast.push({ title: t("toasts_kg_items.detailed_failed_title"), description: t("toasts_kg_items.error_desc", { message: e.message }), tone: "error" });
