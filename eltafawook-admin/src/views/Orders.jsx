@@ -329,29 +329,17 @@ export default function Orders({
   }
 
   async function purchaseCart() {
-    if (!orderSelectedStudent?.id) {
-      toast.push({ title: t("toasts_orders.pick_student_first"), tone: "error" });
-      return;
-    }
-    if (!cart.length) {
-      toast.push({ title: t("toasts_orders.cart_empty"), tone: "error" });
-      return;
-    }
+    if (!orderSelectedStudent?.id) { toast.push({ title: t("toasts_orders.pick_student_first"), tone: "error" }); return; }
+    if (!cart.length) { toast.push({ title: t("toasts_orders.cart_empty"), tone: "error" }); return; }
 
     const payMethod = paymentMethodFromUI(paymentType);
-    let payer_phone = null,
-      payment_proof_id = null,
-      payment_proof_url = null;
-
+    let payer_phone = null;
     if (payMethod !== "cash") {
       if (!is11DigitLocal(payerPhone)) {
-        toast.push({
-          title: t("toasts_orders.invalid_number_title"),
-          description: t("toasts_orders.invalid_number_desc"),
-          tone: "error",
-        });
+        toast.push({ title: t("toasts_orders.invalid_number_title"), description: t("toasts_orders.invalid_number_desc"), tone: "error" });
         return;
       }
+      payer_phone = (payerPhone || "").replace(/\D/g, "");
     }
 
     try {
@@ -364,40 +352,23 @@ export default function Orders({
             qty: Number(line.qty || 1),
             student_id: orderSelectedStudent.id,
             unit_price_cents: Number(line.unit_price_cents || 0),
-            prepaid_cents:
-              Number(line.unit_price_cents || 0) * Number(line.qty || 1),
+            prepaid_cents: Number(line.unit_price_cents || 0) * Number(line.qty || 1),
             payment_method: payMethod,
             payer_phone,
-            payment_proof_id,
-            payment_proof_url,
           },
           authToken,
         });
-        await apiFetch(apiBase, `/reservations/${r.id}/mark-ready`, {
-          method: "POST",
-          body: { notify: false },
-          authToken,
-        });
-        await apiFetch(apiBase, `/reservations/${r.id}/fulfill`, {
-          method: "POST",
-          authToken,
-        });
+        await apiFetch(apiBase, `/reservations/${r.id}/mark-ready`, { method: "POST", body: { notify: false }, authToken });
+        await apiFetch(apiBase, `/reservations/${r.id}/fulfill`, { method: "POST", authToken });
       }
 
-      toast.push({
-        title: t("toasts_orders.purchase_success"),
-        description: `${cart.length} item(s)`,
-      });
+      toast.push({ title: t("toasts_orders.purchase_success"), description: `${cart.length} item(s)` });
       resetCart();
       resetOrderSelections();
       setOrderSelectedStudent(null);
       setOrderRows([]);
     } catch (e) {
-      toast.push({
-        title: t("toasts_orders.purchase_failed"),
-        description: e.message,
-        tone: "error",
-      });
+      toast.push({ title: t("toasts_orders.purchase_failed"), description: e.message, tone: "error" });
     }
   }
 
