@@ -48,7 +48,7 @@ export default function KgReports({ apiBase, authToken, toast, branchId, current
         try {
             const { startDate, endDate } = getReportDateRange();
             const [sales, adjustmentsData] = await Promise.all([
-                apiFetch(apiBase, `/kg-reports/daily-sales?branch_id=${branchId}&start_date=${startDate}&end_date=${endDate}`, { authToken }),
+                apiFetch(apiBase, `/reports/daily-sales?branch_id=${branchId}&start_date=${startDate}&end_date=${endDate}`, { authToken }),
                 apiFetch(apiBase, `/adjustments/revenue?branch_id=${branchId}&start_date=${startDate}&end_date=${endDate}&context=bookstore`, { authToken })
             ]);
             setSummaryData(sales);
