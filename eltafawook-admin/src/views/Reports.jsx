@@ -21,9 +21,8 @@ export default function KgReports({ apiBase, authToken, toast, branchId, current
     const [tab, setTab] = useState("summary");
     const [loading, setLoading] = useState(false);
     const [reportMode, setReportMode] = useState("day");
-    // FIX: Use lazy initializer function `() => ...`
-    const [reportDay, setReportDay] = useState(() => getTodayLocal());
-    const [reportWeekAnchor, setReportWeekAnchor] = useState(() => getTodayLocal());
+    const [reportDay, setReportDay] = useState(getTodayLocal);
+    const [reportWeekAnchor, setReportWeekAnchor] = useState(getTodayLocal);
     const [summaryData, setSummaryData] = useState(null);
     const [adjAmount, setAdjAmount] = useState("");
     const [adjReason, setAdjReason] = useState("");
@@ -55,23 +54,23 @@ export default function KgReports({ apiBase, authToken, toast, branchId, current
             setSummaryData(sales);
             setAdjustments(adjustmentsData || []);
         } catch (e) {
-            toast.push({ title: t("toasts.summary_failed_title"), description: t("toasts.error_desc", { message: e.message }), tone: "error" });
+            toast.push({ title: t("toasts_kg_items.summary_failed_title"), description: t("toasts_kg_items.error_desc", { message: e.message }), tone: "error" });
         } finally {
             setLoading(false);
         }
     };
     
     useEffect(() => {
-        if (tab === 'summary' && branchId) {
+        if (tab === 'dailySales' && branchId) {
             fetchSummaryData();
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [reportDay, reportWeekAnchor, reportMode, tab, branchId]);
 
     const handleCreateAdjustment = async (multiplier) => {
         const amount = centsFromEGP(adjAmount) * multiplier;
         if (amount === 0 || !adjReason.trim()) {
-            toast.push({ title: t("toasts.invalid_adj_title"), description: t("toasts.invalid_adj_desc"), tone: "error"});
+            toast.push({ title: t("toasts_kg_items.invalid_adj_title"), description: t("toasts_kg_items.invalid_adj_desc"), tone: "error"});
             return;
         }
         try {
@@ -87,12 +86,12 @@ export default function KgReports({ apiBase, authToken, toast, branchId, current
                 },
                 authToken
             });
-            toast.push({ title: t("toasts.adj_saved_title"), tone: "success" });
+            toast.push({ title: t("toasts_kg_items.adj_saved_title"), tone: "success" });
             setAdjAmount("");
             setAdjReason("");
             fetchSummaryData();
         } catch (e) {
-            toast.push({ title: t("toasts.save_adj_failed_title"), description: t("toasts.error_desc", { message: e.message }), tone: "error" });
+            toast.push({ title: t("toasts_kg_items.save_adj_failed_title"), description: t("toasts_kg_items.error_desc", { message: e.message }), tone: "error" });
         }
     };
 
@@ -105,7 +104,7 @@ export default function KgReports({ apiBase, authToken, toast, branchId, current
             const data = await apiFetch(apiBase, `/kg-reports/detailed-sales?branch_id=${branchId}&start_date=${startDate}&end_date=${endDate}`, { authToken });
             setDetailedData(data);
         } catch (e) {
-            toast.push({ title: t("toasts.detailed_failed_title"), description: t("toasts.error_desc", { message: e.message }), tone: "error" });
+            toast.push({ title: t("toasts_kg_items.detailed_failed_title"), description: t("toasts_kg_items.error_desc", { message: e.message }), tone: "error" });
         } finally {
             setLoading(false);
         }
