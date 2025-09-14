@@ -1166,8 +1166,7 @@ export default function Orders({
                           ((paymentType === "vodafone_cash" ||
                             paymentType === "instapay") &&
                             (!payerPhone ||
-                              !is11DigitLocal(payerPhone) ||
-                              !paymentFile))
+                              !is11DigitLocal(payerPhone)))
                         }
                       >
                         {uploadingProof
@@ -1382,17 +1381,6 @@ export default function Orders({
                                   });
                                 }
                               }}
-                            />
-                          </div>
-                          <div>
-                            <Label>{t("labels.upload_proof")}</Label>
-                            <input
-                              type="file"
-                              accept="image/*"
-                              onChange={(e) =>
-                                setResPaymentFile(e.target.files?.[0] || null)
-                              }
-                              style={{ display: "block" }}
                             />
                           </div>
                         </>
