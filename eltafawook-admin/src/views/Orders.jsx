@@ -352,31 +352,6 @@ export default function Orders({
         });
         return;
       }
-      if (!paymentFile) {
-        toast.push({
-          title: t("toasts_orders.missing_proof_title"),
-          description: t("toasts_orders.missing_proof_desc"),
-          tone: "error",
-        });
-        return;
-      }
-      try {
-        setUploadingProof(true);
-        const up = await uploadPaymentProof(apiBase, paymentFile);
-        payer_phone = (payerPhone || "").replace(/\D/g, "");
-        payment_proof_id = up?.id || null;
-        payment_proof_url = up?.url || null;
-      } catch (e) {
-        toast.push({
-          title: t("toasts_orders.upload_failed"),
-          description: e.message,
-          tone: "error",
-        });
-        setUploadingProof(false);
-        return;
-      } finally {
-        setUploadingProof(false);
-      }
     }
 
     try {
