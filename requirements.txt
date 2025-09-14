@@ -6,4 +6,3 @@ psycopg[binary]
 python-dotenv
 passlib[bcrypt]
 python-jose[cryptography]
-pyautogui
