@@ -13,6 +13,10 @@ def get_kg_on_hand(db: Session, *, branch_id: UUID, kg_item_id: UUID) -> int:
     ).scalar_one()
     return int(result)
 
+def get_inventory_summary(db: Session, *, branch_id: UUID, kg_item_id: UUID) -> dict:
+    on_hand = get_kg_on_hand(db=db, branch_id=branch_id, kg_item_id=kg_item_id)
+    return {"on_hand": on_hand, "reserved": 0, "available": on_hand}
+
 def receive_kg_stock(db: Session, *, branch_id: UUID, kg_item_id: UUID, qty: int) -> dict:
     if qty <= 0:
         raise ValueError("Quantity must be positive")

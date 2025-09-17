@@ -18,3 +18,7 @@ def receive_stock(body: KgReceiveStockRequest, db: Session = Depends(get_db)):
         )
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
+    
+@router.get("/summary")
+def get_summary(branch_id: UUID, kg_item_id: UUID, db: Session = Depends(get_db)):
+    return service.get_inventory_summary(db=db, branch_id=branch_id, kg_item_id=kg_item_id)
