@@ -8,8 +8,8 @@ import { TableWrap, Table } from '../components/Table';
 import { moneyEGPfromCents, centsFromEGP, fullItemName } from '../utils/helpers';
 import { useTranslation, Trans } from "react-i18next";
 
-export default function Items({ apiBase, authToken, toast, branchId, branchCode, teachers, setTeachers, items, setItems, itemById, teacherById }) {
-    const [itemsTab, setItemsTab] = useState("create");
+export default function Items({ apiBase, authToken, toast, branchId, branchCode, teachers, setTeachers, items, setItems, itemById, teacherById, currentUser }) {
+    const [itemsTab, setItemsTab] = useState("inventory");
     const [createForm, setCreateForm] = useState({teacher_id: "", resource_type: "Book", item_name: "", grade: 3, price_egp: "",});
     const [receive2, setReceive2] = useState({teacher_id: "", item_id: "", qty: 1,});
     const [invFilterTeacher, setInvFilterTeacher] = useState("");
@@ -122,19 +122,25 @@ export default function Items({ apiBase, authToken, toast, branchId, branchCode,
         <Card>
         <CardHead><CardTitle>{t("title_items")}</CardTitle></CardHead>
         <CardBody>
-        <SubTabs>
-        <SubTabButton $active={itemsTab==="create"} onClick={()=>setItemsTab("create")}>
+    <SubTabs>
+      {currentUser?.role === 'admin' && (
+        <SubTabButton $active={itemsTab==="create"} onClick={()=>{
+          setItemsTab("create");
+          // Also reset the form when clicking the tab
+          setCreateForm({ teacher_id: "", resource_type: "book", grade: 3, item_name: "", price_egp: "" });
+        }}>
             {t("tabs_items.create")}
         </SubTabButton>
-        <SubTabButton $active={itemsTab==="receive"} onClick={()=>setItemsTab("receive")}>
-            {t("tabs_items.receive")}
-        </SubTabButton>
-        <SubTabButton $active={itemsTab==="inventory"} onClick={()=>{ setItemsTab("inventory"); loadInventoryGrid(); }}>
-            {t("tabs_items.inventory")}
-        </SubTabButton>
-        </SubTabs>
+      )}
+      <SubTabButton $active={itemsTab==="receive"} onClick={()=>setItemsTab("receive")}>
+          {t("tabs_items.receive")}
+      </SubTabButton>
+      <SubTabButton $active={itemsTab==="inventory"} onClick={()=>{ setItemsTab("inventory"); loadInventoryGrid(); }}>
+          {t("tabs_items.inventory")}
+      </SubTabButton>
+    </SubTabs>
 
-            {itemsTab === "create" && (
+            {itemsTab === "create" && currentUser?.role === 'admin' && (
             <>
 
                 <Row cols={3} style={{marginTop:8}}>

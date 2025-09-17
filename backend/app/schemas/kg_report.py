@@ -1,5 +1,6 @@
 from uuid import UUID
 from pydantic import BaseModel, Field
+from datetime import datetime
 from typing import List
 from datetime import date
 
@@ -22,3 +23,13 @@ class KgDetailedSalesReportOut(BaseModel):
     start_date: date
     end_date: date
     rows: List[KgDetailedSalesRow]
+
+class SubscriptionStatusRow(BaseModel):
+    student_name: str
+    parent_phone: str | None
+    last_payment_date: datetime
+    next_payment_date: date
+    last_used_plan: str
+
+class SubscriptionReportOut(BaseModel):
+    rows: List[SubscriptionStatusRow]

@@ -25,6 +25,38 @@ const CartActionButton = styled.button`
     }
 `;
 
+const ItemGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px; /* Add space between sections */
+`;
+
+const ItemButton = styled.button`
+    padding: 12px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 8px;
+    text-align: start; /* Use logical property for RTL */
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+    &:hover {
+        border-color: var(--brand);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+`;
+
+const ItemButtonName = styled.div`
+    font-weight: 600;
+    color: var(--text);
+`;
+
+const ItemButtonPrice = styled.div`
+    font-size: 14px;
+    color: var(--muted);
+`;
+
 export default function KgOrders({ apiBase, authToken, toast, branchId, kgItems }) {
     const [searchTerm, setSearchTerm] = useState("");
     const [searchLoading, setSearchLoading] = useState(false);
@@ -92,6 +124,24 @@ export default function KgOrders({ apiBase, authToken, toast, branchId, kgItems 
         }
     };
 
+    const availableGoods = useMemo(() => {
+        return kgItems.filter(item => item.item_type === 'good');
+    }, [kgItems]);
+
+    const availableMorningServices = useMemo(() => {
+        if (!selectedStudent || (selectedStudent.attendance_period !== 'morning' && selectedStudent.attendance_period !== 'both')) {
+            return [];
+        }
+        return kgItems.filter(item => item.item_type === 'morning_service');
+    }, [kgItems, selectedStudent]);
+
+    const availableEveningServices = useMemo(() => {
+        if (!selectedStudent || (selectedStudent.attendance_period !== 'evening' && selectedStudent.attendance_period !== 'both')) {
+            return [];
+        }
+        return kgItems.filter(item => item.item_type === 'evening_service');
+    }, [kgItems, selectedStudent]);
+
     if (selectedStudent) {
         return (
             <Card>
@@ -103,15 +153,51 @@ export default function KgOrders({ apiBase, authToken, toast, branchId, kgItems 
                 </CardHead>
                 <CardBody style={{display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '24px'}}>
                     <div>
-                        <Label>{t("order.available_items")}</Label>
-                        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '12px'}}>
-                            {kgItems.map(item => (
-                                <button key={item.id} onClick={() => addToCart(item)} style={{padding: '12px', border: '1px solid #e2e8f0', borderRadius: '8px', textAlign: 'left', cursor: 'pointer'}}>
-                                    <div style={{fontWeight: '600'}}>{item.name}</div>
-                                    <div style={{fontSize: '14px', color: '#475569'}}>{t("order.price_with_currency", { amount: money(item.default_price_cents), currency: t("order.currency") })}</div>
-                                </button>
-                            ))}
-                        </div>
+                        {/* --- UPDATED: Render sections conditionally based on the new lists --- */}
+                        
+                        {availableMorningServices.length > 0 && (
+                            <>
+                                <Label>Morning Services</Label>
+                                <ItemGrid>
+                                    {availableMorningServices.map(item => (
+                                        <ItemButton key={item.id} onClick={() => addToCart(item)}>
+                                            <ItemButtonName>{item.name}</ItemButtonName>
+                                            <ItemButtonPrice>{t("order.price_with_currency", { amount: money(item.default_price_cents), currency: t("order.currency") })}</ItemButtonPrice>
+                                        </ItemButton>
+                                    ))}
+                                </ItemGrid>
+                            </>
+                        )}
+
+                        {availableEveningServices.length > 0 && (
+                            <>
+                                <Label>Evening Services</Label>
+                                <ItemGrid>
+                                    {availableEveningServices.map(item => (
+                                        <ItemButton key={item.id} onClick={() => addToCart(item)}>
+                                            <ItemButtonName>{item.name}</ItemButtonName>
+                                            <ItemButtonPrice>{t("order.price_with_currency", { amount: money(item.default_price_cents), currency: t("order.currency") })}</ItemButtonPrice>
+                                        </ItemButton>
+                                    ))}
+                                </ItemGrid>
+                            </>
+                        )}
+                        
+                        {availableGoods.length > 0 && (
+                            <>
+                                <Label>Goods (Uniforms, Books)</Label>
+                                <ItemGrid>
+                                    {availableGoods.map(item => (
+                                        <ItemButton key={item.id} onClick={() => addToCart(item)}>
+                                            <ItemButtonName>{item.name}</ItemButtonName>
+                                            <ItemButtonPrice>{t("order.price_with_currency", { amount: money(item.default_price_cents), currency: t("order.currency") })}</ItemButtonPrice>
+                                        </ItemButton>
+                                    ))}
+                                </ItemGrid>
+                            </>
+                        )}
+                        {/* --- END OF UPDATE --- */}
+
                     </div>
                     <div>
                         <Label>{t("order.cart")}</Label>

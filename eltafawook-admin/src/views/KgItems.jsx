@@ -1,17 +1,21 @@
 import React, { useState, useMemo } from "react";
+import styled from "styled-components";
 import { apiFetch } from '../api';
 import { centsFromEGP, money } from '../utils/helpers';
 import Button from '../components/Button';
 import { Card, CardHead, CardTitle, CardBody } from '../components/Card';
 import { Row, Label, Input, Select } from '../components/Form';
-import { Helper, SubTabs, SubTabButton, Pill } from '../components/Misc';
+import { Helper, SubTabs, SubTabButton, Pill, } from '../components/Misc';
 import { useTranslation, Trans } from "react-i18next";
+import { InventoryGrid, InventoryItem, ItemName, StockCount, ItemMeta } from '../components/Table';
 
-export default function KgItems({ apiBase, authToken, toast, branchId, kgItems, setKgItems }) {
-    const [tab, setTab] = useState("create");
+export default function KgItems({ apiBase, authToken, toast, branchId, kgItems, setKgItems, currentUser }) {
+    const [tab, setTab] = useState("inventory");
     const [createForm, setCreateForm] = useState({ name: "", price_egp: "", item_type: "service" });
     const [receiveForm, setReceiveForm] = useState({ kg_item_id: "", qty: 1 });
     const { t, i18n } = useTranslation();
+    const [inventory, setInventory] = useState([]);
+    const [loadingInv, setLoadingInv] = useState(false);
     const physicalItems = useMemo(() => kgItems.filter(i => i.item_type === 'good'), [kgItems]);
 
     const handleCreateItem = async () => {
@@ -40,6 +44,29 @@ export default function KgItems({ apiBase, authToken, toast, branchId, kgItems, 
         }
     };
 
+    const loadInventory = async () => {
+        if (!branchId) return;
+        setLoadingInv(true);
+        try {
+            const itemsToStock = kgItems.filter(i => i.item_type === 'good');
+            const stockData = await Promise.all(
+                itemsToStock.map(async (item) => {
+                    try {
+                        const stock = await apiFetch(apiBase, `/kg-inventory/summary?branch_id=${branchId}&kg_item_id=${item.id}`, { authToken });
+                        return { ...item, on_hand: stock.on_hand };
+                    } catch (e) {
+                        return { ...item, on_hand: 0 };
+                    }
+                })
+            );
+            setInventory(stockData);
+        } catch (e) {
+            toast.push({ title: "Failed to load inventory", description: e.message, tone: "error" });
+        } finally {
+            setLoadingInv(false);
+        }
+    };
+
     const handleReceiveStock = async () => {
         if (!receiveForm.kg_item_id || receiveForm.qty <= 0) {
             toast.push({ title: t("toasts_kg_reports.select_and_qty"), tone: "error" });
@@ -60,12 +87,17 @@ export default function KgItems({ apiBase, authToken, toast, branchId, kgItems, 
             <CardHead><CardTitle>{t("title_kg_reports")}</CardTitle></CardHead>
             <CardBody>
                 <SubTabs>
-                <SubTabButton $active={tab === 'create'} onClick={() => setTab('create')}>
-                    {t("tabs_kg_reports.create")}
-                </SubTabButton>
-                <SubTabButton $active={tab === 'receive'} onClick={() => setTab('receive')}>
-                    {t("tabs_kg_reports.receive")}
-                </SubTabButton>
+                    {currentUser?.role === 'admin' && (
+                        <SubTabButton $active={tab === 'create'} onClick={() => setTab('create')}>
+                            {t("tabs_kg_reports.create")}
+                        </SubTabButton>
+                    )}
+                    <SubTabButton $active={tab === 'receive'} onClick={() => setTab('receive')}>
+                        {t("tabs_kg_reports.receive")}
+                    </SubTabButton>
+                    <SubTabButton $active={tab === 'inventory'} onClick={() => { setTab('inventory'); loadInventory(); }}>
+                        {t("tabs_kg_reports.inventory")}
+                    </SubTabButton>
                 </SubTabs>
 
                 {tab === 'create' && (
@@ -76,7 +108,7 @@ export default function KgItems({ apiBase, authToken, toast, branchId, kgItems, 
                                 <Input placeholder={t("create_kg_reports.item_name_ph")} value={createForm.name} onChange={e => setCreateForm({...createForm, name: e.target.value})} />
                                 <Helper>
                                     <Trans
-                                        i18nKey="create_kg_reports.sku_helper"
+                                        i18nKey={t("create_kg_reports.sku_helper")}
                                         ns="kgItems"
                                         values={{ sku: createForm.name.trim().replace(/\s+/g, "_").toUpperCase() || "..." }}
                                         components={{ 0: <Pill /> }}
@@ -95,6 +127,8 @@ export default function KgItems({ apiBase, authToken, toast, branchId, kgItems, 
                                     >
                                     <option value="service">{t("create_kg_reports.item_type_options.service")}</option>
                                     <option value="good">{t("create_kg_reports.item_type_options.good")}</option>
+                                    <option value="morning_service">{t("create_kg_reports.item_type_options.morning_service")}</option>
+                                    <option value="evening_service">{t("create_kg_reports.item_type_options.evening_service")}</option>
                                     </Select>
                             </div>
                         </Row>
@@ -123,6 +157,25 @@ export default function KgItems({ apiBase, authToken, toast, branchId, kgItems, 
                         </Row>
                         <Button onClick={handleReceiveStock} style={{marginTop: '12px'}}>{t("receive_kg_reports.receive_btn")}</Button>
                     </>
+                )}
+
+                {tab === 'inventory' && (
+                    <div>
+                        <Button onClick={loadInventory} disabled={loadingInv} style={{marginBottom: '16px'}}>
+                            {loadingInv ? t('inventory_kg_reports.loading'): t('inventory_kg_reports.refresh_inventory')}
+                        </Button>
+                        <Helper>{t('inventory_kg_reports.helper_message')}</Helper>
+                        
+                        <InventoryGrid>
+                            {inventory.map(item => (
+                                <InventoryItem key={item.id}>
+                                    <ItemName>{item.name}</ItemName>
+                                    <StockCount>{item.on_hand}</StockCount>
+                                    <ItemMeta>{t('inventory_kg_reports.in_stock')}</ItemMeta>
+                                </InventoryItem>
+                            ))}
+                        </InventoryGrid>
+                    </div>
                 )}
             </CardBody>
         </Card>

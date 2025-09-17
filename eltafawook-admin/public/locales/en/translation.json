@@ -29,7 +29,7 @@
   "register": "Register",
   "edit": "Edit",
   "studentName": "Student Name",
-  "invalidName": "Invalide Name",
+  "invalidName": "Invalid Name",
   "invalidNameDesc": "Enter first and last name only.",
   "invalidPhone": "Invalid phone",
   "invalidPhoneDesc": "Use 11 digits like 01XXXXXXXXX.",
@@ -165,7 +165,9 @@
     }
   },
   "stats": {
-    "gross": "Gross Sales (from orders)",
+    "gross_cash": "Gross Sales (Cash)",
+    "gross_voda": "Gross Sales (Vodafone Cash)",
+    "gross_instapay": "Gross Sales (InstaPay)",
     "adjustments": "Adjustments",
     "net": "Net Revenue (Total)",
     "transactions": "Transactions"
@@ -312,7 +314,8 @@
   "title_kg_reports": "Kindergarten Items & Stock",
   "tabs_kg_reports": {
     "create": "Create Item",
-    "receive": "Receive Stock"
+    "receive": "Receive Stock",
+    "inventory": "Inventory"
   },
   "create_kg_reports": {
     "item_name": "Item Name",
@@ -323,6 +326,8 @@
     "item_type": "Item Type",
     "item_type_options": {
       "service": "Service (e.g., Fees, Trips - unlimited qty)",
+      "morning_service": "Morning Service (e.g., Fees, Trips - unlimited qty)",
+      "evening_service": "Evening Service (e.g., Fees, Trips - unlimited qty)",
       "good": "Good (e.g., T-Shirt, Book - tracked qty)"
     },
     "create_btn": "Create Item"
@@ -333,6 +338,12 @@
     "helper_physical_only": "Only physical goods that require inventory tracking appear here.",
     "qty_received": "Quantity Received",
     "receive_btn": "Receive Stock"
+  },
+  "inventory_kg_reports": {
+    "loading": "Loading",
+    "refresh_inventory": "Refresh Inventory",
+    "helper_message": "This shows the current stock for all physical goods. Services are not tracked.",
+    "in_stock": "In Stock"
   },
   "toasts_kg_reports": {
     "name_price_required": "Name and Price are required.",
@@ -386,7 +397,8 @@
   "title_kg_items": "Kindergarten Reports",
   "tabs_kg_items": {
     "summary": "Summary",
-    "detailed": "Detailed Report"
+    "detailed": "Detailed Report",
+    "subscription": "Subscriptions"
   },
   "period_kg_items": {
     "title": "Report Period",
@@ -431,6 +443,18 @@
     "net": "Net Revenue (Total)",
     "transactions": "Transactions"
   },
+  "subscriptions_kg_items":{
+  "search_statment":"Search by Student Name or Parent Phone",
+  "search":"Search",
+  "searching": "Searching...",
+  "type_search":"Type to search...",
+  "name":"Student Name",
+  "parent_phone":"Parent Phone Number",
+  "last_payment":"Last Payment Date",
+  "next_payment":"Next Payment Date",
+  "last_plan":"Last Plan Used",
+  "no_sub":"No subscriptions found."
+  },
   "toasts_kg_items": {
     "summary_failed_title": "Failed to load summary",
     "invalid_adj_title": "Invalid Adjustment",
@@ -450,6 +474,7 @@
 
   "register_kg_students": {
     "child_info_title": "Child's Information",
+    "register_another": "Register Another Student",
     "labels": {
       "full_name": "Full Name (4 to 7 names)",
       "national_id": "National ID (14 digits)",

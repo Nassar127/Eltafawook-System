@@ -5,7 +5,7 @@ from backend.app.db.base import Base
 from uuid import UUID
 from datetime import datetime
 
-KgItemType = sa.Enum('good', 'service', name='kg_item_type', create_type=False)
+KgItemType = sa.Enum('good', 'service', 'morning_service', 'evening_service',  name='kg_item_type', create_type=False)
 
 class KgItem(Base):
     __tablename__ = "kg_items"

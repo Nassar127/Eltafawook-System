@@ -22,7 +22,8 @@ import { StudentIcon, OrdersIcon, ItemsIcon, TransferIcon, ReportsIcon, KgIcon }
 import logo from './assets/logo.png';
 
 export default function App() {
-  const [apiBase, setApiBase] = useState(() => localStorage.getItem("apiBase") || "https://eltafawook-system.onrender.com/api/v1");
+  // const [apiBase, setApiBase] = useState(() => localStorage.getItem("apiBase") || "https://eltafawook-system.onrender.com/api/v1");
+  const apiBase = "http://localhost:8000/api/v1";
   const [authToken, setAuthToken] = useState(() => localStorage.getItem("authToken") || sessionStorage.getItem("authToken"));
   const [currentUser, setCurrentUser] = useState(null);
   const [settings, setSettings] = useState(loadSettings());
@@ -226,8 +227,8 @@ export default function App() {
                 </NavGrid>
 
                 {view === "students" && <Students apiBase={apiBase} authToken={authToken} toast={toast} schools={schools} branchId={branchId} settings={settings} />}
-                {view === "items" && <Items apiBase={apiBase} authToken={authToken} toast={toast} branchId={branchId} branchCode={branchCode} teachers={teachers} setTeachers={setTeachers} items={items} setItems={setItems} itemById={itemById} teacherById={teacherById} />}
-                {view === "reservations" && (<Orders apiBase={apiBase} authToken={authToken} toast={toast} branchId={branchId} branchCode={branchCode} teachers={teachers} setTeachers={setTeachers} items={items} setItems={setItems} itemById={itemById} teacherById={teacherById}/>)}
+                {view === "items" && <Items apiBase={apiBase} authToken={authToken} toast={toast} branchId={branchId} branchCode={branchCode} teachers={teachers} setTeachers={setTeachers} items={items} setItems={setItems} itemById={itemById} teacherById={teacherById} currentUser={currentUser} />}
+                {view === "reservations" && (<Orders apiBase={apiBase} authToken={authToken} toast={toast} branchId={branchId} branchCode={branchCode} teachers={teachers} setTeachers={setTeachers} items={items} setItems={setItems} itemById={itemById} teacherById={teacherById} currentUser={currentUser}/>)}
                 {view === "reports" && <Reports apiBase={apiBase} authToken={authToken} toast={toast} branchId={branchId} branchCode={branchCode} currentUser={currentUser} />}
                 {currentUser?.role === 'admin' && view === "transfers" && ( <Transfers apiBase={apiBase} authToken={authToken} toast={toast} branches={branches} teachers={teachers} /> )}
             </>
@@ -251,13 +252,12 @@ export default function App() {
                 </NavGrid>
 
                 {view === "kg_students" && <KgStudents apiBase={apiBase} authToken={authToken} toast={toast} branchId={branchId} />}
-                {view === "kg_items" && <KgItems apiBase={apiBase} authToken={authToken} toast={toast} branchId={branchId} kgItems={kgItems} setKgItems={setKgItems} />}      
+                {view === "kg_items" && <KgItems apiBase={apiBase} authToken={authToken} toast={toast} branchId={branchId} kgItems={kgItems} setKgItems={setKgItems} currentUser={currentUser}/>}      
                 {view === "kg_orders" && <KgOrders apiBase={apiBase} authToken={authToken} toast={toast} branchId={branchId} kgItems={kgItems} />}
                 {view === "kg_reports" && <KgReports apiBase={apiBase} authToken={authToken} toast={toast} branchId={branchId} currentUser={currentUser} />}
             </>
         )}
         
-        {/* --- GLOBAL ADMIN VIEWS (accessible from any page) --- */}
         {currentUser?.role === 'admin' && view === "teachers" && <Teachers apiBase={apiBase} authToken={authToken} toast={toast} teachers={teachers} setTeachers={setTeachers} />}
         {currentUser?.role === 'admin' && view === "settings" && 
             <Settings 

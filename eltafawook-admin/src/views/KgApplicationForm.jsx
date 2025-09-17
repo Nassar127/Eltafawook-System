@@ -147,6 +147,27 @@ export default function KgApplicationForm() {
     
     const handleSubmit = async () => {
         setError("");
+
+        if (!form.full_name.trim() || !form.father_name.trim() || !form.date_of_birth) {
+            setError("Please fill in all required fields: Child's Full Name, Father's Name, and Date of Birth.");
+            return;
+        }
+        
+        // The National ID check is already optional (it only runs if a value is entered), so it remains.
+        if (form.national_id && form.national_id.replace(/\D/g, '').length !== 14) {
+            setError("If you enter a National ID for the child, it must be 14 digits.");
+            return;
+        }
+        if (form.father_national_id && form.father_national_id.replace(/\D/g, '').length !== 14) {
+            setError("If you enter a National ID for the father, it must be 14 digits.");
+            return;
+        }
+
+        if (form.needs_bus_subscription === false && !form.alternative_transport_method?.trim()) {
+            setError("If you do not need the bus, please specify the alternative transport method.");
+            return;
+        }
+
         if (!isFullNameValid(form.full_name) || !form.father_name || !form.date_of_birth) {
             setError("Please fill in all required fields: Child's Full Name (min. two names), Father's Name, and Date of Birth.");
             return;
@@ -184,7 +205,7 @@ export default function KgApplicationForm() {
                         <Card>
                             <CardBody style={{textAlign: 'center'}}>
                                 <h2 style={{color: '#059669'}}>{t("toasts_kg_students.reg_success")}</h2>
-                                <p>{t("toasts_kg_students.success_message")}</p>
+                                <p>{t("toasts_kg_students.reg_success")}</p>
                             </CardBody>
                         </Card>
                     ) : (

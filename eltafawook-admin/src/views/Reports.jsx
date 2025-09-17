@@ -17,7 +17,7 @@ const getTodayLocal = () => {
     return `${year}-${month}-${day}`;
 };
 
-export default function KgReports({ apiBase, authToken, toast, branchId, currentUser }) {
+export default function Reports({ apiBase, authToken, toast, branchId, currentUser }) {
     const [tab, setTab] = useState("summary");
     const [loading, setLoading] = useState(false);
     const [reportMode, setReportMode] = useState("day");
@@ -61,8 +61,8 @@ export default function KgReports({ apiBase, authToken, toast, branchId, current
     };
     
     useEffect(() => {
-        if (tab === 'dailySales' && branchId) {
-            fetchSummaryData();
+        if (tab === 'summary' && branchId) {
+        fetchSummaryData();
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [reportDay, reportWeekAnchor, reportMode, tab, branchId]);
@@ -191,8 +191,10 @@ export default function KgReports({ apiBase, authToken, toast, branchId, current
 
                         {loading && <p>{t("summary.loading")}</p>}
                         {summaryData && !loading && (
-                            <Row cols={4} style={{marginTop: 16}}>
-                                <StatBox label={t("stats.gross")} value={money(summaryData.sales_total_cents)} />
+                            <Row cols={6} style={{marginTop: 16}}>
+                                <StatBox label={t("stats.gross_cash")} value={money(summaryData.sales_cash_cents)} />
+                                <StatBox label={t("stats.gross_voda")} value={money(summaryData.sales_voda_cents)} />
+                                <StatBox label={t("stats.gross_instapay")} value={money(summaryData.sales_instapay_cents)} />
                                 <StatBox label={t("stats.adjustments")} value={money(summaryData.adjustments_total_cents)} positive={summaryData.adjustments_total_cents > 0} negative={summaryData.adjustments_total_cents < 0} />
                                 <StatBox label={t("stats.net")} value={money(summaryData.net_total_cents)} isTotal />
                                 <StatBox label={t("stats.transactions")} value={summaryData.sales_count} />

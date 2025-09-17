@@ -2,7 +2,7 @@ from __future__ import annotations
 from datetime import date, datetime
 from uuid import UUID
 from typing import Optional, List, Literal
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, field_validator, model_validator, ConfigDict
 
 KgStudentStatus = Literal['pending', 'accepted', 'rejected', 'waitlisted']
 KgAttendancePeriod = Literal['morning', 'evening', 'both']
@@ -34,6 +34,19 @@ class KgStudentBase(BaseModel):
     needs_bus_subscription: bool = False
     alternative_transport_method: Optional[str] = None
     authorized_pickups: Optional[List[str]] = None
+
+    @field_validator('national_id', 'father_national_id', 'guardian_national_id', mode='before')
+    @classmethod
+    def empty_str_to_none(cls, v):
+        if isinstance(v, str) and not v.strip():
+            return None
+        return v
+
+    @model_validator(mode='after')
+    def check_transport_method(self):
+        if self.needs_bus_subscription is False and not self.alternative_transport_method:
+            raise ValueError('If bus subscription is not needed, an alternative transport method must be provided.')
+        return self
 
 class KgApplicationCreate(KgStudentBase):
     pass

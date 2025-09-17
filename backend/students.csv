@@ -1,0 +1,1096 @@
+﻿StudentID,sName,PhoneNo,ParentPhoneNo,School,SeatingNo,Gender,Grade,CityOfResidency,Language,Section,isAllowed
+1,محمد نصار,1273068936,1273068936,قليوب الرسميه امتميزه لغات,,Male,3rd Grade,Banha,L,Math,0
+2,GUEST,1234567890,1234567890,عبدالحليم نور الدين المشتركة بالرملة,,Male,3rd Grade,Banha,A,Math,0
+3,Khaled Ahmed,1020274839,1021470994,عبدالحليم نور الدين المشتركة بالرملة,,Male,3rd Grade,Banha,A,Math,0
+4,Mohamed Yasser,1280550623,1225273183,منصور بدارالثانوية,,Male,3rd Grade,Banha,A,Math,0
+5,Loay Hesham,1273607464,1284188907,منصور بدارالثانوية,,Male,3rd Grade,Banha,A,Math,0
+6,Haneen Abdelsatar,1281335198,1226459966,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+7,Sara Hassan,1208185525,1282568987,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+8,Anas Ahmed,1066189781,1062089213,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+9,Niara mostafa,1026203518,1064315377,بنها الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+10,Mohamed Amr,1114657780,1114055325,شبلنجة الثانوية بنين,,Male,3rd Grade,Banha,A,Math,0
+11,Mohamed Ibrahim,1211315289,1212387545,منصور بدارالثانوية,,Male,3rd Grade,Banha,A,Math,0
+12,Alaa Elsayed,1143540846,1004004936,الشهيد محمد عادل حلاوه,,Female,3rd Grade,Banha,A,Science,0
+13,Nour Atef,1000998962,1000998962,معهد فتيات كفر شكر,,Male,3rd Grade,Banha,A,Science,0
+14,Ame Elsaid,1223212789,1271528984,منصور بدارالثانوية,,Male,3rd Grade,Banha,A,Science,0
+15,Mahmoud Maher,1017907520,1145069602,عرب الرمل الثانوية المشتركة,,Male,3rd Grade,Banha,A,Math,0
+16,Ahmed Maher,1002576859,1145069602,عرب الرمل الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+17,Nelly Elshafey,1099486611,1010363944,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Literature,0
+18,Silvana Remon,1278481186,1270832235,طوخ الثانويه الخاصه,,Female,3rd Grade,Banha,L,Math,0
+19,Nada Ashraf,1097545286,1006510699,كفر شكر,,Female,3rd Grade,Banha,A,Science,0
+20,Habiba Medhat,1228541629,1010961903,صوك الضجاك الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+21,Ahmed El-Labody,1091087756,1225802694,السلام الخاصة ببنها,,Male,3rd Grade,Banha,L,Science,0
+22,Omar Mohamed,1222601874,1222601874,العمار الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+23,Malak Ibrahim,1101004275,1224597243,السلام الخاصة ببنها,,Female,3rd Grade,Banha,L,Science,0
+24,Ahmed Ibrahim,1112817171,1224597243,السلام الخاصة ببنها,,Male,3rd Grade,Banha,L,Science,0
+25,Tasneem Ahmed,1025281966,1104906946,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+26,Badr Hany,1100670217,1110502032,شبلنجة الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+27,Hanen Ehab,1280316668,1024117899,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+28,Abdelgaafar Abdeltaoab,1201115853,1221444708,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+29,Hagar Sayed,1094522266,1007176489,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+30,Shamel Walid,1025857320,1271783225,كفر بطا الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+31,Habiba Morsy,1067151989,1092286832,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+32,Ziad Khaled,1152114512,1114379446,شبلنجة الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+33,Fatma Hassan,1102984618,1159038030,تفهنة العزب,,Female,3rd Grade,Banha,A,Math,0
+34,Tasneem Mohamed,1552401928,1114995158,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+35,Nada Mohamed,1008707686,1116331210,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+36,Gana Ahmed,1013704281,1145892249,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+37,Omar Hany,1002583800,1227848419,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+38,Youssef Elsayed,1204671984,1220279398,الشهيد محمود عماد دغش,,Male,3rd Grade,Banha,A,Science,0
+39,Yomna Mohamed,1026369923,1020658605,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+40,Omar Osama,1064011383,1023899981,امياى الثانوية المشتركه,,Male,3rd Grade,Banha,A,Math,0
+41,Asmaa Mohamed,1008352938,1008352938,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+42,Omar Mohamed,1280599905,1270666012,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Science,0
+43,Sara Elsayed,1093587315,1555960077,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+44,Sohaila Hossam,1069755734,1024599651,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+45,Shahd Essam,1097633185,1281976601,الرملة الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+46,Aya Ayman,1063293502,1203572919,عبدالحليم نور الدين المشتركة بالرملة,,Female,3rd Grade,Banha,A,Math,0
+47,Abdelrahman Mahmoud,1224609780,1024660412,طوخ الثانوية الخاصة,,Male,3rd Grade,Banha,A,Science,0
+48,Nour Mohamed,1002847099,1021559709,طوخ الثانوية الخاصة,,Female,3rd Grade,Banha,A,Science,1
+49,Ahmed Magdy,1030063183,1064005909,امياى الثانوية المشتركه,,Male,3rd Grade,Banha,A,Science,0
+50,Begad Mohamed,1061962610,1004404394,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+51,Rawan Ali,1288088664,1286555654,بنها الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+52,Mariam Mohamed,1023430150,1006874720,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+53,Mohannad Mohamed,1069726332,1068582635,المنشية العسكرية ببنها,,Male,3rd Grade,Banha,A,Math,0
+54,Ahmed Belal,1288614904,1228681879,شبلنجة الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+55,Maiven Magdy,1554469581,1228050306,احمد فريد,,Female,3rd Grade,Banha,A,Math,0
+56,Mohamed Nassar,1273068936,1273068936,احمد فريد,,Female,3rd Grade,Banha,A,Math,0
+57,Aya Osama,1025575157,1099219262,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+58,Esraa Ahmed,1094922769,1010875986,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+59,Omar Ahmed,1069742197,1064755255,الشهيد احمد فؤاد الثانوية العسكرية,,Male,3rd Grade,Banha,A,Science,0
+60,Shahd Mohamed,1090953467,1090487591,الشهيد احمد عبد النبى عطوة,,Female,3rd Grade,Banha,A,Math,0
+61,Naira Farag,1125532657,1116172495,الشهيد احمد عبد النبى عطوة,,Female,3rd Grade,Banha,A,Science,0
+62,Hadeer Tarek,1157210692,1064092557,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+63,Hadeer Salah,1143576879,1155753026,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+64,Nermen Shabaan,1099310274,1060872956,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+65,Malak Wael,1096294625,1022164736,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+66,Judy Wessam,1128191727,1122869254,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+67,Mohamed Elsayed,1008904072,1008904072,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+68,Amr Gamal,1069657333,1098566757,مرصفا الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+69,Ziad Abosaty,1228306742,1142136261,الجعفرية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+70,Ahmed Mohamed,1090049492,1097982767,الرملة الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+71,Nour Ayman,1009030961,1009030351,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+72,Ziad Ayman,1272094079,1224668646,منصور بدارالثانوية,,Male,3rd Grade,Banha,A,Science,0
+73,Malak Ashraf,1003547861,1005523293,ابو بكر الصديق الخاصة,,Female,3rd Grade,Banha,A,Science,0
+74,Sohaila Taher,1284823695,1119639407,الشهيد محمد نجيب الحارثى,,Female,3rd Grade,Banha,A,Science,0
+75,Mohamed Adel,1226189390,1222932510,كفر بطا الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+76,Eman Omar,1095947340,1005065723,كفر شكر الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+77,Aya Nasser,1270935108,1275075101,منصور بدارالثانوية,,Female,3rd Grade,Banha,A,Science,0
+78,Mohamed Sherif,1033741118,1014403836,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+79,Mahmoud Abdelaziz,1092339169,1017320193,الشهيد عقيد طيار وليد اسماعيل,,Male,3rd Grade,Qaliub,A,Science,0
+80,Omar Sabry,1276932569,1095661833,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+81,Abdelmomen Khaled,1015992017,1091167349,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+82,Menna Ahmed,1092095366,1090061561,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+83,Nejar Ahmed,1098402156,1098495507,كفر منصور الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+84,Eiad Hesham,1272751819,1280850709,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+85,Ahmed Khaled,1027417033,1229281593,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+86,Nermeen Khairy,1201510335,1201510445,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+87,Salma Atef,1556844763,1002767773,الشهيد نجيب الحارثي,,Female,3rd Grade,Banha,A,Science,0
+88,Ahmed Hossam,1278007563,1225840688,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+89,Malak Hazem,1020993464,1063635917,كفر شكر,,Female,3rd Grade,Banha,A,Science,0
+90,Rana Walid,1022052560,1005788950,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Math,0
+91,Salma Shokry,1126965309,1155758590,الشموت الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+92,Abdullah Mohamed,1013927566,1005882518,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+93,Bahi Ehab,1200575328,1281599949,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Science,0
+94,Reem Salah,1110799295,1123414166,بتمده الثانوية المشتركة,,Female,3rd Grade,Banha,A,Math,0
+95,Hagar Mourad,1223407731,1273511307,قها الثانوية,,Female,3rd Grade,Banha,A,Math,0
+96,Salma Ali,1140770531,1116424241,الشهيد محمد نجيب الحارثى,,Female,3rd Grade,Banha,A,Science,0
+97,Ahmed Mohamed,1017828693,1010200210,طوخ الثانوية الخاصة,,Male,3rd Grade,Banha,A,Science,0
+98,Raafat Hassan,1025608026,1115349725,ام خنان الثانوية,,Male,3rd Grade,Banha,A,Science,0
+99,Abdullah Ayman,1556499341,1557739214,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Math,0
+100,Noreen Mohamed,1006048449,1063271418,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Math,0
+101,Abdelrahman Salah,1224824463,1211992646,الشهيد محمد جمال الاشقر,,Male,3rd Grade,Banha,A,Math,0
+102,Jana Fahmy,1020805413,1221924009,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+103,Noreen Emry,1000534590,1066680866,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+104,Mona Mahmoud,1064709749,1018672783,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Literature,0
+105,Ahmed Mohamed,1553033526,1012790611,اسطنها الثانوية مشتركة,,Male,3rd Grade,Banha,A,Science,0
+106,Abeer Ayman,1023154220,1281971265,كفر بطا الثانويه المشتركه,,Female,3rd Grade,Banha,A,Science,0
+107,Mostafa Hesham,1067079836,1064555747,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+108,ahmed elabody,1091087756,1225802694,السلام الخاصة ببنها,,Male,3rd Grade,Banha,L,Science,0
+109,nermeen mohamed,1272092875,1221687969,بنها الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+110,yousef ammar,1098834230,1008911927,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+111,ahmed ebrahim,1112817171,1224597243,السلام الخاصة ببنها,,Male,3rd Grade,Banha,L,Science,0
+112,malak ebrahim,1101004275,1224597243,السلام الخاصة ببنها,,Female,3rd Grade,Banha,L,Science,0
+113,habiba ahmed,1024354903,1069231122,امياى الثانوية المشتركه,,Female,3rd Grade,Banha,A,Science,0
+114,hana hatem,1091809321,1066399833,الشهيد مصطفى عطايا,,Female,3rd Grade,Banha,A,Science,0
+115,youse hesham,1013577538,1222706109,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+116,marwa atef,1023362578,1090288352,امياى الثانوية المشتركه,,Female,3rd Grade,Banha,A,Science,0
+117,sohila taha,1228617296,1119639407,الشهيد محمد نجيب الحارثى,,Female,3rd Grade,Banha,A,Science,0
+118,mostafa mohamed,1091536285,1090137855,طوخ الثانوية الخاصة,,Male,3rd Grade,Banha,A,Math,0
+119,shamel waled,1025857320,1060325308,كفر بطا الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+120,ahmed amir,1091966144,1004021853,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Math,0
+121,ahmed eleraky,1124669276,1110061244,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+122,aram ahmed,1277447700,1026797089,بنها الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+123,rodina tamer,1222230029,1550087476,الشهيد النقيب محمد ياسر يوسف محمد امام الرسميه لغات,,Female,3rd Grade,Banha,L,Science,0
+124,mohamed ayman,1221596759,1220897208,منصور محمد بدار الثانويه المشتركه,,Male,3rd Grade,Banha,A,Math,0
+125,yousef mohamed,1069767731,1063397312,الشهيد محمد جمال الاشقر,,Male,3rd Grade,Banha,A,Math,0
+126,omar ashraf,1063251615,1112474582,العمار الثانويه المشتركه,,Male,3rd Grade,Banha,A,Science,0
+127,habiba refat,1224839760,1112474582,العمار الثانويه المشتركه,,Female,2nd Grade,Banha,A,Science,0
+128,ganna khaled,1127923397,1011206133,الشهيد احمد عمارالثانوية بنات,,Female,2nd Grade,Banha,A,Science,0
+129,mohamed elsaeed,1226313094,1271818399,منصور محمد بدار الثانويه,,Male,3rd Grade,Banha,A,Math,0
+130,salma mohamed,1121341620,1121341600,الشهيد عبدالرازق السعيد يحيى بنات,,Female,3rd Grade,Banha,A,Math,0
+131,ahmed khaled,1098687119,1096880857,العسكرية الثانوية بنين,,Male,3rd Grade,Banha,A,Math,0
+132,tasnim mohamed,1552401928,1114995158,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+133,mohamed ahmed,1152378634,1152375874,الشهيد اشرف كامل الهادى عجاج المشتركة,,Male,3rd Grade,Banha,A,Math,0
+134,omar sabry,1276932569,1095661833,بنها الثانوية بنات,,Male,3rd Grade,Banha,A,Science,0
+135,jody wesam,1128191727,1122869254,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+136,mustafa ahmed,1030042688,1003832689,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Science,0
+137,samar gamal,1127240366,1146219646,كفر العمار المشتركة,,Female,2nd Grade,Banha,A,Science,0
+138,malak elakshar,1553250006,1023595925,الشيماء,,Female,3rd Grade,Banha,A,Science,0
+139,renad mohamed,1095401335,1092937439,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+140,abdrahman mohamed,1062875057,1020950995,طوخ الثانوية الخاصة,,Male,3rd Grade,Banha,A,Math,0
+141,yomna tamer,1063712631,1006258853,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+142,hagar khaled,1014975527,1027799321,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+143,ziad atef,1005599106,1011962419,عمار بن ياسر الثانويه,,Male,3rd Grade,Banha,A,Science,0
+144,ahmed ebrahim,1022892728,1067277018,الرملة الثانوية المشتركة,,Male,2nd Grade,Banha,A,Science,0
+145,jana ayman,1009030364,1009030351,مصطفى كامل,,Female,2nd Grade,Banha,L,Science,0
+146,nour ayman,1009030961,1009030351,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+147,ganna ahmed,1013704281,1145892249,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+148,amr ezzat,1280273251,1103669460,الشهيد ابراهيم محمد ابراهيم,,Male,3rd Grade,Banha,A,Science,0
+149,yousef alaa,1508806133,1099956140,دملو الثانوية المشتركه,,Male,3rd Grade,Banha,A,Science,0
+150,shahd waled,1507958688,1110553045,تفهنا العزب الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+151,habiba mohamed,1204406948,1212012402,الشهيد خالد المغربي,,Female,3rd Grade,Banha,A,Math,0
+152,hanin ehab,1280316668,1024117899,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Math,0
+153,mariam goda,1155151657,1155151657,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+154,ahmed elnady,1101317572,1010213626,الشهيد اشرف كامل المشتركة,,Male,3rd Grade,Banha,A,Math,0
+155,mohamed wageh,1221332428,1221332171,قها الرسميه لغات,,Male,1st Grade,Banha,L,Science,0
+156,esraa abdelhamed,1202317951,1289188760,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+157,basant sobhy,1024566420,1024566420,الشهيد محمد صبرى الثانويه المشتركه,,Female,3rd Grade,Banha,A,Science,0
+158,alaa mohamed,1050949455,1050949455,الشهيد مجدى القشاش بنات,,Female,2nd Grade,Banha,A,Science,0
+159,omar tamer,1098851825,1022107730,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+160,ahmed hassan,1552752007,1554533215,الشهيد محمد كريم احمد ضيف,,Male,3rd Grade,Banha,A,Math,0
+161,remas hany,1222697975,1226041727,مدحت طلعت الرسمية لغات,,Female,2nd Grade,Banha,L,Science,0
+162,nour mohamed,1554214547,1061191357,الشهيد مجدى القشاش بنات,,Female,2nd Grade,Banha,A,Science,0
+163,mariam ahmed,1279427878,1226522660,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+164,abdrahman saad,1025069636,1069428074,شبلنجة الثانوية بنين,,Male,3rd Grade,Banha,A,Math,0
+165,abdallah saad,1153844694,1022199735,شبلنجة الثانوية بنين,,Male,3rd Grade,Banha,A,Literature,0
+166,malak ashraf,1003547861,1005523293,ابو بكر الصديق الخاصة,,Female,3rd Grade,Banha,A,Literature,0
+167,hassan eslam,1121579609,1144731604,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,3rd Grade,Banha,A,Math,0
+168,mohand mohamed,1069726332,1212065018,المنشيه العسكريه,,Male,3rd Grade,Banha,A,Math,0
+169,alaa elsaid,1022288145,1006800839,الشهيد محمد عادل حلاوه,,Male,3rd Grade,Banha,A,Science,0
+170,jana ahmed,1016783455,1001048556,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,1
+171,nada ayman,1277835007,1145558413,السادات الثانوية بنات بشبلنجة,,Female,3rd Grade,Banha,A,Science,0
+172,mohamed hany,1022277646,1011119935,الثانويه العسكريه بنين,,Male,3rd Grade,Banha,A,Math,0
+173,eman ahmed,1060702629,1018326854,تل بنى تميم الاعداديه والثانويه المشتركه,,Female,3rd Grade,Banha,A,Science,0
+174,mariem medhat,1094557276,1067041979,تيرسا الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+175,adham mustafa,1001398540,1003130320,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+176,mariam ahmed,1212827625,1222922975,ام المؤمنين الثانويه بنات,,Female,2nd Grade,Banha,A,Science,0
+177,eiad mohamed,1099933448,1013144402,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+178,fatma mamdoh,1275274810,1273381580,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+179,habiba mohamed,1276298188,1281274730,كفر الجمال الرسميه لغات,,Female,3rd Grade,Banha,L,Science,0
+180,shazay wael,1094951101,1015082111,الشهيد عبدالمنعم رياض المشتركه,,Female,2nd Grade,Banha,A,Science,0
+181,roaa mustafa,1287626071,1200028645,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+182,esaf ashraf,1012484422,1010663806,السلام الخاصة ببنها,,Male,3rd Grade,Banha,L,Science,0
+183,mohamed abdwahab,1281733416,1119699422,الشموت الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+184,yousef samy,1013503283,1007872858,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+185,mohamed hany,1010481141,1013916100,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+186,eslam abdelhamed,1204658812,1225358495,البنك الوطنى,,Male,2nd Grade,Banha,A,Science,0
+187,salma abdelhamed,1286697235,1225358495,بنها الثانوية بنات,,Female,1st Grade,Banha,A,Science,0
+188,jood khaled,1553752405,1032249121,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+189,mustafa mohamed,1050403616,1012963500,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+190,jana soliman,1091031114,1000953952,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+191,mohamed ahmed,1098759905,1024559864,الشهيد الهامى عبدالمنعم,,Male,2nd Grade,Banha,A,Science,0
+192,nelly elshafy,1099486611,1010363944,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Literature,0
+193,ahmed elgobashy,1064458215,1061107633,عبدالحليم نور الدين,,Male,3rd Grade,Banha,A,Math,0
+194,omnia fahmy,1288962287,1201656110,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+195,mohamed khaled,1095960162,1000857562,كفر شكر الرسمية لغات,,Male,3rd Grade,Banha,A,Literature,0
+196,Ali Amr,1500963505,1212846000,حامد جوهر,,Male,3rd Grade,Banha,L,Math,0
+197,salma atef,1556844763,1002767773,الشهيد محمد نجيب الحارثى,,Female,3rd Grade,Banha,A,Science,0
+198,mariem mohamed,1023430150,1006874720,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+199,nermeen khairy,1015551109,1201510445,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+200,rawan mustafa,1270093055,1012929730,الشهيد محمد حسن التجريبى,,Female,3rd Grade,Banha,L,Science,0
+201,shahd mohamed,1099907354,1033917767,الشهيد محمد حسن التجريبى,,Female,3rd Grade,Banha,L,Science,0
+202,mohand nader,1068372439,1096507652,الثانويه الرياضيه بنين,,Male,3rd Grade,Banha,A,Math,0
+203,malak mohamed,1006318651,1118486851,الشهيد محمد حسن التجريبى,,Female,3rd Grade,Banha,L,Science,0
+204,yousef mohamed,1276420088,1092071887,عبدالحليم نور الدين المشتركة بالرملة,,Male,3rd Grade,Banha,A,Science,0
+205,nahla amin,1205409013,1280209014,الشهيد محمد حسن التجريبى,,Female,3rd Grade,Banha,L,Science,0
+206,monzer ahmed,1030502762,1004084810,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+207,omar mustafa,1283519903,1000801108,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+208,tedaous moheb,1212908923,1229477445,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+209,mustafa AHMED,1094023494,1021293021,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+210,JOODY HASSAN,1006345684,1271813800,احمد زويل الرسميه لغات,,Female,3rd Grade,Banha,L,Math,0
+211,haneen abdelstar,1281335198,1226459966,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+212,meral sherief,1277439191,1201199476,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+213,haneen hossam,1063831127,1001693306,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+214,omar ahmed,1284370730,1225379670,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Science,0
+215,eyad hany,1155354951,1206691510,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+216,mariem abdelhalem,1012202789,1000917802,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Literature,0
+217,salma ehab,1070880499,1022030001,الشهيد عبد الرازق سعيد,,Female,2nd Grade,Banha,A,Science,0
+218,sara ahmed,1032073929,1005782639,الشهيد احمد عبد النبى عطوة,,Female,3rd Grade,Banha,A,Science,0
+219,omar amir,1212844212,1273045456,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+220,abdallah hany,1288098804,1144535370,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,3rd Grade,Banha,A,Math,0
+221,elsaid mohamed,1060651815,1125156883,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,3rd Grade,Banha,A,Math,0
+222,ahmed khaled,1000857562,1005677651,الشهيد احمد فؤاد الثانوية العسكرية,,Male,3rd Grade,Banha,A,Literature,0
+223,shahd esam,1097633185,1281976601,عبدالحليم نور الدين المشتركة بالرملة,,Female,3rd Grade,Banha,A,Science,0
+224,abdelrahman ahmed,1003027321,1003990120,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Math,0
+225,mohamed ashraf,1210917286,1288105511,الشهيد محمد عادل حلاوه,,Male,3rd Grade,Banha,A,Science,0
+226,hana mohamed,1223509907,1223452996,بنها الثانوية بنات,,Female,2nd Grade,Banha,A,Science,0
+227,salma yousef,1013281109,1024785024,الشيماء ثانويه بنات ببنها,,Female,2nd Grade,Banha,A,Science,0
+228,ali hesham,1008515408,1004125535,السلام الخاصة ببنها,,Male,3rd Grade,Banha,L,Science,0
+229,souhila hossam,1069755734,1142126990,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+230,mary esmat,1557646972,1227426389,الشهيد محمد حسن التجريبى,,Female,1st Grade,Banha,L,Science,0
+231,raghad mohamed,1062822667,1221499910,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+232,mrwan mohamed,1000685843,1005596414,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+233,nardeen wael,1016464674,1013531202,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+234,malak mohamed,1032574217,1006187727,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+235,abdelrahman ahmed,1003027321,1003990120,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Math,0
+236,hala haitham,1014201206,1007694279,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+237,saad haithem,1001172908,1007694279,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+238,mohamed ahmed,1022874199,1090061561,بنها الثانوية بنين,,Male,2nd Grade,Banha,A,Science,0
+239,yasmeen mohamed,1096400814,1005318751,بنها الثانوية بنات,,Female,2nd Grade,Banha,A,Science,0
+240,omar ali,1097434284,1554299226,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Math,0
+241,adham mamdoh,1116694542,1129343337,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,3rd Grade,Banha,A,Math,0
+242,nour ahmed,1282230598,1008918216,مصطفى كامل,,Female,2nd Grade,Banha,L,Science,0
+243,omar tamer,1284035357,1288080054,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+244,menna shrief,1098612098,1002587356,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+245,marina george,1272772685,1203790002,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+246,sama hany,1205288975,1220852731,الشهيد محمد حسن التجريبى,,Female,3rd Grade,Banha,L,Science,0
+247,mohamed ahmed,1270229160,1226807210,طوخ الثانويه الخاصه,,Male,3rd Grade,Banha,L,Math,0
+248,zina ehab,1222253489,1115776301,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+249,mariem dabour,1009941965,1080823647,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+250,sama mohamed,1064845337,1019787061,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+251,mahmoud mohamed,1551696675,1005571448,مشلة الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+252,jana osama,1223172181,1205431966,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+253,abdelmoamen khaled,1015992017,1091167349,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+254,hagar khaled,1556152586,1283997632,بنها الثانوية بنين,,Female,3rd Grade,Banha,A,Science,0
+255,mohamed nour,1141825064,1027315602,الشهيد مدحت طلعت التجريبى لغات,,Male,2nd Grade,Banha,L,Science,0
+256,fares mohamed,1069430053,1011006245,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+257,ahmed osama,1118915000,1092475889,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+258,fatma ashraf,1033725894,1007465299,الفتح الخاصة,,Female,3rd Grade,Banha,A,Science,0
+259,seifeldeen wesam,1554469607,1067543674,مصطفى كامل,,Male,1st Grade,Banha,L,Science,0
+260,salma hossam,1032619245,1005878894,الشيماء ثانويه بنات ببنها,,Female,2nd Grade,Banha,A,Science,0
+261,hala bahaa,1001031200,1003759368,السلام الخاصة ببنها,,Female,3rd Grade,Banha,L,Math,0
+262,omar ahmed,1003584481,1006833550,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+263,abdelhamed samer,1064551217,1225459221,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+264,basant shereif,1146490755,1114112794,كفر منصور الثانوية مشتركة,,Female,3rd Grade,Banha,A,Science,0
+265,mustafa elsaid,1019508620,1019508620,الشهيد احمد عبد النبى عطوة,,Male,3rd Grade,Banha,A,Math,0
+266,moren samaan,1210663995,1220746066,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+267,samar gamal,1127240366,1146219646,كفر العمار الاعدادية الثانوية المشتركة,,Female,2nd Grade,Banha,A,Science,0
+268,sama elsaid,1097338311,1064120260,الشهيد محمد نجيب الحارثى,,Female,3rd Grade,Banha,A,Science,0
+269,rodina hany,1559331860,1283467736,الشيماء ثانويه بنات ببنها,,Female,2nd Grade,Banha,A,Science,0
+270,maisa mohamed,1003569344,1205366009,كفر بطا الثانوية المشتركة,,Female,2nd Grade,Banha,A,Science,0
+271,menna mohamed,1014814153,1090800649,كفر شكر الرسمية لغات,,Female,2nd Grade,Banha,L,Science,0
+272,mohamed mustafa,1005410575,1554214787,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+273,fatma mohamed,1095009152,1006727983,الشهيد محمد نجيب الحارثى,,Female,1st Grade,Banha,A,Science,0
+274,rahma shokry,1100187846,1026806406,احمد زويل الرسميه لغات,,Female,3rd Grade,Banha,L,Science,0
+275,jana tamer,1223261577,1272234471,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+276,malak eslam,1552623519,1211755584,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+277,mahmoud ebrahim,1212387545,1276914539,منصور بدارالثانوية,,Male,3rd Grade,Banha,A,Math,0
+278,abdelrahman mohamed,1550581997,1270861648,شبلنجة الثانوية بنين,,Male,1st Grade,Banha,A,Science,0
+279,ahmed tamer,1124669276,1110061244,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+280,habiba alaa,1024747597,1060668901,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+281,fatma ebrahim,1092768031,1060668901,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+282,rana eslam,1095586372,1007803171,مصطفى كامل,,Female,1st Grade,Banha,L,Science,0
+283,ahmed mustafa,1093260283,1060036890,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+284,khadiga ahmed,1119248569,1129190940,الشيماء ثانويه بنات ببنها,,Female,2nd Grade,Banha,A,Science,0
+285,tomas sameh,1223505974,1273112320,شبلنجة الثانوية بنين,,Male,3rd Grade,Banha,A,Math,0
+286,asmaa khalifa,1146619881,1113346255,الرحاب المشتركة برشوم,,Female,2nd Grade,Banha,A,Science,0
+287,mohamed wael,1067118228,1006606234,بنها الثانوية بنين,,Male,2nd Grade,Banha,A,Science,0
+288,donna maseha,1507785505,1099918327,الشمس الرسمية لغات,,Female,2nd Grade,Banha,L,Science,0
+289,kareem ekramy,1017640376,1207662908,بلتان الثانوية العامة,,Male,1st Grade,Banha,A,Science,0
+290,nataly nazih,1284444540,1112506573,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+291,mahmoud sameh,1117247362,1113709919,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Female,3rd Grade,Banha,A,Literature,0
+292,anas ahmed,1029591048,1062018521,كفر شكر الرسمية لغات,,Male,2nd Grade,Banha,L,Science,0
+293,karem emad,1151633778,1110335481,الشهيد احمد عبد النبى عطوة,,Female,2nd Grade,Banha,A,Science,0
+294,malak ahmed,1019792948,1155452012,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+295,ahmed alaa,1120169164,1223786363,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Math,0
+296,habiba mohamed,1115311770,1091642089,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+297,fatma hassan,1278335499,1205482944,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+298,marwan ahmed,1006925664,1016865023,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+299,seifeldeen haitham,1030845461,1060365278,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+300,mahmoud ahmed,1016126138,1006135038,مصطفى كامل,,Male,2nd Grade,Banha,L,Science,0
+301,mahmoud bakry,1098905301,1063867956,معهد بنين طحلة,,Male,3rd Grade,Banha,A,Science,0
+302,julie osama,1018481788,1008869694,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+303,sama yasser,1025275765,1013762777,الفتح الخاصة,,Female,3rd Grade,Banha,A,Science,0
+304,abdelrahman mohamed,1069169780,1016323937,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+305,khaled mohamed,1099039577,1061625804,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Science,0
+306,lina ahmed,1015080845,1062210887,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+307,rawan mohamed,1008442634,1016917280,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+308,yoanna ekramy,1274108369,1273584612,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+309,botamina ehab,1210078885,1285405078,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+310,karen sameh,1288949228,1222986158,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+311,youmna eldakrory,1060539387,1287263705,كفر الجمال التجريبية لغات,,Female,3rd Grade,Banha,L,Science,0
+312,omar ahmed,1556575112,1005353368,كفر شكر الرسمية لغات,,Male,3rd Grade,Banha,L,Science,0
+313,mohamed tarek,1063292730,1001093314,كفر شكر الرسمية لغات,,Male,3rd Grade,Banha,L,Science,0
+314,nagham osama,1099325258,1001234722,مصر الحرة للغات,,Female,3rd Grade,Banha,L,Science,0
+315,ahmed tarek,1554686929,1202504270,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+316,habiba saad,1068062146,1098941556,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+317,marina basem,1271417766,1220019842,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+318,esraa saber,1100601457,1155019096,بتمدة الثانوية المشتركة,,Female,2nd Grade,Banha,A,Science,0
+319,roaa mohmed,1009505024,1066600404,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+320,jana mohamed,1022669429,1094461818,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+321,fatma moheb,1117790765,1004908259,السلام الخاصة ببنها,,Female,3rd Grade,Banha,L,Science,0
+322,abdelrahman mohamed,1112933946,1112933946,الشهيد احمد فؤاد الثانوية العسكرية,,Male,3rd Grade,Banha,A,Science,0
+323,kenzy mahmoud,1023266960,1013306867,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+324,jovana safa,1222428176,1223399004,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+325,amr elsaeed,1223212789,1205930606,منصور بدارالثانوية,,Male,3rd Grade,Banha,A,Math,0
+326,hana bahaa,1224423407,1223920704,طوخ الثانويه الخاصه,,Female,3rd Grade,Banha,L,Science,0
+327,osama ahmed,1080547641,1153036379,الشهيد اشرف كامل المشتركة,,Male,2nd Grade,Banha,A,Science,0
+328,mustafa hatem,1226824577,1150251862,الشهيد اشرف كامل المشتركة,,Male,2nd Grade,Banha,A,Science,0
+329,ahmed sameh,1221464660,1223920160,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+330,ahmed hamada,1013867173,1013867173,الشهيد محمد عادل حلاوه,,Male,2nd Grade,Banha,A,Science,0
+331,mariem ali,1289613773,1221226020,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+332,saja mohamed,1558141447,1020029111,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+333,ahmed mohamed,1012692635,1030103360,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+334,marwan khaled,1112627731,1115574008,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Math,0
+335,mohamed ebrahim,1025527378,1006263079,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+336,yasmeen yaser,1202993250,1273922733,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+337,zyaid amr,1069984864,1000857307,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+338,shady ahmed,1060676719,1273967659,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+339,aml mohamed,1280694362,1224288616,بنها الثانوية بنات,,Female,3rd Grade,Banha,A,Literature,0
+340,malak medhat,1068180274,1206146262,بنها الثانوية بنات,,Female,1st Grade,Banha,A,Science,0
+341,nanssy mohamed,1551421509,1068612583,احمد زويل الرسميه لغات,,Female,3rd Grade,Banha,L,Science,0
+342,roqaia abaas,1114241380,1144949642,الشهيد تامر عبد الحافظ الثانوية المشتركة,,Female,2nd Grade,Banha,A,Science,0
+343,omar mohamed,1201240523,1276042470,الشهيد مدحت طلعت الرسمية لغات,,Male,1st Grade,Banha,L,Science,0
+344,raneem ahmed,1097427383,1063575747,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+345,marwan wael,1063678891,1066567064,الفتح التجريبى الرسمية لغات,,Male,3rd Grade,Banha,L,Science,0
+346,sara amer,1070448864,1027222972,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+347,abdelmoamen hassan,1212530890,1212514294,طوخ الثانويه الخاصه,,Male,3rd Grade,Banha,L,Math,0
+348,yousef mohamed,1061420494,1007293619,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+349,sara ahmed,1012515870,1009493691,الشموت الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+350,amaar mohamed,1227353936,1288836159,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+351,abdelghany amr,1201831796,1206606450,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,2nd Grade,Banha,A,Science,0
+352,yousef eslam,1221837969,1224987783,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+353,omar zahran,1087147205,1028833191,الفتح التجربى الرسمية لغات,,Male,3rd Grade,Banha,L,Science,0
+354,fatma mahmoud,1012400847,1022300537,مصر الحرة التجريبى لغات,,Female,3rd Grade,Banha,L,Science,0
+355,mustafa samy,1012717604,1013137604,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+356,abdelaziz khaled,1201874535,1222902807,منصور بدارالثانوية,,Male,3rd Grade,Banha,A,Math,0
+357,salma zaied,1227813783,1210898748,احمد زويل الرسميه لغات,,Female,3rd Grade,Banha,L,Math,0
+358,habiba khaled,1099570932,1063650021,احمد زويل الرسميه لغات,,Female,3rd Grade,Banha,L,Math,0
+359,rahem ahmed,1283855081,1227718390,الشهيد محمد حسن التجريبى,,Male,3rd Grade,Banha,L,Math,0
+360,remas esayed,1141697691,1005663540,الثانويه بنات,,Female,1st Grade,Banha,A,Science,0
+361,menna mustafa,1103603202,1274001130,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+362,abdelrahman ahmed,1122073998,1005437027,عبدالحليم نور الدين المشتركة بالرملة,,Male,3rd Grade,Banha,A,Science,0
+363,mahmoud saeed,1014526984,1001752345,الشهيد محمد عبدالحميد الرسميه لغات,,Male,3rd Grade,Banha,L,Science,0
+364,sondous mustafa,1011734519,1018298187,طوخ الثانوية الخاصة,,Female,3rd Grade,Banha,A,Science,0
+365,mustafa esam,1007271437,1288286582,الشهيد محمد حسن عبد الحميد الرسمية لغات,,Male,3rd Grade,Banha,L,Science,0
+366,sama hossam,1559688309,1142787937,قها الثانوية  المشتركة,,Female,3rd Grade,Banha,A,Science,0
+367,safy mohamed,1007594715,1097157858,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+368,rahma alaa,1095901103,1027103571,الشيماء ثانويه بنات ببنها,,Female,2nd Grade,Banha,A,Science,0
+369,malak nabil,1065539089,1009560069,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+370,ashraf alaa,1099058821,1003866215,بنها الثانوية بنين,,Male,2nd Grade,Banha,A,Science,0
+371,ahmed amer,1006550934,1090637484,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+372,mazen mohamed,1117178359,1224032101,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+373,abdelrahman ahmed,1117179276,1115899947,مصطفى كامل,,Male,2nd Grade,Banha,L,Science,0
+374,sanaa osama,1064639852,1150583938,بنها الثانوية بنات,,Female,3rd Grade,Banha,A,Literature,0
+375,yousef sameh,1103073178,1080279133,امياى الثانوية المشتركه,,Male,3rd Grade,Banha,A,Science,0
+376,yomna ayman,1015950829,1067311589,مصطفى كامل,,Female,2nd Grade,Banha,L,Science,0
+377,mariem elsaid,1032593792,1060038425,اسطنها الثانوية مشتركة,,Female,3rd Grade,Banha,A,Math,0
+378,logy ameer,1276095266,1222342352,مصطفى كامل,,Female,2nd Grade,Banha,L,Science,0
+379,mariem fayez,1208865847,1202815598,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Math,0
+380,mohamed ayman,1097426525,1027506871,كفر الاربعين الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+381,raneem ahmed,1097427383,1063575747,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+382,yousef fawzy,1285266505,1201236935,ام خنان الثانوية المشتركة,,Male,3rd Grade,Banha,A,Math,0
+383,Amr Baher,1093889688,1223750806,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+384,habiba adel,1061608841,1091960195,احمد زويل الرسميه لغات,,Female,3rd Grade,Banha,L,Science,0
+385,nouran elhoseeny,1111601925,1159773859,الشيماء ثانويه بنات ببنها,,Female,2nd Grade,Banha,A,Science,0
+386,martena ayman,1205281127,1280101182,الشهيد تامر عبد الحافظ ابو العنين,,Female,1st Grade,Banha,A,Science,0
+387,nada adel,1011794596,1225483543,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+388,sama mohamed,1205801449,1283225373,الامريكيه شبين الكوم,,Female,3rd Grade,Banha,L,Math,0
+389,alaa yasser,1060996898,1005869438,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+390,omar esam,1063323092,1014115888,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Math,0
+391,marwan waled,1207800847,1279193606,طوخ الثانويه الخاصه,,Male,3rd Grade,Banha,L,Math,0
+392,malak elsaid,1126418597,1115673759,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+393,jana tarek,1280186177,1210500870,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+394,youmna sheif,1098345609,1098188750,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+395,mariem ashraf,1222965484,1113657720,الشهيد تامر عبد الحافظ ابو العنين,,Female,2nd Grade,Banha,A,Science,0
+396,omar eslam,1228045404,1224828444,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+397,patrick mina,1202709393,1225008595,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+398,AHMED HAITHAM,1065015391,1145533195,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Science,0
+399,doaa sallam,1002740511,1003061907,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+400,ahmed osama,1223790135,1204000418,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Science,0
+401,helana kareem,1283399471,1114232100,الشمس التجريبية لغات,,Female,2nd Grade,Banha,L,Literature,0
+402,yousef samer,1124865531,1228730713,العمار الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+403,rana sameh,1205609393,1282388364,الشهيد صلاح الدين الرسميه للغات,,Female,3rd Grade,Banha,L,Science,0
+404,moustafa ashraf,1007872637,1002836420,مصطفى كامل,,Male,2nd Grade,Banha,L,Science,0
+405,shahd rageh,1289278577,1282665938,دملو الثانوية المشتركه,,Female,3rd Grade,Banha,A,Math,0
+406,abdelhrahman ahmed,1279095585,1206338442,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+407,rahmah helmy,1062419851,1009054293,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+408,reem tarek,1011434540,1067065337,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Math,0
+409,MAI HANY,1272544928,1006800839,الشهيد محمد عادل حلاوه,,Female,3rd Grade,Banha,A,Science,0
+410,ALI SALAMA,1287393506,1226584411,الشهيد محمد عادل حلاوه,,Male,3rd Grade,Banha,A,Science,0
+411,ESRA ATEF,1146484173,1069098366,الثانويه بنات بنها,,Female,3rd Grade,Banha,A,Literature,0
+412,MENA TAMER,1287814649,1093663024,طوخ الخاصه,,Female,3rd Grade,Banha,A,Science,0
+413,ahmed ehab,1279838944,1272502075,الشهيد محمد حسن التجريبى,,Male,3rd Grade,Banha,L,Math,0
+414,raghad samy,1062425039,1006264210,كفر شكر الرسمية لغات,,Female,1st Grade,Banha,L,Science,0
+415,nada eltoukhy,1227558728,1123928870,الشهيد خالد المغربي,,Female,3rd Grade,Banha,A,Science,0
+416,sara hosam,1030928766,1097270481,بنها الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+417,mustafa abdelmenem,1208557973,1210011527,تيرسا الثانويه المشتركه,,Male,3rd Grade,Banha,A,Math,0
+418,mohamed hossam,1050088657,1200625552,الشهيد محمد ياسر اللرسميه لغات,,Male,1st Grade,Banha,L,Science,0
+419,mena mahmoud,1012561083,1067438413,كفر الجمال الرسميه لغات,,Female,3rd Grade,Banha,L,Science,0
+420,TOKAA MOHAMED,1113129965,1153799037,مدرسه عربي الرمل الثانويه,,Female,3rd Grade,Banha,A,Science,0
+421,hagar samir,1025633969,1289920117,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+422,yara ebrahim,1227533726,1272447182,الشهيد محمد حسن التجريبى,,Female,3rd Grade,Banha,L,Science,0
+423,hana tamer,1095721179,1110061244,مصطفى كامل,,Female,1st Grade,Banha,L,Science,0
+424,amen eltoukhy,1067749384,1226734910,طوخ الثانويه الخاصه,,Male,3rd Grade,Banha,L,Math,0
+425,ali ebrahem,1060630330,1029907744,احمد زويل الرسميه لغات,,Male,2nd Grade,Banha,L,Math,0
+426,salma ebrahim,1012300394,1012310776,25يناير الرسمية لغات,,Female,2nd Grade,Banha,L,Science,0
+427,rana kamal,1099656008,1007237888,25يناير الرسمية لغات,,Female,2nd Grade,Banha,L,Science,0
+428,sama nasser,1142758738,1117308180,كفر شكر الرسمية لغات,,Female,2nd Grade,Banha,L,Science,0
+429,mariem abdallah,1153934501,1067300986,كفر شكر الرسمية لغات,,Female,2nd Grade,Banha,L,Science,0
+430,nour khaled,1067870278,1033893302,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+431,retaj abdelmeneem,1011988953,1008039443,كفر شكر الرسمية لغات,,Female,2nd Grade,Banha,L,Science,0
+432,habiba haitham,1024800131,1061618317,25يناير الرسمية لغات,,Female,2nd Grade,Banha,L,Science,0
+433,yosef mahmoud,1062208970,1019956995,السلام الخاصة ببنها,,Male,3rd Grade,Banha,L,Science,0
+434,ahmed elhady,1121329284,1014091107,دمالو الثانويه المشتركه,,Male,3rd Grade,Banha,A,Science,0
+435,nourelhoda mamdoh,1099650742,1004530383,سرياقوس الثانويه المشتركه,,Female,3rd Grade,Banha,A,Science,0
+436,reem tamer,1200851502,1111189908,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+437,ahmed yaseen,1227758230,1288004507,السلام الخاصه لغات,,Male,2nd Grade,Banha,L,Science,0
+438,ziyad mohamed,1029103265,1276510527,كفر شكر الرسميه لغات,,Male,2nd Grade,Banha,L,Science,0
+439,yosef esmaeel,1022750658,1001335193,كفر شكر الرسميه لغات,,Male,2nd Grade,Banha,L,Science,0
+440,mazen tarek,1113868878,1201356812,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Math,0
+441,fatma adel,1061608841,1091960195,احمد زويل الرسميه لغات,,Female,3rd Grade,Banha,L,Science,0
+442,menna haitham,1021818477,1029933477,طوخ الثانويه الخاصه,,Female,3rd Grade,Banha,L,Math,0
+443,renad essam,1010605904,1061978388,25يناير الرسمية لغات,,Female,2nd Grade,Banha,L,Science,0
+444,sama amr,1551478397,1029559338,25يناير الرسميه لغات,,Female,2nd Grade,Banha,L,Science,0
+445,fatma emad,1229681297,1271082262,الشهيد محمد صبري,,Female,3rd Grade,Banha,A,Science,0
+446,logy samer,1095208209,1015458423,مصطفي كامل,,Female,3rd Grade,Banha,L,Math,0
+447,yosef ahmed,1095363969,1023031737,قها التجربيه للغات,,Male,3rd Grade,Banha,L,Science,0
+448,mena ahmed,1060067699,1102265402,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+449,amr ahmed,1102682970,1019979069,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+450,aser ahmed,1062980367,1016865023,مصطفى كامل,,Male,1st Grade,Banha,L,Science,0
+451,ganna deyaa,1097620087,1016197986,قليوب الرسميه امتميزه لغات,,Female,2nd Grade,Banha,L,Science,0
+452,shahd hany,1287386125,1155186801,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+453,saif mahmoud,1093946771,1280673839,كفر شكر الرسمية لغات,,Male,1st Grade,Banha,L,Science,0
+454,kholoud bakry,1032427711,1028710700,كفر شكر الرسمية لغات,,Female,2nd Grade,Banha,L,Science,0
+455,menna ahmed,1281924789,1223620400,الفتح,,Female,3rd Grade,Banha,A,Science,0
+456,bosaina rezk,1010472057,1021848515,طوخ الثانوية الخاصة,,Female,3rd Grade,Banha,A,Science,0
+457,batol mahmoud,1550763998,1009875998,25يناير الرسميه لغات,,Female,1st Grade,Banha,L,Science,0
+458,mohamed ramzy,1281024654,1008244742,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Math,0
+459,reham eid,1556385538,1270849440,كفر الجمال الرسميه لغات,,Female,3rd Grade,Banha,L,Science,0
+460,rana mahmoud,1095466117,1005776605,ميت كنانة الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+461,abdelrahman mahrous,1018625877,1069454514,عزت عبد الحفيظ المشتركه,,Male,3rd Grade,Banha,A,Math,0
+462,mostafa osama,1225304853,1210470050,مصطفى كامل,,Male,1st Grade,Banha,L,Science,0
+463,hassan mohamed,1012132232,1090505889,طوخ الثانويه الخاصه,,Male,3rd Grade,Banha,L,Math,0
+464,anas abdelraheem,1210042364,1200359859,طوخ الثانويه الخاصه,,Male,3rd Grade,Banha,L,Math,0
+465,ali magdy,1141655845,1020693473,الشهيد محمد حسن التجريبى,,Male,3rd Grade,Banha,L,Math,0
+466,sama gamal,1093672130,1093678231,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Math,0
+467,hana mohamed,1098158680,1000679939,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+468,heba abdelaziz,1018059707,1005661063,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+469,rawan esam,1005238665,1064091712,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+470,ali amr,1221955215,1060053048,كفر شكر الرسمية لغات,,Male,3rd Grade,Banha,L,Math,0
+471,yousef ahmed,1276209010,1023031737,قها الرسمية لغات,,Male,3rd Grade,Banha,L,Math,0
+472,noreen emery,1000534590,1066680866,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+473,rana ehab,1508836406,1007956840,الفتح التجريبية بالبجور,,Female,3rd Grade,Banha,L,Science,0
+474,noraa abdelatef,1061663660,1024657201,الفتح التجريبية بالبجور,,Female,3rd Grade,Banha,L,Science,0
+475,sandy sameh,1068547324,1003991976,الفتح التجريبية بالبجور,,Female,3rd Grade,Banha,L,Science,0
+476,khaled eldeeb,1070876272,1061162231,الفتح التجريبية بالبجور,,Male,3rd Grade,Banha,L,Science,0
+477,yousef bayomy,1145810270,1558435270,الفتح التجريبية بالبجور,,Male,3rd Grade,Banha,L,Science,1
+478,omar karem,1143641966,1001809004,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+479,yousef mahmoud,1018808224,1015530171,الشهيد تامر عبد الحافظ ابو العنين,,Male,1st Grade,Banha,A,Science,0
+480,saifelden adeya,1200708468,1288146066,الشهيد محمد عادل حلاوه,,Male,3rd Grade,Banha,A,Science,0
+481,hana ahmed,1019891502,1022595224,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+482,habiba tamer,1142790078,1023031737,قها الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+483,gerges musa,1286052820,1227807833,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,3rd Grade,Banha,A,Math,0
+484,mina zekarya,1211410866,1223476063,مدرسه السلام الخاصه,,Male,3rd Grade,Banha,L,Math,0
+485,marwan mahmoud,1098952379,1229285771,الشهيد محمد حسن التجريبى,,Male,3rd Grade,Banha,L,Science,0
+486,arwa wesaam,1271525314,1067543674,مصطفي كامل,,Female,3rd Grade,Banha,L,Math,0
+487,nada ashraf,1097545286,1003067945,الشهيد مصطفى عطايا,,Female,3rd Grade,Banha,A,Science,0
+488,mrawan ahmed,1092337573,1065331239,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+489,ahmed saad,1555298879,1018795909,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+490,shaima khaled,1205117620,1112486062,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+491,mohamed ebrahim,1100416499,1158004649,الشيماء ثانويه بنات ببنها,,Male,3rd Grade,Banha,A,Science,0
+492,malak ahmed,1060830042,1113443488,السلام الخاصة ببنها,,Female,3rd Grade,Banha,L,Science,0
+493,farha ehab,1063874768,1019615411,مصطفي كامل,,Female,3rd Grade,Banha,L,Math,0
+494,mohamed sabry,1274643132,1229382946,منصور محمد بدار,,Male,3rd Grade,Banha,A,Math,0
+495,hana mohamed,1099041813,1270330711,طوخ الخاصه,,Female,3rd Grade,Banha,L,Science,0
+496,eman ahmed,1508990882,1030541697,الشهيد اشرف كامل المشتركة,,Female,3rd Grade,Banha,A,Science,0
+497,ali gamal,1275794941,1224148464,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+498,moaied nabil,1112486101,1280071812,الشهيد محمد حسن التجريبى,,Male,3rd Grade,Banha,L,Math,0
+499,rokaa ebraheim,1284108767,1224547140,مصطفي كامل,,Female,3rd Grade,Banha,L,Literature,0
+500,menna mahmoud,1203448772,1060234127,الشهيد محمد حسن التجريبى,,Female,3rd Grade,Banha,L,Math,0
+501,ahmed hesam,1273474707,1017367213,مصطفي كامل,,Male,3rd Grade,Banha,L,Math,0
+502,rofieda said,1144628813,1117118444,ازهار الدلتا الحديثه,,Female,3rd Grade,Banha,L,Science,0
+503,moahmed hosny,1020848519,1154053429,الفيومى  الخاصة,,Male,3rd Grade,Banha,A,Science,0
+504,yaseen shreif,1204556544,1094810020,مصطفى كامل,,Male,3rd Grade,Banha,L,Literature,0
+505,habiba abdellatef,1503468178,1014590143,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+506,amr ashraf,1229122843,1205332100,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+507,ahmed hamid,1017828693,1274931555,الشهيد محمد جمال,,Male,3rd Grade,Banha,A,Science,0
+508,abelrahman khaled,1091210642,1289220052,الدكتور مصطفي خليل الثانويه بنين,,Male,3rd Grade,Banha,A,Science,0
+509,yousef asraif,1101307727,1114716077,ميت كنانه الثانوبه بنات,,Male,3rd Grade,Banha,A,Science,0
+510,ghadeer refaat,1066548746,1007782637,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+511,abdul ghaffar,1201115853,1221444780,بنها الثانويه بنين,,Male,3rd Grade,Banha,A,Science,0
+512,fatma saeed,1273702330,1284142682,الشهيد خالد المغربي,,Female,3rd Grade,Banha,A,Science,0
+513,mohamed sherif,1022541531,1144425323,الشبان المسلمين,,Male,3rd Grade,Banha,A,Math,0
+514,ebrahim tamer,1013378532,1094549900,طحلة الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+515,noureleslam khaled,1554522083,1284236695,محمد عبد الحميد حسن الرسمية لغات,,Female,3rd Grade,Banha,L,Math,0
+516,cresteen fady,1203076465,1224589535,طوخ الثانوية الخاصة,,Female,3rd Grade,Banha,A,Science,0
+517,selvana remon,1278481186,1223871071,الشهيد محمد حسن التجريبى,,Female,3rd Grade,Banha,L,Math,0
+518,mohamed mamdouh,1003389731,1280399351,طوخ الثانوية الخاصة,,Male,3rd Grade,Banha,A,Science,0
+519,sara esmat,1270855510,1557646985,الشهيد محمد حسن التجريبى,,Female,3rd Grade,Banha,L,Science,0
+520,salma ehab,1203853078,1287361226,طوخ الثانوية الخاصة,,Female,3rd Grade,Banha,A,Science,0
+521,yousef abdelrahman,1023203953,1025822702,الحاج عزت عبد الحفيظ المشتركة,,Male,3rd Grade,Banha,A,Science,0
+522,rokya hessen,1140066766,1096909270,التجربيه المتميزه لغات,,Female,3rd Grade,Banha,L,Literature,0
+523,rana talat,1015891472,1061315551,التجربيه المتميزه لغات,,Female,3rd Grade,Banha,L,Literature,0
+524,ziad ashraf,1099435251,1288858946,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,3rd Grade,Banha,A,Math,0
+525,mahmoud ashaf,1210917286,1224946078,الشهيد محمد عادل حلاوه,,Male,3rd Grade,Banha,A,Science,0
+526,rawan ayman,1014100143,1002417254,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Math,0
+527,nour mahmoud,1015905121,1015814944,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Math,0
+528,rodina elsabahy,1029990858,1020205458,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Math,0
+529,yousef mohamed,1020285959,1002973736,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Math,0
+530,malak emad,1090043204,1007525133,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+531,fatma abdelhlem,1552612372,1022024344,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+532,hager khaled,1014975527,1027799321,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+533,menna wael,1009082557,1063583848,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+534,salma mohamed,1121341620,1121341600,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+535,malak wael,1096294625,1091482906,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+536,hagar mahmoud,1110280126,1000666946,السادات الثانوية بنات بشبلنجة,,Female,3rd Grade,Banha,A,Science,0
+537,rafat hassan,1025208026,1221303740,ام خنان الثانويه,,Male,3rd Grade,Banha,A,Science,0
+538,yousef fawzy,1285266505,1115349725,ام خنان الثانويه,,Male,3rd Grade,Banha,A,Math,0
+539,abdelrahman mohamed,1224609780,1024660412,الشهيد محمد جمال الاشقر,,Male,3rd Grade,Banha,A,Science,0
+540,ahmed fawzy,1004043911,1001981737,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Science,0
+541,esraa ebrahim,1285009572,1229966933,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+542,esraa saied,1270101731,1270113663,ميت بره الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+543,yuosef ayman,1098789876,1027640054,مدرسه الدكتورعبدالحليم نور الدين,,Male,3rd Grade,Banha,A,Science,0
+544,haidy omar,1070152830,1225637222,بنها الثانوية بنات,,Female,3rd Grade,Banha,A,Literature,0
+545,maison mahmoud,1064109694,1008911250,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+546,romisa mohamed,1110702443,1104584462,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+547,shahd omer,1062053579,1021246318,الشمس الرسميه لغات,,Female,1st Grade,Banha,L,Science,0
+548,maryam abdelfatah,1065402724,1146270066,الشيماء ثانويه بنات ببنها,,Female,2nd Grade,Banha,A,Science,0
+549,aya emad,1017702000,1099955452,الشموت الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+550,rawda mohamed,1157029955,1110337530,السادات الثانوية بنات بشبلنجة,,Female,2nd Grade,Banha,A,Science,0
+551,barakat abdelziz,1122355928,1103979128,كفر الاربعين الثانوية المشتركة,,Male,1st Grade,Banha,A,Science,0
+552,naser fuoad,1125347896,1067123372,كفر الاربعين الثانوية المشتركة,,Male,1st Grade,Banha,A,Science,0
+553,shimaa kamel,1090617754,1029249709,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+554,jana osama,1223172181,1205431966,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+555,fatma asraf,1281025086,1284590549,السادات الثانوية بنات بشبلنجة,,Male,2nd Grade,Banha,A,Science,0
+556,sagda awad,1223073237,1208501721,السادات الثانوية بنات بشبلنجة,,Female,2nd Grade,Banha,A,Science,0
+557,may mamdoh,1146609031,1110071866,السادات الثانوية بنات بشبلنجة,,Female,2nd Grade,Banha,A,Science,0
+558,omniaa hashem,1204978403,1224624173,السادات الثانوية بنات بشبلنجة,,Female,2nd Grade,Banha,A,Science,0
+559,samaa elsayid,1206092044,1225805580,السادات الثانوية بنات بشبلنجة,,Female,2nd Grade,Banha,A,Science,0
+560,nourelhouda elsaid,1062390101,1097160076,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+561,ghaidaa mohamed,1208509593,1202815598,ام المؤمنين الثانويه بنات,,Female,1st Grade,Banha,A,Science,0
+562,sara ashraf,1096624754,1007465299,الفتح,,Female,1st Grade,Banha,A,Science,0
+563,omar mohamed,1098116319,1021514314,الشبان المسلمين,,Male,1st Grade,Banha,A,Science,0
+564,hana saher,1098725198,1090594840,ميت راضي الثانويه المشتركه,,Female,3rd Grade,Banha,A,Science,0
+565,haya mahmoud,1005846090,1006997068,الفتح التجريبية بالبجور,,Female,3rd Grade,Banha,L,Science,0
+566,meirna sameh,1024342399,1005116086,الحريه لغات,,Female,3rd Grade,Banha,L,Science,0
+567,mahmoud samer,1093761845,1221047229,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,3rd Grade,Banha,A,Science,0
+568,salsabel mohamed,1064035360,1012011310,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+569,enas samy,1032432300,1090698189,الشهيد مصطفى عطايا,,Female,3rd Grade,Banha,A,Science,0
+570,sama samer,1012957360,1005278578,الشهيد مصطفى عطايا,,Female,3rd Grade,Banha,A,Science,0
+571,hana abdelmageed,1064238866,1009366794,الشهيد مصطفى عطايا,,Female,3rd Grade,Banha,A,Science,0
+572,hana hatem,1091809321,1022056773,الشهيد مصطفى عطايا,,Female,3rd Grade,Banha,A,Science,0
+573,mariem mohamed,1154347592,1112002378,قليوب  الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+574,shahd abdelhalem,1030853366,1024997990,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+575,basmala hamdy,1097590824,1032759895,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+576,esraa ehab,1098535723,1018179092,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+577,eiad mohamed,1002144017,1002144016,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Science,0
+578,reem emam,1024142439,1098993101,بنها الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+579,mahmoud mostafa,1099500038,1025377784,الشهيد حسن علي رشوان,,Male,3rd Grade,Banha,A,Science,0
+580,ahmed aymen,1223504542,1120079411,منصور بدارالثانوية,,Male,3rd Grade,Banha,A,Science,0
+581,ahmed helmy,1212924486,1281489904,منصور بدارالثانوية,,Male,3rd Grade,Banha,A,Science,0
+582,rawan mohamed,1143919466,1143919466,كفر منصور الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+583,salma mohamed,1060708201,1003398325,دلتا الثانوية,,Female,3rd Grade,Banha,A,Science,0
+584,yossef reda,1122069007,1123223364,الشهيد محمد عادل حلاوه,,Male,3rd Grade,Banha,A,Science,0
+585,omar ahmed,1555171348,1553334888,سعد الدين شريف الثانويه,,Male,3rd Grade,Banha,A,Math,0
+586,rawan amr,1008682031,1014146082,بنها الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+587,abdelrahman shafee,1002639942,1114044178,الشهيد محمد جمال الاشقر,,Male,3rd Grade,Banha,A,Math,0
+588,mohamed sameh,1007705109,1063170797,الشهيد محمد جمال الاشقر,,Male,3rd Grade,Banha,A,Science,0
+589,jameila ali,1112390053,1023038062,ترسا الثانويه المشتركه,,Female,3rd Grade,Banha,A,Science,0
+590,menaa elsayed,1144054160,1001881677,قها الثانويه المشتركه,,Female,3rd Grade,Banha,A,Science,0
+591,andro emad,1286019965,1229810373,المنشيه العسكريه,,Male,3rd Grade,Banha,A,Science,0
+592,fares walid,1028423379,1010795095,المنشيه العسكريه,,Male,3rd Grade,Banha,A,Science,0
+593,abdelrahman mostafa,1019746954,1286739067,المنشيه العسكريه,,Male,3rd Grade,Banha,A,Science,0
+594,sara yaser,1206766933,1204737465,الشهيد محمد عادل حلاوه,,Female,3rd Grade,Banha,A,Science,0
+595,heba nasser,1014272989,1014272989,الشهيد محمد عادل حلاوه,,Female,3rd Grade,Banha,A,Science,0
+596,ali sabry,1060794770,1283899880,منصور بدارالثانوية,,Male,3rd Grade,Banha,A,Math,0
+597,ahmed mahmoud,1201306716,1153270146,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,3rd Grade,Banha,A,Literature,0
+598,malk mohamed,1554511968,1061156620,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+599,malk mohamed,1550936387,1021654111,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+600,ahmed hagag,1098472920,1066750740,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+601,mustafa elfaisal,1069318731,1021601344,الشهيد محمد جمال الاشقر,,Male,3rd Grade,Banha,A,Science,0
+602,malak ahmed,1116121222,1111142144,مندرهوس,,Female,3rd Grade,Banha,L,Science,0
+603,jana shreif,1229891586,1205488117,الرحاب الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+604,esraa wael,1099284895,1062335100,عنترعبد الرازق المشتركة,,Female,3rd Grade,Banha,A,Science,0
+605,mohab hoseen,1021412394,1092338770,بنها الثانوية بنين,,Male,2nd Grade,Banha,A,Science,0
+606,ahmed arfa,1551653131,1015289927,الشهيد مدحت طلعت تجريبي مشتركه,,Male,2nd Grade,Banha,A,Science,0
+607,kenzy khaled,1552291143,1553000435,السلام الخاصه لغات,,Female,1st Grade,Banha,L,Science,0
+608,malak emad,1028264688,1098524929,طوخ الثانوية الخاصة,,Female,2nd Grade,Banha,L,Science,0
+609,tasneem abdelwahab,1152808180,1205709240,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Math,0
+610,ibraheim seid,1050884983,1273908683,كفربطاالمشتركه,,Male,2nd Grade,Banha,A,Science,0
+611,nada saeed,1128382092,1142916061,الشهيد محمد كريم احمد ضيف,,Female,2nd Grade,Banha,A,Science,0
+612,shorouk shafek,1013630982,1505336051,الشهيد محمد كريم احمد ضيف,,Female,2nd Grade,Banha,A,Literature,0
+613,hana ahmed,1027903507,1093825259,الفؤاد الحديثة,,Female,2nd Grade,Banha,L,Science,0
+614,ahdab ahmed,1096913667,1155095033,ام المؤمنين الثانويه بنات,,Female,2nd Grade,Banha,A,Science,0
+615,gana baker,1202380922,1221613132,ام المؤمنين الثانويه بنات,,Female,2nd Grade,Banha,A,Science,0
+616,khadija tamer,1015241518,1080326845,ميت راضي الثانويه المشتركه,,Female,3rd Grade,Banha,A,Science,0
+617,rawda ayman,1557375224,1069996798,مدرسه كفر البطل الثانويه,,Female,3rd Grade,Banha,A,Science,0
+618,basmala wagdy,1555447063,1204095134,الشيماء ثانويه بنات ببنها,,Female,2nd Grade,Banha,A,Science,0
+619,shorouk atef,1151973104,1151973104,الشهيد خالد المغربي,,Female,2nd Grade,Banha,A,Science,0
+620,seif sameh,1091499601,1030256395,ميت كنانة الثانوية بنين,,Male,2nd Grade,Banha,A,Science,0
+621,abdelrahman mohamed,1009229840,1004428605,كفر شكر الرسمية لغات,,Male,2nd Grade,Banha,L,Science,0
+622,sara elfaysal,1021601344,1069318731,الشهيد خالد المغربي,,Female,3rd Grade,Banha,A,Literature,0
+623,mohamed waled,1224119018,1274280446,دملو الثانوية المشتركه,,Male,2nd Grade,Banha,A,Science,0
+624,malak mohamed,1012160374,1029123432,عبدالحليم نور الدين المشتركة بالرملة,,Female,2nd Grade,Banha,A,Science,0
+625,jana mohamed,1095182872,1095182872,عبدالحليم نور الدين المشتركة بالرملة,,Female,2nd Grade,Banha,A,Science,0
+626,zaky khaled,1559471221,1553320214,المنشية الكبرى الثانوية المشتركة,,Male,3rd Grade,Banha,A,Math,0
+627,yousef ahmed,1557116231,1009493691,الشموت الثانوية المشتركة,,Male,2nd Grade,Banha,A,Science,0
+628,marim eslam,1556414322,1551562782,الشهيد محمد ياسر الرسميه لغات,,Female,1st Grade,Banha,L,Science,0
+629,albaraa esam,1014025104,1210123002,مصطفي كامل,,Male,3rd Grade,Banha,A,Science,0
+630,mohamed mustafa,1070446193,1070446193,الشهيد عقيد طيار وليد اسماعيل محمد عطية,,Male,3rd Grade,Banha,A,Math,0
+631,zyaid amein,1551953517,1116160379,الدكتور مصطفي خليل الثانويه بنين,,Male,1st Grade,Banha,A,Science,0
+632,noraan hateem,1204978419,1282176404,السادات الثانوية بنات بشبلنجة,,Female,2nd Grade,Banha,A,Science,0
+633,joudy waled,1032903638,1095112469,الشهيد مدحت طلعت لغات,,Female,1st Grade,Banha,L,Science,0
+634,yousef ehab,1096629823,1099750748,الشهيد احمد عبد النبى عطوة,,Male,3rd Grade,Banha,A,Science,0
+635,mohamed rafat,1060987255,1224030205,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+636,saad ahmed,1090370035,1068071706,IDGL,,Male,3rd Grade,Banha,L,Math,0
+637,norhan reda,1061203890,1001050961,كفر شكر السميه لغات,,Female,1st Grade,Banha,L,Science,0
+638,fares ahmed,1158845755,1289891113,الشهيد محمد ابراهيم,,Male,3rd Grade,Banha,A,Science,0
+639,jana elsayed,1155521991,1094706158,قها الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+640,habiba mahmoud,1272092164,1224404347,عبدالحليم نور الدين المشتركة بالرملة,,Female,2nd Grade,Banha,A,Science,0
+641,sama saqr,1123673461,1110758757,كفرشكر الرسميه لغات,,Female,1st Grade,Banha,L,Science,0
+642,malak mohamed,1019065907,1010074742,كفر شكر الرسمية لغات,,Female,2nd Grade,Banha,L,Science,0
+643,hassan mohamed,1030718573,1080155168,مدرسه 25 يناير كفرشكرالرسميه لغات,,Male,2nd Grade,Banha,L,Science,0
+644,aya hassan,1011436826,1002761436,كفر شكر الرسمية لغات,,Female,2nd Grade,Banha,L,Science,0
+645,menna afify,1227073659,1202691367,الشهيد محمد حسن التجريبى,,Female,3rd Grade,Banha,L,Literature,0
+646,jana elsaid,1155521991,1094706158,قها الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+647,abdallah bashir,1001031397,1001480690,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+648,abdelrahman ahmed,1004084810,1090676008,مصطفي كامل,,Male,2nd Grade,Banha,A,Science,0
+649,ahmad mohamed,1553970553,1553677605,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+650,omar hany,1210031852,1010074683,مصطفى كامل,,Male,3rd Grade,Banha,A,Science,0
+651,mohamed mousa,1115348698,1275920299,الشهيد وليد اسماعيل,,Male,3rd Grade,Banha,A,Science,0
+652,saif moustafa,1095614646,1096110545,كفر شكر الرسمية لغات,,Male,3rd Grade,Banha,L,Math,0
+653,mahmoud ahmed,1122932958,1151513637,كفر شكر الرسمية لغات,,Male,2nd Grade,Banha,L,Math,0
+654,mohamed amr,1006368526,1013346265,|كفرشكرالرسميه لغات,,Male,2nd Grade,Banha,L,Science,0
+655,ahmed goda,1010945620,1012601960,25يناير الرسمية,,Male,2nd Grade,Banha,L,Science,0
+656,salma khaled,1091861322,1003791550,كفر شكر الرسمية لغات,,Female,2nd Grade,Banha,L,Science,0
+657,mariem osama,1503214158,1114241633,احمد زويل الرسميه لغات,,Female,3rd Grade,Banha,L,Math,0
+658,saad mohamed,1033570893,1006782676,25يناير الرسمية,,Male,2nd Grade,Banha,L,Science,0
+659,shahd mohamed,1096359674,1118460715,كفر شكر الرسمية لغات,,Female,2nd Grade,Banha,L,Math,0
+660,mustafa mohamed,1140109228,1118460715,كفر شكر الرسمية لغات,,Male,2nd Grade,Banha,L,Math,0
+661,abdelmageed yousry,1097411176,1152049531,كفر شكر الرسمية لغات,,Male,3rd Grade,Banha,L,Math,0
+662,mahmoud amr,1008752365,1001033738,كفر شكر الرسمية لغات,,Male,2nd Grade,Banha,L,Science,0
+663,adham ali,1003746289,1090577823,كفر شكر الرسمية لغات,,Male,2nd Grade,Banha,L,Math,0
+664,fatma hassan,1278335499,1205482944,ام المؤمنين الثانويه بنات,,Female,2nd Grade,Banha,A,Science,0
+665,eiad eslam,1062091119,1065374652,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+666,yousef mohamed,1018808224,1015530171,الشهيد تامر عبد الحافظ ابو العنين,,Male,1st Grade,Banha,A,Science,0
+667,hader amer,1126869023,1050998860,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+668,hala tarek,1040887150,1024220962,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+669,abdelrahman mohamed,1025133472,1004315532,مدرسه العالميه ببنها,,Male,3rd Grade,Banha,L,Science,0
+670,yousef hessam,1126822421,1021554351,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+671,eman omar,1095947340,1007390868,الشهيد مصطفى عطايا,,Female,3rd Grade,Banha,A,Science,0
+672,mohamed ahmed,1098759905,1024559864,مدرسه قويسنا الحديثه,,Male,3rd Grade,Banha,A,Science,0
+673,salma ahmed,1553969960,1145037596,طوخ الثانويه الخاصه,,Female,2nd Grade,Banha,L,Math,0
+674,abdelrahman mohamed,1281450377,1204770462,مدرسه الشهيد ابراهيم محمد ابراهيم,,Male,3rd Grade,Banha,A,Math,0
+675,adham mohamed,1011467101,1022670081,كفر شكر الرسمية لغات,,Male,2nd Grade,Banha,L,Science,0
+676,menna ahmed,1044319019,1156553509,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+677,mariem ashraf,1222965484,1288100450,ام خنان الثانوية مشتركة,,Female,2nd Grade,Banha,A,Science,0
+678,yousef elsaid,1204671984,1220279398,الشهيد محمود عماد دغش,,Male,3rd Grade,Banha,A,Science,0
+679,retaj tamer,1023499559,1005549234,التحرير الثانوى,,Female,2nd Grade,Banha,A,Science,0
+680,mohamed alaa,1101045331,1065809385,طوخ الثانويه الخاصه,,Male,3rd Grade,Banha,L,Science,0
+681,ahmed eslam,1068879056,1147122043,الشموت الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+682,abdallah soroor,1005805259,1016619196,منصور بدارالثانوية,,Male,3rd Grade,Banha,A,Science,0
+683,salma nabil,1288094616,1222197907,الرحاب الثانوية المشتركة,,Female,3rd Grade,Banha,A,Math,0
+684,nour salah,1284910698,1030268554,الشيماء ثانويه بنات ببنها,,Female,1st Grade,Banha,A,Science,0
+685,walaa hamdy,1144193005,1144193008,بتمدا الثانوية المشتركة,,Female,2nd Grade,Banha,A,Science,0
+686,osman mustafa,1507174992,1224642259,الشهيد كريم احمد ضيف,,Male,3rd Grade,Banha,A,Science,0
+687,ahmed hany,1069501215,1098071002,الشقر الثانويه المشتركه,,Male,3rd Grade,Banha,A,Science,0
+688,fares yaseen,1201190327,1279969691,الشهيد  ابراهيم محمد ابراهيم,,Male,3rd Grade,Banha,A,Science,0
+689,yahia mohamed,1025464905,1098032308,الشبان المسلمين,,Male,3rd Grade,Banha,A,Math,0
+690,shahd nader,1225951116,1272932213,طنان الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+691,abdelrahman mohamed,1154860046,1112869750,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Science,0
+692,mohamed amir,1558325603,1552780688,كفر شكر الرسمية لغات,,Male,2nd Grade,Banha,L,Science,0
+693,abdelrahman mohamed,1153041431,1010127759,مامون عامر الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+694,mohamed abdelrahman,1012600710,1022303525,الشبان المسلمين,,Male,3rd Grade,Banha,A,Science,0
+695,kirolos sameh,1508933878,1223590171,قها الثانويه المشتركه,,Male,3rd Grade,Banha,A,Science,0
+696,mohamed osama,1021906870,1099219262,الشهيد محمود عماد دغش,,Male,1st Grade,Banha,A,Science,0
+697,yousef magdy,1122046167,1211365313,كفر المقدام الثانوية بنين,,Male,3rd Grade,Banha,A,Math,0
+698,walaa atia,1278140344,1285232668,الشهيد محمد كمال المغربي,,Female,3rd Grade,Banha,A,Science,0
+699,habiba kamal,1029972758,1019524588,قويسنا الرسميه لغات,,Female,3rd Grade,Banha,L,Science,0
+700,anas ahmed,1066189781,1062089213,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+701,sama abdelfatah,1061512621,1228797591,السادات الثانوية بنات بشبلنجة,,Female,3rd Grade,Banha,A,Literature,0
+702,mohamed ashraf,1028111410,1024834255,الشهيد محمد حسن التجريبى,,Male,3rd Grade,Banha,L,Math,0
+703,omar mohamed,1044896287,1557969899,العمار الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+704,rooz yaser,1116310898,1116259426,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Math,0
+705,sondous mustafa,1011734519,1018298187,طوخ الثانوية الخاصة,,Female,3rd Grade,Banha,A,Science,0
+706,zaina hossam,1223504827,1287093777,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Math,0
+707,walied wall,1120555881,1113359467,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Female,3rd Grade,Banha,A,Literature,0
+708,habah hamed,1098910141,1002837110,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+709,malak anwer,1228570467,1146438150,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+710,Malak Elsayed,1276242188,1270777047,الشهيد محمد حسن التجريبى,,Female,3rd Grade,Banha,L,Science,0
+711,ebrahim abdeltawab,1068737630,1003046972,الشبان المسلمين,,Male,3rd Grade,Banha,A,Math,0
+712,mariem ahmed,1010874839,1226522660,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+713,sara ahmed,1554520693,1206338442,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+714,rofaida mohamed,1113068066,1000656664,هدى شعراوى,,Female,3rd Grade,Banha,A,Science,0
+715,alaa reda,1030827091,1028576603,الشهيد مجدى محمود القشاش,,Female,3rd Grade,Banha,A,Science,0
+716,aya esam,1208226331,1277982401,اجهور الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+717,alaa amer,1151779425,1144731578,الشموت الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+718,yasmeen mohseen,1020575816,1270100696,ترسا الثانويه المشتركه,,Female,3rd Grade,Banha,L,Literature,0
+719,merola maged,1211481181,1228966142,دكتور عبد الحليم نور الدين,,Female,3rd Grade,Banha,A,Science,0
+720,mohamed mahmoud,1210678271,1018955708,الشهيد محمد جمال الاشقر,,Male,3rd Grade,Banha,A,Math,0
+721,shahd hessen,1090670922,1090854231,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+722,fatma mahmoud,1284631862,1203766502,ترسا الثانويه المشتركه,,Female,3rd Grade,Banha,A,Science,0
+723,mahmoud amr,1064299169,1064046692,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,3rd Grade,Banha,A,Math,0
+724,mahmoud amr,1064299169,1064046692,الشهيد ابراهيم محمد ابراهيم السيد كشوع,0,Male,3rd Grade,Banha,A,Math,0
+725,mustafa yasser,1153962592,1007048273,العمار الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+726,mohannd sameh,1141731539,1063519600,العمار الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+727,fathy mohamed,1154044679,1111912210,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Math,0
+728,maha ibrahim,1068154530,1006808112,طوخ الثانوية الخاصة,,Female,3rd Grade,Banha,A,Science,0
+729,nadia waell,1020735000,1020100908,الشهيد محمد حسن التجريبى,,Female,3rd Grade,Banha,L,Literature,0
+730,hamza yasser,1151165273,1143411517,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Science,0
+731,gana ashrif,1220290180,1025113091,طوخ الثانوية الخاصة,,Female,3rd Grade,Banha,A,Literature,0
+732,ahmed magdi,1032197461,1026157596,عبدالحليم نور الدين المشتركة بالرملة,,Male,3rd Grade,Banha,A,Science,0
+733,reham abdelrahman,1099762141,1060803720,الشهيدعلاءابوسليم,,Female,3rd Grade,Banha,A,Science,0
+734,raghad ahmed,1203610106,1152959747,بنها الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+735,ahmed ibrahim,1007843557,1224526662,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Math,0
+736,menna fahmy,1228086478,1224849141,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+737,doaa mohamed,1024697205,1098735240,قليوب الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+738,basmala esam,1006886279,1278835327,بنها الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+739,menna mohamed,1025832082,1002318025,الشهيد خالد مغربى الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+740,nancy ashraf,1210352382,1223387462,الشهيد خالد مغربى الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+741,nour mohamed,1021559709,1002847099,طوخ الخاصة,,Female,3rd Grade,Banha,A,Science,0
+742,mohamed wagdy,1206446958,1289351738,الشهيد محمد عادل حلاوة,,Male,3rd Grade,Banha,A,Science,0
+743,yousef mohamed,1055073901,1096095905,الشهيد محمد كريم مصطفى,,Male,3rd Grade,Banha,A,Science,0
+744,salma wael,1205856634,1033414173,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+745,lemar samer,1010934120,1022843665,الشيماء,,Female,3rd Grade,Banha,A,Literature,0
+746,radwa esam,1040551228,1001698948,كفر العمار الاعدادية الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+747,nour elsaid,1228867960,1150042845,الشموت الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+748,nour elsaid,1228867960,1005560453,الشموت الثانوية المشتركة,0,Female,3rd Grade,Banha,A,Science,0
+749,emad wael,1030939196,1030257447,الشهيدوليداسماعيل,,Male,3rd Grade,Banha,A,Math,0
+750,omar osama,1064011383,1023899981,امياي الثانويه المشتركه,,Male,3rd Grade,Banha,A,Math,0
+751,ann saber,1120928035,1220345408,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+752,mohamed nagy,1012478947,1014990663,دامالو الثانويه المشتركه,,Male,3rd Grade,Banha,A,Science,0
+753,saif mohamed,1225171080,1276488515,منصور بدارالثانوية,,Male,3rd Grade,Banha,A,Science,0
+754,houda mohamed,1013914601,1024343117,الدكتور محمود مصطفى الثانوية بنات,,Female,3rd Grade,Banha,A,Science,0
+755,mohamed sabri,1092658010,1110500872,منصور بدارالثانوية,,Male,3rd Grade,Banha,A,Math,0
+756,alaaeldeen mohamed,1274643132,1229382946,منصور بدارالثانوية,,Male,3rd Grade,Banha,A,Math,0
+757,altaieb almohamed,1030882186,1019790400,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+758,mohamed elsaid,1044917215,1008904072,بنها الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+759,bahy esam,1281044831,1065327404,ميت راضي الثانوية المشتركة,,Male,3rd Grade,Banha,A,Math,0
+760,mai dahi,1275830252,1207910887,سميحة صدقى,,Female,3rd Grade,Banha,A,Science,0
+761,marwan madian,1141150230,1145244433,طنط الجزيرة الثانوية المشتركة,,Male,3rd Grade,Banha,A,Math,0
+762,hafsa khaled,1025220107,1095185951,الدكتور محمود مصطفى الثانوية بنات,,Female,3rd Grade,Banha,A,Math,0
+763,hageer elsaid,1094522266,1007176489,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+764,anas mohamed,1111670886,1129996880,شهيد عقيد طيار وليد اسماعيل,,Male,3rd Grade,Banha,A,Math,0
+765,adham ahmed,1144075154,1149868230,مرصفا الثانوية,,Male,3rd Grade,Banha,A,Science,0
+766,ahmed mohamed,1067283209,1270873493,كفر الجمال التجريبية لغات,,Male,3rd Grade,Banha,L,Math,0
+767,Eyad Mohamed,1002144017,1002144016,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Science,0
+768,antonios wadee,1278360565,1070386236,الشهيد محمد عبد الحميد حسن,,Male,3rd Grade,Banha,L,Math,0
+769,moamen mohamed,1212090965,1277093787,طوخ الخاصة,,Male,3rd Grade,Banha,L,Math,0
+770,amal mohamed,1099598951,1001395119,طوخ الخاصة,,Female,3rd Grade,Banha,L,Science,0
+771,eiad mohamed,1002144017,1002144016,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Science,0
+772,mohamed ahmed,1554455217,1277722010,قها التجريبية لغات,,Male,3rd Grade,Banha,L,Math,0
+773,habiba ebrahim,1145159079,1144309118,الشهيد محمد عبد الحميد حسن,,Female,3rd Grade,Banha,L,Math,0
+774,malak eslam,1023247373,1061666853,كريتيف للغات,,Female,3rd Grade,Banha,L,Science,0
+775,farah alaa,1204237961,1221291198,الشهيد محمد عبد الحميد حسن لغات,,Female,3rd Grade,Banha,L,Science,0
+776,karema ebahim,1096818630,1009520320,الشهيد محمد عبد الحميد حسن لغات,,Female,3rd Grade,Banha,L,Science,0
+777,malak mohamed,1203768727,1221074230,الشهيد محمد عبد الحميد حسن لغات,,Female,3rd Grade,Banha,L,Science,0
+778,nadeen hamdy,1119295050,1006673786,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+779,mayar mohamed,1208570724,1224867764,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+780,salma khaled,1505331811,1553000435,السلام الخاصة ببنها,,Female,3rd Grade,Banha,L,Science,0
+781,adham amr,1009098943,1008871868,كفر شكر الرسمية لغات,,Male,2nd Grade,Banha,L,Math,0
+782,joudy tamer,1025715915,1023710410,طوخ الخاصة,,Female,2nd Grade,Banha,A,Science,0
+783,mahmoud mohamed,1211113901,1222237135,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+784,mustafa mohamed,1096764906,1280869991,الشبان المسلمين,,Male,2nd Grade,Banha,A,Science,0
+785,mahmoud mohamed,1117042296,1284624987,الشهيد جابر الثانوية بنين,,Male,2nd Grade,Banha,A,Science,0
+786,ganna bakr,1202380922,1221613132,ام المؤمنين الثانويه بنات,,Female,2nd Grade,Banha,A,Literature,0
+787,arwa mohamed,1118027900,1020658605,ام المؤمنين الثانويه بنات,,Female,1st Grade,Banha,A,Science,0
+788,abdelkhalek mohamed,1120600971,1006420793,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+789,romaysaa mohamed,1093674768,1018688811,25ينايرالرسميه للغات بكفرشكر,,Female,2nd Grade,Banha,L,Science,0
+790,hageer ibrahim,1288141259,1279130343,السادات الثانوية بنات بشبلنجة,,Female,2nd Grade,Banha,A,Science,0
+791,feryal samy,1007009609,1000845116,الفتح الخاصه بنهاا,,Female,3rd Grade,Banha,A,Science,0
+792,jana walid,1202312197,1099951167,25ينايرالرسميه للغات,,Female,2nd Grade,Banha,L,Science,0
+793,mustafa khateb,1124659962,1143343828,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+794,basmala abdelminem,1284347547,1281862245,طوخ الثانوية الخاصة,,Female,3rd Grade,Banha,A,Math,0
+795,ahmed sherif,1013386919,1014403836,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+796,toka saeed,1065832671,1023746436,كفر بطا الثانوية المشتركة,,Female,2nd Grade,Banha,A,Science,0
+797,jomana rezk,1050920413,1050920412,كفر الجمال التجريبية لغات,,Female,3rd Grade,Banha,L,Science,0
+798,yara hany,1066675454,1033555278,الشهيد عصام مراد,,Female,1st Grade,Banha,A,Science,0
+799,mayar mohktar,1010599973,1010599973,الشهيد عصام مراد,,Female,2nd Grade,Banha,A,Science,0
+800,rayain rezk,1050737108,1050920413,كفر الجمال التجريبية لغات,,Male,3rd Grade,Banha,L,Science,0
+801,ahmed halas,1012692635,1000537624,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+802,mona samy,1091209419,1065239382,كفر الجمال التجريبية لغات,,Female,3rd Grade,Banha,L,Science,0
+803,omar sherif,1026340774,1019205669,طوخ الثانويه الخاصه,,Male,3rd Grade,Banha,L,Science,0
+804,adam samy,1033080992,1020093344,طوخ الثانوية الخاصة,,Male,3rd Grade,Banha,A,Math,0
+805,tanal yasser,1146770624,1119522663,احمد زويل الرسميه لغات,,Female,3rd Grade,Banha,L,Science,0
+806,aliaa tarek,1287703575,1275928712,المتفوقين بالمنوفية STEM,,Female,2nd Grade,Banha,L,Science,0
+807,ragab mahmoud,1009626161,1128446660,الشهيد محمد عبد الحميد حسن  لغات,,Male,3rd Grade,Banha,L,Science,0
+808,mohamed ameen,1149953649,1146478555,قها الرسمية لغات,,Male,3rd Grade,Banha,L,Science,0
+809,salma karem,1033583526,1012354233,طوخ الخاصة,,Female,3rd Grade,Banha,A,Science,0
+810,zaina ehab,1222253489,1115776301,مصطفي كامل,,Female,3rd Grade,Banha,L,Science,0
+811,mariam ahmed,1009941965,1080823647,مصطفي كامل,,Female,3rd Grade,Banha,L,Science,0
+812,aisha tamer,1102505932,1117806544,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+813,fatma emad,1271082262,1229681693,الشهيد محمد صبرى احمد عطية,,Female,3rd Grade,Banha,A,Science,0
+814,ahmed hamdan,1203195024,1508733158,الشهيد محمد جمال الاشقر,,Male,3rd Grade,Banha,A,Math,0
+815,sama amr,1098026661,1069997870,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+816,omar hamdy,1287968004,1279196248,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,3rd Grade,Banha,A,Math,0
+817,moamen mohamed,1558347157,1033746964,قها الرسمية لغات,,Male,3rd Grade,Banha,L,Math,0
+818,merna mohamed,1019642268,1024524929,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+819,merna mohamed,1019642268,1024524929,مصطفى كامل,0,Female,3rd Grade,Banha,L,Science,0
+820,ahmad abdelrahman,1201251609,1221290484,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,3rd Grade,Banha,A,Literature,0
+821,habiba abdallah,1200620532,1280805937,ميت برة الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+822,tasneem ahmed,1033513101,1003136604,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+823,mahmoud mohamed,1550193889,1096789087,مصطفى خاطر الثانوية المشتركة,,Male,3rd Grade,Banha,A,Math,0
+824,omar mohamed,1040921878,1024694306,مصطفى خاطر الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+825,shuruk mohamed,1029020409,1129020943,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+826,sama emad,1552429615,1150929291,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+827,salma sameh,1121344158,1121624293,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+828,mai hany,1006737982,1281024842,الشهيد خالد المغربي,,Female,3rd Grade,Banha,A,Science,0
+829,rewayda mohamed,1023595949,1009846641,دمالو الثانويه,,Female,3rd Grade,Banha,A,Science,0
+830,haneen ashrif,1090189982,1148462537,الشهيد احمد عبدالنبي عطوه,,Female,3rd Grade,Banha,A,Science,0
+831,mohamed montaser,1156160889,1154411139,الشهيد اشرف كامل عجاج,,Male,3rd Grade,Banha,A,Science,0
+832,adham mohamed,1273035673,1272604006,الثانوية بنين طنان,,Male,3rd Grade,Banha,A,Literature,0
+833,ebrahim mohamed,1206324468,1206500762,الثانوية بنين طنان,,Male,3rd Grade,Banha,A,Literature,0
+834,mustafa ahmed,1204704981,1272003947,الثانوية بنين طنان,,Male,3rd Grade,Banha,A,Literature,0
+835,shorouk emad,1145869727,1144148497,الشيماء,,Female,3rd Grade,Banha,A,Science,0
+836,yara ahmed,1202078675,1000799238,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+837,rawan alaa,1010046744,1097958785,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+838,rawan alaa,1010046744,1273260789,الشيماء ثانويه بنات ببنها,0,Female,3rd Grade,Banha,A,Science,0
+839,mohamed ahmed,1013238146,1009209144,الشهيد حسن على رشوان,,Male,3rd Grade,Banha,A,Science,0
+840,fatma ayman,1145027293,1145027293,دملو الثانوية المشتركة,,Female,3rd Grade,Banha,A,Math,0
+841,esraa mohamed,1553927844,1128921205,جرين سكول,,Female,3rd Grade,Banha,A,Science,0
+842,eslam mohamed,1201014027,1210635507,طنان الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+843,ebrahim mohamed,1206554262,1210635507,طنان الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+844,Ali Sherif,1015003968,1010733928,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+845,Retag Ahmed,1009908802,1000590072,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+846,Mera Maged,1229361164,1228005624,مصطفى كامل,0,Female,3rd Grade,Banha,L,Science,0
+847,Jomana Ehab,1032670045,1002566300,طوخ الثانويه الخاصه,,Female,3rd Grade,Banha,L,Science,0
+848,Sama Yasser,1020350935,1003662976,طوخ الثانويه الخاصه,0,Female,3rd Grade,Banha,L,Science,0
+849,Nour Ahmed,1050346679,1092601193,طوخ الثانويه الخاصه,,Female,3rd Grade,Banha,L,Science,0
+850,Yara Walid,1055718865,1009858517,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+851,Yassin Khaled,1555724228,1200990477,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Science,0
+852,Abdelrahman Ahmed,1117179276,1115899947,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+853,Nour Osama,1023870808,1009669065,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+854,Hamsa Hamdy,1204180169,1280425377,قها الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+855,Mariam Ahmed,1065794003,1227192242,قها الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+856,Rahf Khaled,1207053181,1211556769,قها الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+857,Mariam Ibrahim,1204723785,1281512512,قها الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+858,Saba Essam,1225874173,1273538190,قها الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+859,Retaj Mohamed,1223171774,1227260386,طوخ الثانويه الخاصه,,Female,3rd Grade,Banha,L,Science,0
+860,Fouad Adel,1117880118,1122224379,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+861,Sama Ahmed,1007907292,1007907292,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+862,Mostafa Ashraf,1007872637,1002836420,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+863,Sama Elsayed,1206092044,1278793071,السادات الثانوية بنات بشبلنجة,,Female,3rd Grade,Banha,A,Science,0
+864,Mai Mamdouh,1146609031,1110071866,السادات الثانوية بنات بشبلنجة,,Female,3rd Grade,Banha,A,Science,0
+865,Hagar Ibrahim,1279130343,1279130343,السادات الثانوية بنات بشبلنجة,,Female,3rd Grade,Banha,A,Science,0
+866,Manar Mohamed,1125012314,1283566682,الشهيد محمد كريم احمد ضيف,,Female,3rd Grade,Banha,A,Science,0
+867,Jana Mahmoud,1227756375,1210881918,طوخ الثانويه الخاصه,,Female,3rd Grade,Banha,L,Science,0
+868,Nour Ahmed,1200885056,1203609086,طوخ الثانويه الخاصه,,Female,3rd Grade,Banha,L,Science,0
+869,Ehab Tarek,1508319822,1555406973,المنشية الكبرى الثانوية المشتركة,,Male,3rd Grade,Banha,A,Math,0
+870,Mohamed Osama,1061649357,1099207647,اسطنها الثانوية مشتركة,,Male,3rd Grade,Banha,A,Math,0
+871,Ahmed Mohamed,1206223833,1286446608,المدرسة الخاصة,,Male,3rd Grade,Banha,A,Science,0
+872,Belal Ahmed,1017894696,1224655860,المدرسة الخاصة,,Male,3rd Grade,Banha,A,Science,0
+873,Zeyad Mohamed,1273394783,1003832322,الرملة الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+874,Nada Abdelhalim,1032924737,1147416234,الشهيد اشرف كامل المشتركة,,Female,3rd Grade,Banha,A,Science,0
+875,Eslam Abdelhamid,1225358495,1023314354,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Math,0
+876,Mohamed Saied,1129808667,1120393437,شبلنجة الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+877,Jannah Faisal,1157984979,1128131507,الشهيد علاء ابو سليم,,Female,3rd Grade,Banha,A,Science,0
+878,Nouran Hatem,1204978419,1282176404,السادات الثانوية بنات بشبلنجة,,Female,3rd Grade,Banha,A,Science,0
+879,Ahmed Ibrahim,1022892728,1067277018,عبدالحليم نور الدين المشتركة بالرملة,,Male,3rd Grade,Banha,A,Science,0
+880,Omar Mohamed,1279448180,1211950062,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Science,0
+881,Farah Hany,1118352394,1001988107,شبان المسلميبن,,Female,3rd Grade,Banha,A,Science,0
+882,Soliman Ahmed,1061240540,1009738119,ش.ع.ط وليد إسماعيل طيار,,Male,3rd Grade,Banha,A,Math,0
+883,Rawda Mohamed,1157029955,1110337530,السادات الثانوية بنات بشبلنجة,,Female,3rd Grade,Banha,A,Science,0
+884,Sandy Makram,1210048302,1287551401,طوخ الثانويه الخاصه,,Female,3rd Grade,Banha,L,Science,0
+885,Mai Anwar,1063523792,1020069665,بتمده الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+886,Toka Elsayed,1007178468,1000529888,ميت راضي الثانوية المشتركة,,Female,3rd Grade,Banha,A,Math,0
+887,Roaa Elsayed,1288060289,1000529888,ميت راضي الثانوية المشتركة,,Female,3rd Grade,Banha,A,Math,0
+888,Youssef Samy,1034814634,1068948517,الشهيد محمود عماد دغش,,Male,3rd Grade,Banha,A,Math,0
+889,Mostafa Mahmoud,1224107634,1281479077,المنشية الكبرى الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+890,Mohamed Salah,1069671490,1155317476,المنشية الكبرى الثانوية المشتركة,,Male,3rd Grade,Banha,A,Math,0
+891,Samir Ahmed,1285059600,1110323745,المنشية الكبرى الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+892,Rofida Ayman,1026500319,1026027633,طوخ الثانوية الخاصة,,Female,3rd Grade,Banha,A,Science,0
+893,Malak Amr,1100675609,1100873442,الشهيد محمد صبرى احمد عطية,,Female,3rd Grade,Banha,A,Science,0
+894,Ahmed Desouki,1025357415,1009293024,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,3rd Grade,Banha,A,Math,0
+895,Emmi Tamer,1204054853,1227245658,منيا القمح الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+896,Jana Mohamed,1003514661,1200049550,شريف طلعت الزقازيق,,Female,3rd Grade,Banha,L,Science,1
+897,Salma Elhussein,1119861720,1095988858,المنشية الكبرى الثانوية المشتركة,,Female,3rd Grade,Banha,A,Math,0
+898,Salma Ahmed,1553969960,1145037596,طوخ الثانويه الخاصه,,Female,3rd Grade,Banha,L,Science,0
+899,Sama Ehab,1067337711,1089445152,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+900,Seif Wael,1123200945,1228321385,السلام الخاصة ببنها,,Male,3rd Grade,Banha,L,Math,0
+901,Sama Amr,1270703616,1203465128,الشهيد محمد حسن التجريبى,,Male,3rd Grade,Banha,L,Science,0
+902,Mariam Abdelbaset,1080871335,1113608490,معهد فتيات بنها النموذجى,,Female,3rd Grade,Banha,A,Science,0
+903,Ganna Mohamed,1011972296,1000362301,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+904,Karim Yasser,1099445559,1111117377,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+905,Mohamed Khaled,1064061926,1113322468,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+906,Abdullah Ahmed,1103073653,1113360183,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,3rd Grade,Banha,A,Math,0
+907,Omar Mohamed,1020367430,1025147927,امياى الثانوية المشتركه,,Male,3rd Grade,Banha,A,Science,0
+908,Abdullah Hazem,1061041292,1066034278,امياى الثانوية المشتركه,,Male,3rd Grade,Banha,A,Science,0
+909,Wafaa Hesham,1281975012,1279560019,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+910,Malak Mosaad,1013657332,1154325808,الصباحي ابو المعاطي,,Female,3rd Grade,Banha,A,Science,0
+911,Nour Ashraf,1002956823,1025571610,عبدالحليم نور الدين المشتركة بالرملة,,Female,3rd Grade,Banha,A,Science,0
+912,Peter John,1551116323,1270050225,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+913,John Beshoy,1277748989,1226557050,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+914,George Isaac,1284602361,1224473702,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+915,Maria George,1208605653,1223468801,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+916,Ali Sherif,1015003968,1002952912,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+917,Logina Amer,1276095266,1222342352,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+918,Tasneem Ahmed,1152844897,1144350961,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+919,Rawan Ibrahim,1066027977,1009503261,احمد زويل الرسميه لغات,,Female,3rd Grade,Banha,L,Science,0
+920,Omar Mahmoud,1274504422,1274504477,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+921,Salma Ahmed,1065964824,1288834646,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+922,Omar Hosny,1010107190,1009335444,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Math,0
+923,Abdelrahman Atef,1555819912,1553463051,الشهيد محمد كريم احمد ضيف,,Male,3rd Grade,Banha,A,Math,0
+924,Maya Emad,1202965528,1204466851,طوخ الثانويه الخاصه,,Female,3rd Grade,Banha,L,Science,0
+925,Mohamed Karam,1030215956,1060672076,الشهيد محمد كريم احمد ضيف,,Male,3rd Grade,Banha,A,Math,0
+926,Mohamed Karam,1030215956,1060672076,الشهيد محمد كريم احمد ضيف,,Male,3rd Grade,Banha,A,Math,0
+927,Ali Mostafa,1067558792,1063409488,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+928,Omar Ahmed,1098666638,1005227000,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+929,Malak Ahmed,1094419536,1062000400,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+930,Ahmed Mohamed,1125938936,1099288088,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+931,Shaimaa Ahmed,1099647773,1067515471,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+932,Renad Mohamed,1014511383,1020170711,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+933,Ziad Mohamed,1212344051,1226977553,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+934,Yomna Ayman,1015950829,1067311589,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+935,Sara Ahmed,1013415381,1002759073,المتميزة لغات بقويسنا,,Female,3rd Grade,Banha,L,Science,0
+936,Ali Alaa,1029064766,1023489317,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Math,0
+937,Sama Ibrahim,1024071137,1000448389,قويسنا الرسمية المتميزة لغات,,Female,3rd Grade,Banha,L,Science,0
+938,Malak Ahmed,1227357360,1224957574,المدرسة الامريكية لغات,,Female,3rd Grade,Banha,L,Science,0
+939,Mohamed Abdelghany,1283569948,1281017074,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Math,0
+940,Rana Tarek,1201350496,1225946266,الشيماء ثانويه بنات ببنها,,Female,3rd Grade,Banha,A,Science,0
+941,Abdelrahman Mohamed,1017579208,1004917677,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+942,Youssef Anwar,1032983028,1068178833,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+943,Haneen Tarek,1015965055,1007328543,الشهيد عبد الرازق سعيد,,Female,3rd Grade,Banha,A,Science,0
+944,Zeina Ramez,1281641839,1225703523,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+945,Hamza Mostafa,1144548023,1122146538,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+946,Nora Magdy,1553395611,1068752140,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+947,Kevin Hany,1288489001,1228042626,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+948,Mariam Mohamed,1091791939,1000537624,السلام الخاصة ببنها,,Female,3rd Grade,Banha,L,Science,0
+949,Asser Amir,1027205057,1005620804,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+950,Edward Edmon,1557864591,1221093772,السلام الخاصة ببنها,,Male,3rd Grade,Banha,L,Math,0
+951,Amr Khaled,1228436545,1094171231,قويسنا الرسمية لغات,,Male,3rd Grade,Banha,L,Math,0
+952,Mohamed Ayman,1099296706,1008726884,الشهيد جابر الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+953,Abdelbadea Abdullah,1124184993,1229277255,الشهيد جابر الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+954,Farah Elsayed,1119706127,1119706315,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+955,Reham Elarabay,1062348615,1033104451,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+956,Mariam Nasser,1287666539,1276782267,سبك الضحاك المشتركة,,Female,3rd Grade,Banha,A,Science,0
+957,Youssef Ahmed,1015259539,1068612583,احمد زويل الرسميه لغات,,Female,3rd Grade,Banha,L,Science,0
+958,Jomana Mohamed,1550007191,1280116634,الشهيد محمد حسن التجريبى,,Female,3rd Grade,Banha,L,Science,0
+959,Ahmed Mahmoud,1142540575,1092217690,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+960,Nada Osama,1552560112,1067656728,العبادلة الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+961,Jomana Mohamed,1095781334,1092815592,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+962,Jessica Halim,1275298530,1282707574,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+963,Kariman Ali,1225552312,1119008223,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+964,Sadine Mohamed,1010483770,1002184321,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+965,Ahmed Mahmoud,1010922943,1099943806,طوخ الثانويه الخاصه,,Male,3rd Grade,Banha,L,Math,0
+966,Toka Salama,1287767214,1281851874,منصور بدارالثانوية,,Female,3rd Grade,Banha,A,Science,0
+967,Basmala Mohamed,1201907882,1287306144,منصور بدارالثانوية,,Female,3rd Grade,Banha,A,Science,0
+968,Fatma Ahmed,1223008435,1224653971,منصور بدارالثانوية,,Female,3rd Grade,Banha,A,Science,0
+969,Neqaa Sherif,1207327319,1223507892,منصور بدارالثانوية,,Female,3rd Grade,Banha,A,Science,0
+970,Karim Mahmoud,1062208962,1019956995,السلام الخاصة ببنها,,Male,3rd Grade,Banha,L,Math,0
+971,Mohamed Khaled,1271059424,1225281516,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+973,Gowairya Osama,1282053844,1278479342,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+974,Mohamed Essam,1011916628,1225979243,ميت برة الثانوية المشتركة,,Male,3rd Grade,Banha,A,Science,0
+975,hazem mahmoud,1092144636,1275778770,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+976,mohamed tamer,1060650946,1016401147,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+977,fatma ashraf,1281025086,1280334702,السادات الثانوية بنات بشبلنجة,,Female,3rd Grade,Banha,A,Science,0
+978,hagar hany,1559660464,1203016834,العمار الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+979,mariem mahmoud,1202025227,1011454122,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+980,abdallah maged,1288090172,1278479342,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Science,0
+981,yara amir,1061571737,1092119992,طوخ الثانويه الخاصه,,Female,3rd Grade,Banha,L,Science,0
+982,rodina khaled,1060524504,1289553357,براعم مصر للغات,,Female,3rd Grade,Banha,L,Science,0
+983,mohamed khaled,1096376129,1091817016,الفتح,,Male,3rd Grade,Banha,A,Science,0
+984,ahmed mahmoud,1142540575,1092217690,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+985,amar yaser,1032554678,1221947351,السلام,,Male,3rd Grade,Banha,L,Science,0
+986,rawan elsaid,1025646509,1098860536,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+987,gana shreif,1064164724,1062590201,طوخ الثانويه الخاصه,,Female,3rd Grade,Banha,L,Science,0
+988,reem waled,1500358383,1094387374,حسن ابو بكر,,Female,3rd Grade,Banha,L,Science,0
+989,menna mohamed,1014814153,1090800649,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Math,0
+990,ahmed hesham,1273474707,1017367213,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+991,salma helal,1210958632,1221486587,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+992,malak mahmoud,1212231893,1225945856,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+993,mohamed mohamed,1060700241,1003398325,دلتا الخاصة,,Male,1st Grade,Banha,A,Science,0
+994,mohamed hosam,1050114822,1002291600,الشهيد محمد كريم احمد ضيف,,Male,3rd Grade,Banha,A,Math,0
+995,ramez amr,1017544919,1017939500,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+996,ramez amr,1017544919,1017939500,مصطفى كامل,0,Male,3rd Grade,Banha,L,Math,0
+997,adam tarek,1226759959,1223427128,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+998,omar saeed,1206997679,1552527931,بلقس الثانوية بنين,,Male,3rd Grade,Banha,A,Science,0
+999,mariem ahmed,1066114972,1270369036,قويسنا الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+1000,farah ahmed,1008849790,1008004541,التجريبية المتميزة قويسنا,,Female,3rd Grade,Banha,L,Science,0
+1001,laria ayman,1226899025,1225899289,التجريبية المتميزة للغات قويسنا,,Female,3rd Grade,Banha,L,Science,0
+1002,haneen mohamed,1274736830,1288383545,الشهيد خالد المغربي,,Female,3rd Grade,Banha,A,Literature,0
+1003,yousef ali,1113698240,1016486285,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Science,0
+1004,roqaia abas,1114241380,1127104400,الشهيد تامر عبد الحافظ ابو العنين,,Female,3rd Grade,Banha,A,Science,0
+1005,mohamed mohamed,1096530998,1022228200,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Science,0
+1006,salma rafat,1006196454,1006579487,كفر الجمال التجريبية لغات,,Female,3rd Grade,Banha,L,Science,0
+1007,mahmoud ahmed,1122932958,1151513637,كفر شكر الرسمية لغات,,Male,3rd Grade,Banha,L,Math,0
+1008,mohamed amr,1006368526,1013346265,كفر شكر الرسمية لغات,,Male,3rd Grade,Banha,L,Math,0
+1009,mohamed alaa,1060003294,1000691655,كفر شكر الرسمية لغات,,Male,3rd Grade,Banha,L,Math,0
+1010,ali hatem,1122510265,1119257097,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,3rd Grade,Banha,A,Math,0
+1011,hagar mohamed,1028445789,1147387929,الشموت الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+1012,hana mosad,1129701386,1153268812,الشموت الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+1013,mohamed mustafa,1030577390,1000715559,طوخ الثانويه الخاصه,,Male,3rd Grade,Banha,L,Math,0
+1014,zina rashad,1016906053,1061656348,الفتح الرسمية للغات,,Female,3rd Grade,Banha,L,Science,0
+1015,fatma mohamed,1030949648,1004213192,الفتح الرسمية لغات,,Female,3rd Grade,Banha,L,Science,0
+1016,sama mohamed,1154389150,1158070879,الشبان المسلمين,,Female,3rd Grade,Banha,A,Science,0
+1017,yehia ahmed,1204659109,1098754312,الفتح,,Male,3rd Grade,Banha,A,Science,0
+1018,mazen mohamed,1101760877,1022060278,الشهيد ابراهيم محمد ابراهيم السيد كشوع,,Male,3rd Grade,Banha,A,Science,0
+1019,esaf salem,1012484422,1010663806,السلام الخاصة ببنها,,Male,3rd Grade,Banha,L,Science,0
+1020,marwan mohamed,1066101337,1022488126,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+1021,faisal saeed,1013600645,1093010634,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+1022,yahia mohamed,1288099449,1111186449,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+1023,abdelrahman yaser,1070771158,1001291184,الشهيد الطياروليداسماعيل,,Male,3rd Grade,Banha,L,Science,0
+1024,habiba wael,1023478027,1006149157,احمد زويل الرسميه لغات,,Female,3rd Grade,Banha,L,Math,0
+1025,mohamed samer,1097692712,1027256757,سعيد الدين الشاذلي,,Male,3rd Grade,Banha,L,Science,0
+1026,hassan hegazy,1025096104,1012874747,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+1027,basel haitham,1006379312,1002933486,فيوتشر,,Male,3rd Grade,Banha,L,Science,0
+1028,kariman ali,1125552312,1119008223,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Science,0
+1029,youssef belal,1095274225,1105713230,عبدالحليم نور الدين المشتركة بالرملة,,Male,3rd Grade,Banha,A,Math,0
+1030,mohad ahmed,1229433106,1225773686,اجهور الثانويه بنين,,Male,3rd Grade,Banha,A,Math,0
+1031,mayar emad,1552373089,1065152852,سعد الدين شريف الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+1032,mahmoud ahmed,1016126138,1006135038,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+1033,menna ayman,1018399197,1065325635,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+1034,rahma mahmoud,1066367815,1098986784,الشهيد احمد عبد النبى عطوة,,Female,3rd Grade,Banha,A,Science,0
+1035,mohamed ahmed,1007195150,1065722257,الدكتور محمود مصطفى الثانوية بنين,,Male,3rd Grade,Banha,A,Math,0
+1036,mohamed tamer,1062242690,1551453399,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+1037,hala wael,1200461342,1205565163,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+1038,abdelrahman haitham,1093047695,1005762160,الشهيد طياروليد اسماعيل,,Male,3rd Grade,Banha,A,Math,0
+1039,mohamed haikal,1000971526,1066635395,السلام الخاصة ببنها,,Male,3rd Grade,Banha,L,Math,0
+1040,malek ashraf,1283090107,1221266314,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+1041,ebrahim mustafa,1012741447,1096739460,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+1042,laila ali,1104791446,1032520756,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+1043,areej reda,1060533490,1032419169,الثانوية بنات بقويسنا,,Female,2nd Grade,Banha,A,Science,0
+1044,sepa ehap,1285145407,1205555853,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+1045,hana ayman,1092698053,1066314276,السلام الخاصة ببنها,,Female,3rd Grade,Banha,L,Math,0
+1046,maryam mohamed,1009823225,1035105308,طوخ الثانويه الخاصه,,Female,3rd Grade,Banha,L,Math,0
+1047,lojina ibrahim,1284697226,1279102933,بنها الثانوية بنات,,Female,1st Grade,Banha,A,Science,0
+1048,yousef ahmed,1203758789,1151534355,بنها الثانوية بنين,,Female,1st Grade,Banha,A,Science,0
+1049,saif mohamed,1111107060,1124000666,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+1050,roqaia reda,1019195543,1013370455,كفر عابد الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+1051,nagham ibrahim,1552693600,1554272651,المنشية الكبرى الثانوية المشتركة,,Female,3rd Grade,Banha,A,Science,0
+1052,youssef mohamed,1094563738,1093983276,مصطفى كامل,,Male,3rd Grade,Banha,L,Science,0
+1053,retaj reda,1128828243,1228187556,بنها الثانوية بنات,,Female,2nd Grade,Banha,A,Science,0
+1054,ahmed sami,1110110377,1142244559,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+1055,sandy makram,1006325372,1287551401,الشهيد محمد عبدالحميد,,Female,3rd Grade,Banha,L,Science,0
+1056,sandy makram,1210048302,1287551401,الشهيد محمد عبدالحميد,0,Female,3rd Grade,Banha,L,Science,0
+1057,lenah awad,1096470079,1009394661,مصطفى كامل,,Female,3rd Grade,Banha,L,Science,0
+1058,nour mohamed,1284826021,1020441105,ام المؤمنين الثانويه بنات,,Female,3rd Grade,Banha,A,Math,0
+1059,saif mahmoud,1093946777,1505702029,كفر شكر الرسمية لغات,,Male,3rd Grade,Banha,L,Science,0
+1060,jana ahmed,1550718788,1000127424,احمد زويل الرسميه لغات,,Female,3rd Grade,Banha,L,Math,0
+1061,mohamed abdo,1226715947,1111333451,دملو الثانوية المشتركه,,Male,2nd Grade,Banha,A,Math,0
+1062,nour hessam,1287224382,1284188907,منصور بدارالثانوية,,Female,2nd Grade,Banha,A,Science,0
+1063,abdelminim sabry,1284312065,1274643132,منصور بدارالثانوية,,Male,2nd Grade,Banha,A,Science,0
+1064,abdelminim sabry,1284312065,1289442281,منصور بدارالثانوية,0,Male,2nd Grade,Banha,A,Science,0
+1065,yasmin rashed,1286409619,1016173705,الشهيد خالد المغربي,,Female,3rd Grade,Banha,A,Science,0
+1066,sahar gamal,1080421316,1559483256,الثانويه المشتركه بهورين,,Female,3rd Grade,Banha,A,Science,0
+1067,jana ali,1229819863,1142453586,نصر عبدالغفور الثانويه بنات,,Female,1st Grade,Banha,A,Science,0
+1068,aya elkoramy,1551562007,1551562008,نصر عبدالغفور الثانويه بنات,,Female,1st Grade,Banha,A,Science,0
+1069,amr eslam,1121095541,1117767838,بنها الثانوية بنين,,Male,2nd Grade,Banha,A,Science,0
+1070,jana amr,1015411127,1016773322,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+1071,nancy mohamed,1015487805,1098330011,احمد زويل الرسميه لغات,,Female,3rd Grade,Banha,L,Science,0
+1072,marwan morsi,1032777054,1029952502,بنها الثانوية بنين,,Male,2nd Grade,Banha,A,Science,0
+1073,omnia hamdy,1270325243,1225907426,دملو الثانوية المشتركه,,Female,1st Grade,Banha,A,Science,0
+1074,kerolos emad,1285961592,1224058598,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+1075,omar ahmed,1098387361,1063411469,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Science,0
+1076,abdelrahman wael,1095251784,1006029676,البنك القليوبية الوطنى,,Male,1st Grade,Banha,A,Science,0
+1077,noura khaled,1091817016,1096376129,الفتح,,Female,1st Grade,Banha,A,Science,0
+1078,yousef ahmed,1116644786,1069089092,السيدة خديجة الرسمية لغات,,Male,3rd Grade,Banha,L,Science,0
+1079,abdelrahmen hattim,1092307020,1064215029,مصطفى كامل,,Male,1st Grade,Banha,L,Science,0
+1080,rodina ayman,1210012764,1220897208,منصور بدارالثانوية,,Female,1st Grade,Banha,A,Science,0
+1081,yousef adel,1278872794,1282041329,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+1082,ramez amr,1062449010,1017939500,احمد زويل الرسميه لغات,,Male,3rd Grade,Banha,L,Math,0
+1083,habiba alaa,1112106135,1111093600,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+1084,nour hossin,1286144270,1060116318,مصطفى كامل,,Female,1st Grade,Banha,L,Science,0
+1085,habiba ahmed,1098582664,1062379600,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+1086,habiba yousef,1143054009,1145328604,مصطفى كامل,,Female,3rd Grade,Banha,L,Math,0
+1087,sief hossen,1123285599,1113361106,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+1088,ahmed mohamed,1208172411,1010318557,الرياضية الثانوية ببنها,,Male,2nd Grade,Banha,A,Literature,0
+1089,belal ahmed,1021909131,1062045304,مصطفى كامل,,Male,3rd Grade,Banha,L,Math,0
+1090,kenzy osama,1100608321,1228367066,كفر شكر الرسمية لغات,,Female,3rd Grade,Banha,L,Math,0
+1091,jana ahmed,1019795908,1155452012,مصطفى كامل,,Female,1st Grade,Banha,L,Science,0
+1092,fatma mohamed,1095009158,1006727983,الشهيد محمد نجيب الحارثى,,Female,2nd Grade,Banha,A,Science,0
+1093,ahmed safwat,1011233266,1200060033,سعد الدين,,Male,3rd Grade,Banha,L,Math,0
+1094,yasmin rashed,1286409619,1016173705,الشهيد خالد المغربي,,Female,3rd Grade,Banha,A,Science,0
+1095,eslam abdelhamed,1225358495,1023314354,البنك القليوبية الوطنى,,Male,3rd Grade,Banha,A,Math,0
+1096,esraa shaban,1032801240,1063343055,مياى الثانوية المشتركه,,Female,3rd Grade,Banha,A,Science,0

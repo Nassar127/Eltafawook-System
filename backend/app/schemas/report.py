@@ -37,9 +37,14 @@ class DailySalesOut(BaseModel):
     branch_code: str
     day: date
     sales_count: int
-    sales_total_cents: int = Field(..., description="Sum of sales from the sales table")
-    adjustments_total_cents: int = Field(..., description="Sum of manual revenue adjustments")
-    net_total_cents: int = Field(..., description="Grand total (sales + adjustments)")
+
+    # UPDATED: Replace the single total with three separate totals
+    sales_cash_cents: int
+    sales_voda_cents: int
+    sales_instapay_cents: int
+
+    adjustments_total_cents: int
+    net_total_cents: int
     net_total_egp: float
 
 class DetailedSalesRow(BaseModel):

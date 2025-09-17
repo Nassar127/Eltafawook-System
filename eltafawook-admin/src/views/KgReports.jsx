@@ -17,6 +17,18 @@ const getTodayLocal = () => {
     return `${year}-${month}-${day}`;
 };
 
+const formatDateTime = (dateStr, lang) => {
+    const d = new Date(dateStr);
+    const locale = lang === 'ar' ? 'ar-EG' : 'en-US';
+    return new Intl.DateTimeFormat(locale, {
+        weekday: 'short',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+    }).format(d);
+};
 
 export default function KgReports({ apiBase, authToken, toast, branchId, currentUser }) {
     const [tab, setTab] = useState("summary");
@@ -29,6 +41,9 @@ export default function KgReports({ apiBase, authToken, toast, branchId, current
     const [adjReason, setAdjReason] = useState("");
     const [adjustments, setAdjustments] = useState([]);
     const [detailedData, setDetailedData] = useState(null);
+    const [subscriptions, setSubscriptions] = useState([]);
+    const [loadingSubs, setLoadingSubs] = useState(false);
+    const [subsSearchTerm, setSubsSearchTerm] = useState("");
     const { t, i18n } = useTranslation("kgReports");
 
     const getReportDateRange = () => {
@@ -110,6 +125,29 @@ export default function KgReports({ apiBase, authToken, toast, branchId, current
         }
     };
 
+    const fetchSubscriptions = async () => {
+        if (!branchId) return;
+        setLoadingSubs(true);
+        try {
+            let url = `/kg-reports/subscriptions?branch_id=${branchId}`;
+            if (subsSearchTerm.trim()) {
+                url += `&search=${encodeURIComponent(subsSearchTerm.trim())}`;
+            }
+            const data = await apiFetch(apiBase, url, { authToken });
+            setSubscriptions(data.rows || []);
+        } catch (e) {
+            toast.push({ title: "Failed to load subscriptions", description: e.message, tone: "error" });
+        } finally {
+            setLoadingSubs(false);
+        }
+    };
+    
+    useEffect(() => {
+        if (tab === 'subscriptions') {
+            fetchSubscriptions();
+        }
+    }, [tab]);
+
     return (
         <Card>
             <CardHead><CardTitle>{t("title_kg_items")}</CardTitle></CardHead>
@@ -120,6 +158,9 @@ export default function KgReports({ apiBase, authToken, toast, branchId, current
                 </SubTabButton>
                 <SubTabButton $active={tab === 'detailed'} onClick={() => setTab('detailed')}>
                     {t("tabs_kg_items.detailed")}
+                </SubTabButton>
+                <SubTabButton $active={tab === 'subscriptions'} onClick={() => setTab('subscriptions')}>
+                    {t("tabs_kg_items.subscription")}
                 </SubTabButton>
                 </SubTabs>
                 
@@ -192,7 +233,7 @@ export default function KgReports({ apiBase, authToken, toast, branchId, current
                         {loading && <p>{t("summary.loading")}</p>}
                         {summaryData && !loading && (
                             <Row cols={4} style={{marginTop: 16}}>
-                                <StatBox label={t("stats.gross")} value={money(summaryData.sales_total_cents)} />
+                                <StatBox label={t("stats.gross_cash")} value={money(summaryData.sales_total_cents)} />
                                 <StatBox label={t("stats.adjustments")} value={money(summaryData.adjustments_total_cents)} positive={summaryData.adjustments_total_cents > 0} negative={summaryData.adjustments_total_cents < 0} />
                                 <StatBox label={t("stats.net")} value={money(summaryData.net_total_cents)} isTotal />
                                 <StatBox label={t("stats.transactions")} value={summaryData.sales_count} />
@@ -224,6 +265,53 @@ export default function KgReports({ apiBase, authToken, toast, branchId, current
                             </TableWrap>
                         )}
                    </>
+                )}
+
+                {tab === 'subscriptions' && (
+                    <>
+                        <Row cols={3} style={{marginTop: '16px'}}>
+                            <div style={{gridColumn: 'span 2'}}>
+                                <Label>{t('subscriptions_kg_items.search_statment')}</Label>
+                                <Input 
+                                    value={subsSearchTerm}
+                                    onChange={(e) => setSubsSearchTerm(e.target.value)}
+                                    onKeyDown={(e) => e.key === 'Enter' && fetchSubscriptions()}
+                                    placeholder={t('subscriptions_kg_items.type_search')}
+                                />
+                            </div>
+                            <div style={{display: 'flex', alignItems: 'end'}}>
+                                <Button onClick={fetchSubscriptions} disabled={loadingSubs}>
+                                    {loadingSubs ? t('subscriptions_kg_items.searching') : t('subscriptions_kg_items.search')}
+                                </Button>
+                            </div>
+                        </Row>
+
+                        <TableWrap style={{marginTop: '16px'}}>
+                            <Table>
+                                <thead>
+                                    <tr>
+                                        <th>{t('subscriptions_kg_items.name')}</th>
+                                        <th>{t('subscriptions_kg_items.parent_phone')}</th>
+                                        <th>{t('subscriptions_kg_items.last_payment')}</th>
+                                        <th>{t('subscriptions_kg_items.next_payment')}</th>
+                                        <th>{t('subscriptions_kg_items.last_plan')}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {subscriptions.map((row, i) => (
+                                        <tr key={i}>
+                                            <td>{row.student_name}</td>
+                                            <td>{row.parent_phone || 'N/A'}</td>
+                                            <td>{formatDateTime(row.last_payment_date, i18n.language)}</td>
+                                            <td>{new Date(row.next_payment_date).toLocaleDateString(i18n.language === 'ar' ? 'ar-EG' : 'en-CA')}</td>
+                                            <td>{row.last_used_plan}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </Table>
+                        </TableWrap>
+                        {subscriptions.length === 0 && !loadingSubs && <Helper>{t('subscriptions_kg_items.no_sub')}</Helper>}
+                    </>
                 )}
             </CardBody>
         </Card>

@@ -2,7 +2,7 @@ from uuid import UUID
 from typing import Literal, Optional
 from pydantic import BaseModel, ConfigDict
 
-KgItemType = Literal['good', 'service']
+KgItemType = Literal['good', 'service', 'morning_service', 'evening_service']
 
 class KgItemBase(BaseModel):
     sku: str

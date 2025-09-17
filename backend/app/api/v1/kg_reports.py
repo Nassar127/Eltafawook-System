@@ -8,13 +8,24 @@ from typing import cast
 from backend.app.db.session import get_db
 from backend.app.models.branch import Branch
 from backend.app.models.user import User
-from backend.app.schemas.kg_report import KgDailySalesOut, KgDetailedSalesReportOut, KgDetailedSalesRow
+from backend.app.schemas.kg_report import KgDailySalesOut, KgDetailedSalesReportOut, KgDetailedSalesRow, SubscriptionReportOut, SubscriptionStatusRow
 from backend.app.services import kg_report_service as service
 from .auth import get_current_active_user
 from sqlalchemy import select
 
 
 router = APIRouter()
+
+@router.get("/subscriptions", response_model=SubscriptionReportOut)
+def get_subscriptions(
+    branch_id: PyUUID,
+    search: str | None = Query(default=None),
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_active_user)
+):
+    rows = service.get_subscription_statuses(db=db, branch_id=branch_id, search_term=search)
+    return SubscriptionReportOut(rows=[SubscriptionStatusRow.model_validate(row) for row in rows])
+
 
 @router.get("/daily-sales", response_model=KgDailySalesOut)
 def daily_sales(

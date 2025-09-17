@@ -165,7 +165,9 @@
     }
   },
   "stats": {
-    "gross": "إجمالي المبيعات (من الطلبات)",
+    "gross_cash": "إجمالي المبيعات (كاش)",
+    "gross_voda": "إجمالي المبيعات (فودافون كاش)",
+    "gross_instapay": "إجمالي المبيعات (انستاباي)",
     "adjustments": "التعديلات",
     "net": "صافي الإيراد (الإجمالي)",
     "transactions": "عدد العمليات"
@@ -312,7 +314,8 @@
   "title_kg_reports": "عناصر الحضانة والمخزون",
   "tabs_kg_reports": {
     "create": "إنشاء عنصر",
-    "receive": "استلام مخزون"
+    "receive": "استلام مخزون",
+    "inventory": "المخزون"
   },
   "create_kg_reports": {
     "item_name": "اسم العنصر",
@@ -323,6 +326,8 @@
     "item_type": "نوع العنصر",
     "item_type_options": {
       "service": "خدمة (مثل المصروفات، الرحلات - كمية غير محدودة)",
+      "morning_service": "خدمة صباحية (مثل المصروفات - كمية غير محدودة)",
+      "evening_service": "خدمة مسائية (مثل المصروفات - كمية غير محدودة)",
       "good": "سلعة (مثل التيشيرت، الكتاب - كمية متتبعة)"
     },
     "create_btn": "إنشاء عنصر"
@@ -333,6 +338,12 @@
     "helper_physical_only": "تظهر هنا السلع المادية التي تتطلب تتبعًا للمخزون فقط.",
     "qty_received": "الكمية المستلمة",
     "receive_btn": "استلام المخزون"
+  },
+  "inventory_kg_reports": {
+    "loading": "جارٍ التحميل...",
+    "refresh_inventory": "تحديث المخزون",
+    "helper_message": "بيظهر كمية الحاجات الفعلية فقط. الخدمات مش هتظهر",
+    "in_stock": "فى المخزن"
   },
   "toasts_kg_reports": {
     "name_price_required": "الاسم والسعر مطلوبان.",
@@ -386,7 +397,8 @@
   "title_kg_items": "تقارير الحضانة",
   "tabs_kg_items": {
     "summary": "الملخص",
-    "detailed": "تقرير تفصيلي"
+    "detailed": "تقرير تفصيلي",
+    "subscription": "الاشتراكات"
   },
   "period_kg_items": {
     "title": "فترة التقرير",
@@ -431,6 +443,18 @@
     "net": "صافي الإيراد (الإجمالي)",
     "transactions": "عدد العمليات"
   },
+  "subscriptions_kg_items":{
+  "search_statment":"ابحث باسم الطالب او ولى الامر",
+  "search":"بحث",
+  "searching": "يتم البحث",
+  "type_search":"اكتب للبحث",
+  "name":"اسم الطالب",
+  "parent_phone":"رقم ولي الامر",
+  "last_payment":"اخر ميعاد دفع",
+  "next_payment":"ميعاد الدفع القادم",
+  "last_plan":"اخر طريقة دفع",
+  "no_sub":"لا يوجد إشتراكات"
+  },
   "toasts_kg_items": {
     "summary_failed_title": "فشل تحميل الملخص",
     "invalid_adj_title": "تعديل غير صالح",
@@ -450,8 +474,9 @@
 
   "register_kg_students": {
     "child_info_title": "بيانات الطفل",
+    "register_another": "تسجيل طفل اخر",
     "labels": {
-      "full_name": "الاسم رباعي إلى سباعي",
+      "full_name": "الاسم",
       "national_id": "الرقم القومي (14 رقمًا)",
       "nationality": "الجنسية",
       "religion": "الديانة",
@@ -472,7 +497,7 @@
 
     "parents_title": "بيانات ولي الأمر",
     "parents": {
-      "father_name": "اسم الأب رباعي",
+      "father_name": "اسم الأب",
       "father_national_id": "الرقم القومي للأب (14 رقمًا)",
       "father_profession": "مهنة الأب",
       "father_phone": "هاتف الأب (11 رقمًا)",
@@ -480,13 +505,13 @@
       "mother_phone": "هاتف الأم (11 رقمًا)"
     },
 
-    "guardian_title": "بيانات الوصي (إن وُجد)",
+    "guardian_title": "بيانات ولى الأمر (إن وُجد)",
     "guardian": {
-      "name": "اسم الوصي رباعي",
-      "national_id": "الرقم القومي للوصي (14 رقمًا)",
+      "name": "اسم ولى الأمر رباعي",
+      "national_id": "الرقم القومي لولى الأمر (14 رقمًا)",
       "relation": "صلة القرابة",
-      "phone": "هاتف الوصي (11 رقمًا)",
-      "whatsapp": "واتساب الوصي (11 رقمًا)"
+      "phone": "هاتف ولى الأمر (11 رقمًا)",
+      "whatsapp": "واتساب ولى الأمر (11 رقمًا)"
     },
 
     "additional_title": "معلومات إضافية",

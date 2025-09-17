@@ -112,8 +112,10 @@ export default function KgStudents({ apiBase, authToken, toast, branchId }) {
   const [pendingStudents, setPendingStudents] = useState([]);
   const [loadingPending, setLoadingPending] = useState(false);
   const { t, i18n } = useTranslation();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
 
-  // Helper: format date based on current UI language (fixes 9/12/2025 escaping & locale)
   const formatDateLocalized = (dateStr) => {
     if (!dateStr) return "—";
     const d = new Date(dateStr);
@@ -142,11 +144,9 @@ export default function KgStudents({ apiBase, authToken, toast, branchId }) {
       }
     };
     fetchPending();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tab, branchId, apiBase, authToken]);
 
   const handleStatusUpdate = async (studentId, newStatus) => {
-    // FIX: use proper button labels instead of toast messages
     const confirmationMessage =
       newStatus === 'accepted'
         ? t("confirms.accept")
@@ -235,73 +235,55 @@ export default function KgStudents({ apiBase, authToken, toast, branchId }) {
     }
   };
 
-  const handleSubmit = async () => {
-    if (!isFullNameValid(form.full_name)) {
-      toast.push({ title: t("toasts_kg_students.validation_title"), description: t("validation.child_full_name"), tone: "error" });
-      return;
-    }
-    if (form.national_id && form.national_id.replace(/\D/g, '').length !== 14) {
-      toast.push({ title: t("toasts_kg_students.validation_title"), description: t("validation.child_nid"), tone: "error" });
-      return;
-    }
-    if (form.father_name && !isFullNameValid(form.father_name)) {
-      toast.push({ title: t("toasts_kg_students.validation_title"), description: t("validation.father_full_name"), tone: "error" });
-      return;
-    }
-    if (form.guardian_name && !isFullNameValid(form.guardian_name)) {
-      toast.push({ title: t("toasts_kg_students.validation_title"), description: t("validation.guardian_full_name"), tone: "error" });
-      return;
-    }
-    if (form.father_national_id && form.father_national_id.replace(/\D/g, '').length !== 14) {
-      toast.push({ title: t("toasts_kg_students.validation_title"), description: t("validation.father_nid"), tone: "error" });
-      return;
-    }
-    if (form.guardian_national_id && form.guardian_national_id.replace(/\D/g, '').length !== 14) {
-      toast.push({ title: t("toasts_kg_students.validation_title"), description: t("validation.guardian_nid"), tone: "error" });
-      return;
-    }
+    const handleSubmit = async () => {
+        setError("");
 
-    const phoneFields = {
-      father_phone: eg11ToE164(form.father_phone),
-      father_whatsapp: eg11ToE164(form.father_whatsapp),
-      mother_phone: eg11ToE164(form.mother_phone),
-      guardian_phone: eg11ToE164(form.guardian_phone),
-      guardian_whatsapp: eg11ToE164(form.guardian_whatsapp)
+        if (!form.full_name.trim() || !form.father_name.trim() || !form.date_of_birth) {
+            setError("Please fill in all required fields: Child's Full Name, Father's Name, and Date of Birth.");
+            return;
+        }
+        
+        if (form.national_id && form.national_id.replace(/\D/g, '').length !== 14) {
+            setError("If you enter a National ID for the child, it must be 14 digits.");
+            return;
+        }
+        if (form.father_national_id && form.father_national_id.replace(/\D/g, '').length !== 14) {
+            setError("If you enter a National ID for the father, it must be 14 digits.");
+            return;
+        }
+
+        if (form.needs_bus_subscription === false && !form.alternative_transport_method?.trim()) {
+            setError("If you do not need the bus, please specify the alternative transport method.");
+            return;
+        }
+
+        if (!isFullNameValid(form.full_name) || !form.father_name || !form.date_of_birth) {
+            setError("Please fill in all required fields: Child's Full Name (min. two names), Father's Name, and Date of Birth.");
+            return;
+        }
+        setIsSubmitting(true);
+        try {
+            const payload = {
+                ...form,
+                father_phone: eg11ToE164(form.father_phone),
+                father_whatsapp: eg11ToE164(form.father_whatsapp),
+                mother_phone: eg11ToE164(form.mother_phone),
+                guardian_phone: eg11ToE164(form.guardian_phone),
+                guardian_whatsapp: eg11ToE164(form.guardian_whatsapp),
+                authorized_pickups: form.authorized_pickups.filter(name => name && name.trim() !== "")
+            };
+            await apiFetch(apiBase, "/public/kg-applications", { method: "POST", body: payload });
+            setSuccess(true);
+        } catch (e) {
+            setError(`Submission Failed: ${e.message}`);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
-    for (const [key, value] of Object.entries(phoneFields)) {
-      if (form[key] && !value) {
-        toast.push({
-          title: t("toasts_kg_students.invalid_phone_title"),
-          description: t("toasts_kg_students.invalid_phone_desc", { field: key.replace('_', ' ') }),
-          tone: "error"
-        });
-        return;
-      }
-    }
-
-    if (!form.date_of_birth) {
-      toast.push({ title: t("toasts_kg_students.validation_title"), description: t("toasts_kg_students.dob_required"), tone: "error" });
-      return;
-    }
-
-    try {
-      const payload = {
-        ...form,
-        ...phoneFields,
-        branch_id: branchId,
-        authorized_pickups: form.authorized_pickups.filter(name => name.trim() !== "")
-      };
-      const student = await apiFetch(apiBase, "/kg-students", { method: "POST", body: payload, authToken });
-      toast.push({
-        title: t("toasts_kg_students.reg_success"),
-        description: t("toasts_kg_students.reg_success_desc", { name: student.full_name }),
-        tone: "success"
-      });
-      setForm(INITIAL_FORM_STATE);
-    } catch (e) {
-      toast.push({ title: t("toasts_kg_students.reg_failed"), description: e.message, tone: "error" });
-    }
+  const handleRegisterAnother = () => {
+    setForm(INITIAL_FORM_STATE);
+    setSuccess(false);
   };
 
   return (
@@ -325,107 +307,123 @@ export default function KgStudents({ apiBase, authToken, toast, branchId }) {
         </SubTabs>
 
         {tab === 'register' && (
-          <div>
-            <CardTitle style={{ fontSize: 16, marginTop: 16 }}>{t("register_kg_students.child_info_title")}</CardTitle>
-            <Row cols={3}>
-              <div><Label>{t("register_kg_students.labels.full_name")}</Label><Input name="full_name" value={form.full_name} onChange={handleFormChange} /></div>
-              <div><Label>{t("register_kg_students.labels.national_id")}</Label><Input name="national_id" value={form.national_id} onChange={handleFormChange} maxLength={14} /></div>
-              <div><Label>{t("register_kg_students.labels.nationality")}</Label><Input name="nationality" value={form.nationality} onChange={handleFormChange} /></div>
+          <>
+            {success ? (
+              <div style={{ textAlign: 'center', padding: '40px 0' }}>
+                <h2 style={{ color: '#059669' }}>{t("toasts_kg_students.reg_success")}</h2>
+                <p>{t("toasts_kg_students.reg_success_desc", { name: form.full_name })}</p>
+                <Button onClick={handleRegisterAnother} style={{ marginTop: '16px' }}>
+                    {t("register_kg_students.register_another")}
+                </Button>
+              </div>
+            ) : (
               <div>
-                <Label>{t("register_kg_students.labels.religion")}</Label>
-                <Select name="religion" value={form.religion} onChange={handleFormChange}>
-                  <option value="Muslim">{t("register_kg_students.labels.religion_muslim")}</option>
-                  <option value="Christian">{t("register_kg_students.labels.religion_christian")}</option>
-                </Select>
+                <CardTitle style={{ fontSize: 16, marginTop: 16 }}>{t("register_kg_students.child_info_title")}</CardTitle>
+                <Row cols={3}>
+                  <div><Label>{t("register_kg_students.labels.full_name")}</Label><Input name="full_name" value={form.full_name} onChange={handleFormChange} /></div>
+                  <div><Label>{t("register_kg_students.labels.national_id")}</Label><Input name="national_id" value={form.national_id} onChange={handleFormChange} maxLength={14} /></div>
+                  <div><Label>{t("register_kg_students.labels.nationality")}</Label><Input name="nationality" value={form.nationality} onChange={handleFormChange} /></div>
+                  <div>
+                    <Label>{t("register_kg_students.labels.religion")}</Label>
+                    <Select name="religion" value={form.religion} onChange={handleFormChange}>
+                      <option value="Muslim">{t("register_kg_students.labels.religion_muslim")}</option>
+                      <option value="Christian">{t("register_kg_students.labels.religion_christian")}</option>
+                    </Select>
+                  </div>
+                  <div><Label>{t("register_kg_students.labels.dob")}</Label><Input name="date_of_birth" type="date" value={form.date_of_birth} onChange={handleFormChange} /></div>
+                  <div><Label>{t("register_kg_students.labels.pob")}</Label><Input name="place_of_birth" value={form.place_of_birth} onChange={handleFormChange} /></div>
+                </Row>
+                <Row cols={1}>
+                  <div><Label>{t("register_kg_students.labels.address")}</Label><Input name="address" value={form.address} onChange={handleFormChange} /></div>
+                </Row>
+
+                <Row cols={1} style={{ marginTop: '12px' }}>
+                  <div>
+                    <Label>{t("register_kg_students.labels.attendance_title")}</Label>
+                    <Select name="attendance_period" value={form.attendance_period} onChange={handleFormChange}>
+                      <option value="morning">{t("register_kg_students.labels.attendance_morning")}</option>
+                      <option value="evening">{t("register_kg_students.labels.attendance_evening")}</option>
+                      <option value="both">{t("register_kg_students.labels.attendance_both")}</option>
+                    </Select>
+                  </div>
+                </Row>
+
+                <div style={{ marginTop: '12px' }}>
+                  <Label>{t("register_kg_students.labels.age_oct_title")}</Label>
+                  <Row cols={3}>
+                    <div><Input value={ageAtOctober.years} readOnly disabled placeholder={t("register_kg_students.labels.age_years_ph")} /></div>
+                    <div><Input value={ageAtOctober.months} readOnly disabled placeholder={t("register_kg_students.labels.age_months_ph")} /></div>
+                    <div><Input value={ageAtOctober.days} readOnly disabled placeholder={t("register_kg_students.labels.age_days_ph")} /></div>
+                  </Row>
+                </div>
+
+                <hr style={{ margin: '24px 0' }} />
+                <CardTitle style={{ fontSize: 16 }}>{t("register_kg_students.parents_title")}</CardTitle>
+                <Row cols={2}>
+                  <div><Label>{t("register_kg_students.parents.father_name")}</Label><Input name="father_name" value={form.father_name} onChange={handleFormChange} /></div>
+                  <div><Label>{t("register_kg_students.parents.father_national_id")}</Label><Input name="father_national_id" value={form.father_national_id} onChange={handleFormChange} maxLength={14} /></div>
+                  <div><Label>{t("register_kg_students.parents.father_profession")}</Label><Input name="father_profession" value={form.father_profession} onChange={handleFormChange} /></div>
+                  <div><Label>{t("register_kg_students.parents.father_phone")}</Label><Input name="father_phone" value={form.father_phone} onChange={handleFormChange} maxLength={11} /></div>
+                  <div><Label>{t("register_kg_students.parents.father_whatsapp")}</Label><Input name="father_whatsapp" value={form.father_whatsapp} onChange={handleFormChange} maxLength={11} /></div>
+                  <div><Label>{t("register_kg_students.parents.mother_phone")}</Label><Input name="mother_phone" value={form.mother_phone} onChange={handleFormChange} maxLength={11} /></div>
+                </Row>
+
+                <hr style={{ margin: '24px 0' }} />
+                <CardTitle style={{ fontSize: 16 }}>{t("register_kg_students.guardian_title")}</CardTitle>
+                <Row cols={2}>
+                  <div><Label>{t("register_kg_students.guardian.name")}</Label><Input name="guardian_name" value={form.guardian_name} onChange={handleFormChange} /></div>
+                  <div><Label>{t("register_kg_students.guardian.national_id")}</Label><Input name="guardian_national_id" value={form.guardian_national_id} onChange={handleFormChange} maxLength={14} /></div>
+                  <div><Label>{t("register_kg_students.guardian.relation")}</Label><Input name="guardian_relation" value={form.guardian_relation} onChange={handleFormChange} /></div>
+                  <div><Label>{t("register_kg_students.guardian.phone")}</Label><Input name="guardian_phone" value={form.guardian_phone} onChange={handleFormChange} maxLength={11} /></div>
+                  <div><Label>{t("register_kg_students.guardian.whatsapp")}</Label><Input name="guardian_whatsapp" value={form.guardian_whatsapp} onChange={handleFormChange} maxLength={11} /></div>
+                </Row>
+
+                <hr style={{ margin: '24px 0' }} />
+                <CardTitle style={{ fontSize: 16 }}>{t("register_kg_students.additional_title")}</CardTitle>
+                <Row cols={2}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <input type="checkbox" id="has_chronic_illness" name="has_chronic_illness" checked={form.has_chronic_illness} onChange={handleFormChange} style={{ width: 20, height: 20 }} />
+                    <Label htmlFor="has_chronic_illness" style={{ marginBottom: 0 }}>{t("register_kg_students.additional.has_illness")}</Label>
+                  </div>
+                  {form.has_chronic_illness && <div><Label>{t("register_kg_students.additional.illness_desc")}</Label><Input name="chronic_illness_description" value={form.chronic_illness_description} onChange={handleFormChange} /></div>}
+                </Row>
+                <Row cols={2} style={{ marginTop: 12 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <input type="checkbox" id="attended_previous_nursery" name="attended_previous_nursery" checked={form.attended_previous_nursery} onChange={handleFormChange} style={{ width: 20, height: 20 }} />
+                    <Label htmlFor="attended_previous_nursery" style={{ marginBottom: 0 }}>{t("register_kg_students.additional.attended_prev")}</Label>
+                  </div>
+                  {form.attended_previous_nursery && <div><Label>{t("register_kg_students.additional.prev_name")}</Label><Input name="previous_nursery_name" value={form.previous_nursery_name} onChange={handleFormChange} /></div>}
+                </Row>
+
+                <Row cols={2} style={{ marginTop: 12 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <input type="checkbox" id="needs_bus_subscription" name="needs_bus_subscription" checked={form.needs_bus_subscription} onChange={handleFormChange} style={{ width: 20, height: 20 }} />
+                    <Label htmlFor="needs_bus_subscription" style={{ marginBottom: 0 }}>{t("register_kg_students.additional.needs_bus")}</Label>
+                  </div>
+                  {!form.needs_bus_subscription && <div><Label>{t("register_kg_students.additional.alt_transport")}</Label><Input name="alternative_transport_method" value={form.alternative_transport_method} onChange={handleFormChange} /></div>}
+                </Row>
+                
+                <div style={{ marginTop: 16 }}>
+                  <Label>{t("register_kg_students.pickups.title")}</Label>
+                  <Row cols={3}>
+                    <Input placeholder={t("register_kg_students.pickups.ph1")} value={form.authorized_pickups[0]} onChange={e => handlePickupChange(0, e.target.value)} />
+                    <Input placeholder={t("register_kg_students.pickups.ph2")} value={form.authorized_pickups[1]} onChange={e => handlePickupChange(1, e.target.value)} />
+                    <Input placeholder={t("register_kg_students.pickups.ph3")} value={form.authorized_pickups[2]} onChange={e => handlePickupChange(2, e.target.value)} />
+                  </Row>
+                </div>
+                
+                <PreSubmissionInfo />
+
+                {/* --- CHANGE 4: Add the error display and update the submit button --- */}
+                {error && <p style={{color: 'var(--danger)', textAlign: 'center', marginTop: '16px'}}>{error}</p>}
+                <div style={{ marginTop: 24 }}>
+                  <Button onClick={handleSubmit} disabled={isSubmitting} style={{width: '100%', padding: '12px'}}>
+                    {isSubmitting ? t("signingIn") : t("register_kg_students.submit_btn")}
+                  </Button>
+                </div>
               </div>
-              <div><Label>{t("register_kg_students.labels.dob")}</Label><Input name="date_of_birth" type="date" value={form.date_of_birth} onChange={handleFormChange} /></div>
-              <div><Label>{t("register_kg_students.labels.pob")}</Label><Input name="place_of_birth" value={form.place_of_birth} onChange={handleFormChange} /></div>
-            </Row>
-            <Row cols={1}>
-              <div><Label>{t("register_kg_students.labels.address")}</Label><Input name="address" value={form.address} onChange={handleFormChange} /></div>
-            </Row>
-
-            <Row cols={1} style={{ marginTop: '12px' }}>
-              <div>
-                <Label>{t("register_kg_students.labels.attendance_title")}</Label>
-                <Select name="attendance_period" value={form.attendance_period} onChange={handleFormChange}>
-                  <option value="morning">{t("register_kg_students.labels.attendance_morning")}</option>
-                  <option value="evening">{t("register_kg_students.labels.attendance_evening")}</option>
-                  <option value="both">{t("register_kg_students.labels.attendance_both")}</option>
-                </Select>
-              </div>
-            </Row>
-
-            <div style={{ marginTop: '12px' }}>
-              <Label>{t("register_kg_students.labels.age_oct_title")}</Label>
-              <Row cols={3}>
-                <div><Input value={ageAtOctober.years} readOnly disabled placeholder={t("register_kg_students.labels.age_years_ph")} /></div>
-                <div><Input value={ageAtOctober.months} readOnly disabled placeholder={t("register_kg_students.labels.age_months_ph")} /></div>
-                <div><Input value={ageAtOctober.days} readOnly disabled placeholder={t("register_kg_students.labels.age_days_ph")} /></div>
-              </Row>
-            </div>
-
-            <hr style={{ margin: '24px 0' }} />
-            <CardTitle style={{ fontSize: 16 }}>{t("register_kg_students.parents_title")}</CardTitle>
-            <Row cols={2}>
-              <div><Label>{t("register_kg_students.parents.father_name")}</Label><Input name="father_name" value={form.father_name} onChange={handleFormChange} /></div>
-              <div><Label>{t("register_kg_students.parents.father_national_id")}</Label><Input name="father_national_id" value={form.father_national_id} onChange={handleFormChange} maxLength={14} /></div>
-              <div><Label>{t("register_kg_students.parents.father_profession")}</Label><Input name="father_profession" value={form.father_profession} onChange={handleFormChange} /></div>
-              <div><Label>{t("register_kg_students.parents.father_phone")}</Label><Input name="father_phone" value={form.father_phone} onChange={handleFormChange} maxLength={11} /></div>
-              <div><Label>{t("register_kg_students.parents.father_whatsapp")}</Label><Input name="father_whatsapp" value={form.father_whatsapp} onChange={handleFormChange} maxLength={11} /></div>
-              <div><Label>{t("register_kg_students.parents.mother_phone")}</Label><Input name="mother_phone" value={form.mother_phone} onChange={handleFormChange} maxLength={11} /></div>
-            </Row>
-
-            <hr style={{ margin: '24px 0' }} />
-            <CardTitle style={{ fontSize: 16 }}>{t("register_kg_students.guardian_title")}</CardTitle>
-            <Row cols={2}>
-              <div><Label>{t("register_kg_students.guardian.name")}</Label><Input name="guardian_name" value={form.guardian_name} onChange={handleFormChange} /></div>
-              <div><Label>{t("register_kg_students.guardian.national_id")}</Label><Input name="guardian_national_id" value={form.guardian_national_id} onChange={handleFormChange} maxLength={14} /></div>
-              <div><Label>{t("register_kg_students.guardian.relation")}</Label><Input name="guardian_relation" value={form.guardian_relation} onChange={handleFormChange} /></div>
-              <div><Label>{t("register_kg_students.guardian.phone")}</Label><Input name="guardian_phone" value={form.guardian_phone} onChange={handleFormChange} maxLength={11} /></div>
-              <div><Label>{t("register_kg_students.guardian.whatsapp")}</Label><Input name="guardian_whatsapp" value={form.guardian_whatsapp} onChange={handleFormChange} maxLength={11} /></div>
-            </Row>
-
-            <hr style={{ margin: '24px 0' }} />
-            <CardTitle style={{ fontSize: 16 }}>{t("register_kg_students.additional_title")}</CardTitle>
-            <Row cols={2}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <input type="checkbox" id="has_chronic_illness" name="has_chronic_illness" checked={form.has_chronic_illness} onChange={handleFormChange} style={{ width: 20, height: 20 }} />
-                <Label htmlFor="has_chronic_illness" style={{ marginBottom: 0 }}>{t("register_kg_students.additional.has_illness")}</Label>
-              </div>
-              {form.has_chronic_illness && <div><Label>{t("register_kg_students.additional.illness_desc")}</Label><Input name="chronic_illness_description" value={form.chronic_illness_description} onChange={handleFormChange} /></div>}
-            </Row>
-            <Row cols={2} style={{ marginTop: 12 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <input type="checkbox" id="attended_previous_nursery" name="attended_previous_nursery" checked={form.attended_previous_nursery} onChange={handleFormChange} style={{ width: 20, height: 20 }} />
-                <Label htmlFor="attended_previous_nursery" style={{ marginBottom: 0 }}>{t("register_kg_students.additional.attended_prev")}</Label>
-              </div>
-              {form.attended_previous_nursery && <div><Label>{t("register_kg_students.additional.prev_name")}</Label><Input name="previous_nursery_name" value={form.previous_nursery_name} onChange={handleFormChange} /></div>}
-            </Row>
-
-            <Row cols={2} style={{ marginTop: 12 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <input type="checkbox" id="needs_bus_subscription" name="needs_bus_subscription" checked={form.needs_bus_subscription} onChange={handleFormChange} style={{ width: 20, height: 20 }} />
-                <Label htmlFor="needs_bus_subscription" style={{ marginBottom: 0 }}>{t("register_kg_students.additional.needs_bus")}</Label>
-              </div>
-              {!form.needs_bus_subscription && <div><Label>{t("register_kg_students.additional.alt_transport")}</Label><Input name="alternative_transport_method" value={form.alternative_transport_method} onChange={handleFormChange} /></div>}
-            </Row>
-
-            <div style={{ marginTop: 16 }}>
-              <Label>{t("register_kg_students.pickups.title")}</Label>
-              <Row cols={3}>
-                <Input placeholder={t("register_kg_students.pickups.ph1")} value={form.authorized_pickups[0]} onChange={e => handlePickupChange(0, e.target.value)} />
-                <Input placeholder={t("register_kg_students.pickups.ph2")} value={form.authorized_pickups[1]} onChange={e => handlePickupChange(1, e.target.value)} />
-                <Input placeholder={t("register_kg_students.pickups.ph3")} value={form.authorized_pickups[2]} onChange={e => handlePickupChange(2, e.target.value)} />
-              </Row>
-            </div>
-
-            <PreSubmissionInfo />
-
-            <div style={{ marginTop: 24 }}>
-              <Button onClick={handleSubmit}>{t("register_kg_students.submit_btn")}</Button>
-            </div>
-          </div>
+            )}
+          </>
         )}
 
         {tab === 'edit' && (

@@ -105,18 +105,22 @@ def daily_sales_totals(db: Session, *, branch_id: PyUUID, start_date: date, end_
     """
     code = db.execute(select(Branch.code).where(Branch.id == branch_id)).scalar_one()
 
-    sales_row = db.execute(
-        text("""
-            SELECT COALESCE(SUM(total_cents), 0) AS total_cents, COUNT(*) AS sales_count
-            FROM sales
-            WHERE branch_id = :branch_id 
-              AND (sold_at AT TIME ZONE 'Africa/Cairo')::date >= :start_date
-              AND (sold_at AT TIME ZONE 'Africa/Cairo')::date <= :end_date
-        """),
-        {"branch_id": str(branch_id), "start_date": start_date, "end_date": end_date},
-    ).one()
+    # UPDATED: This query now groups sales by payment_method using FILTER
+    sales_query = text("""
+        SELECT
+            COUNT(*) AS sales_count,
+            COALESCE(SUM(total_cents) FILTER (WHERE payment_method = 'cash'), 0) AS sales_cash_cents,
+            COALESCE(SUM(total_cents) FILTER (WHERE payment_method = 'vodafone_cash'), 0) AS sales_voda_cents,
+            COALESCE(SUM(total_cents) FILTER (WHERE payment_method = 'instapay'), 0) AS sales_instapay_cents
+        FROM sales
+        WHERE branch_id = :branch_id 
+          AND (sold_at AT TIME ZONE 'Africa/Cairo')::date >= :start_date
+          AND (sold_at AT TIME ZONE 'Africa/Cairo')::date <= :end_date
+    """)
+    sales_row = db.execute(sales_query, {"branch_id": str(branch_id), "start_date": start_date, "end_date": end_date}).one()
     
-    sales_total_cents = int(sales_row.total_cents or 0)
+    # Calculate the total sales from the new separate fields
+    sales_total_cents = int(sales_row.sales_cash_cents or 0) + int(sales_row.sales_voda_cents or 0) + int(sales_row.sales_instapay_cents or 0)
     sales_count = int(sales_row.sales_count or 0)
 
     adjustments_total_cents = db.execute(
@@ -131,12 +135,15 @@ def daily_sales_totals(db: Session, *, branch_id: PyUUID, start_date: date, end_
 
     net_total_cents = sales_total_cents + adjustments_total_cents
 
+    # UPDATED: Return the new fields
     return DailySalesOut(
         branch_id=branch_id,
         branch_code=code,
         day=start_date,
         sales_count=sales_count,
-        sales_total_cents=sales_total_cents,
+        sales_cash_cents=int(sales_row.sales_cash_cents or 0),
+        sales_voda_cents=int(sales_row.sales_voda_cents or 0),
+        sales_instapay_cents=int(sales_row.sales_instapay_cents or 0),
         adjustments_total_cents=adjustments_total_cents,
         net_total_cents=net_total_cents,
         net_total_egp=round(net_total_cents / 100.0, 2),
