@@ -47,7 +47,6 @@ def create_item(body: ItemCreate, db: Session = Depends(get_db)):
     values = {
         "sku": body.sku,
         "name": body.name,
-        "description": body.description,
         "resource_type": body.resource_type,
         "grade": body.grade,
         "teacher_id": body.teacher_id,

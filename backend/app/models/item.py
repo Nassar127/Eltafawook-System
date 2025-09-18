@@ -12,7 +12,6 @@ class Item(Base):
     id = sa.Column(UUID(as_uuid=True), primary_key=True, server_default=sa.text("gen_random_uuid()"))
     sku = sa.Column(sa.Text, unique=True, nullable=False)
     name = sa.Column(sa.Text, nullable=False)
-    description = sa.Column(sa.Text)
 
     resource_type = sa.Column(ResourceType, nullable=False)
     grade = sa.Column(sa.SmallInteger, nullable=False)
