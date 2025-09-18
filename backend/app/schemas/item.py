@@ -1,4 +1,4 @@
-from typing import Literal, Annotated
+from typing import Literal, Annotated, Optional
 from uuid import UUID
 from pydantic import BaseModel, Field
 
@@ -13,6 +13,7 @@ class ItemCreate(BaseModel):
     grade: Annotated[int, Field(ge=1, le=3)]
     teacher_id: UUID | None = None
     default_price_cents: NonNegInt | None = None
+    profit_cents: int
 
 class ItemOut(BaseModel):
     id: UUID
@@ -23,3 +24,4 @@ class ItemOut(BaseModel):
     grade: int
     teacher_id: UUID | None = None
     default_price_cents: NonNegInt
+    profit_cents: Optional[int] = None

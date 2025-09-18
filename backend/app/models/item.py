@@ -19,6 +19,7 @@ class Item(Base):
     teacher_id = sa.Column(UUID(as_uuid=True), sa.ForeignKey("teachers.id", ondelete="RESTRICT"), nullable=False)
 
     default_price_cents: Mapped[int] = mapped_column(sa.Integer, nullable=False, server_default="0")
+    profit_cents: Mapped[int] = mapped_column(sa.Integer, default=0, nullable=False)
     default_cost_cents: Mapped[int] = mapped_column(sa.Integer, nullable=False, server_default="0")
 
     active = sa.Column(sa.Boolean, nullable=False, server_default=sa.text("true"))

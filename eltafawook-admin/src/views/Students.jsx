@@ -53,6 +53,10 @@ export default function Students ({ apiBase, authToken, toast, schools, branchId
             parent_phone: parentE164 || null,
         };
 
+        if (payload.grade === '1' || payload.grade === 1) {
+            payload.section = 'science';
+        }
+
         if (studentForm.school_id === 'other') {
             if (!newSchoolName.trim()) {
                 toast.push({ title: t('schoolNameReq'), description: t('schoolNameReqDesc'), tone: "error" });

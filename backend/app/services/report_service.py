@@ -119,9 +119,19 @@ def daily_sales_totals(db: Session, *, branch_id: PyUUID, start_date: date, end_
     """)
     sales_row = db.execute(sales_query, {"branch_id": str(branch_id), "start_date": start_date, "end_date": end_date}).one()
     
-    # Calculate the total sales from the new separate fields
     sales_total_cents = int(sales_row.sales_cash_cents or 0) + int(sales_row.sales_voda_cents or 0) + int(sales_row.sales_instapay_cents or 0)
     sales_count = int(sales_row.sales_count or 0)
+
+    profit_query = text("""
+        SELECT COALESCE(SUM(s.qty * i.profit_cents), 0)
+        FROM sales s
+        JOIN items i ON s.item_id = i.id
+        WHERE s.branch_id = :branch_id
+          AND (s.sold_at AT TIME ZONE 'Africa/Cairo')::date >= :start_date
+          AND (s.sold_at AT TIME ZONE 'Africa/Cairo')::date <= :end_date
+    """)
+    total_profit_cents = db.execute(profit_query, {"branch_id": str(branch_id), "start_date": start_date, "end_date": end_date}).scalar_one()
+
 
     adjustments_total_cents = db.execute(
         select(func.coalesce(func.sum(RevenueAdjustment.amount_cents), 0))
@@ -135,7 +145,6 @@ def daily_sales_totals(db: Session, *, branch_id: PyUUID, start_date: date, end_
 
     net_total_cents = sales_total_cents + adjustments_total_cents
 
-    # UPDATED: Return the new fields
     return DailySalesOut(
         branch_id=branch_id,
         branch_code=code,
@@ -144,6 +153,7 @@ def daily_sales_totals(db: Session, *, branch_id: PyUUID, start_date: date, end_
         sales_cash_cents=int(sales_row.sales_cash_cents or 0),
         sales_voda_cents=int(sales_row.sales_voda_cents or 0),
         sales_instapay_cents=int(sales_row.sales_instapay_cents or 0),
+        total_profit_cents=int(total_profit_cents or 0),
         adjustments_total_cents=adjustments_total_cents,
         net_total_cents=net_total_cents,
         net_total_egp=round(net_total_cents / 100.0, 2),

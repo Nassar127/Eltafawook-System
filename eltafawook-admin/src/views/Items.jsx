@@ -10,7 +10,7 @@ import { useTranslation, Trans } from "react-i18next";
 
 export default function Items({ apiBase, authToken, toast, branchId, branchCode, teachers, setTeachers, items, setItems, itemById, teacherById, currentUser }) {
     const [itemsTab, setItemsTab] = useState("inventory");
-    const [createForm, setCreateForm] = useState({teacher_id: "", resource_type: "Book", item_name: "", grade: 3, price_egp: "",});
+    const [createForm, setCreateForm] = useState({teacher_id: "", resource_type: "Book", item_name: "", grade: 3, price_egp: "", profit_egp: ""});
     const [receive2, setReceive2] = useState({teacher_id: "", item_id: "", qty: 1,});
     const [invFilterTeacher, setInvFilterTeacher] = useState("");
     const [invFilterText, setInvFilterText] = useState("");
@@ -40,6 +40,7 @@ export default function Items({ apiBase, authToken, toast, branchId, branchCode,
         grade: Number(createForm.grade || 3),
         teacher_id: createForm.teacher_id,
         default_price_cents: centsFromEGP(createForm.price_egp || 0),
+        profit_cents: centsFromEGP(createForm.profit_egp || 0),
         };
 
         try {
@@ -52,6 +53,7 @@ export default function Items({ apiBase, authToken, toast, branchId, branchCode,
             item_name: "",
             grade: 3,
             price_egp: "",
+            profit_egp: "" 
         });
         } catch (e) {
         if (/exists|duplicate|already/i.test(e.message) && body.sku) {
@@ -122,25 +124,24 @@ export default function Items({ apiBase, authToken, toast, branchId, branchCode,
         <Card>
         <CardHead><CardTitle>{t("title_items")}</CardTitle></CardHead>
         <CardBody>
-    <SubTabs>
-      {currentUser?.role === 'admin' && (
-        <SubTabButton $active={itemsTab==="create"} onClick={()=>{
-          setItemsTab("create");
-          // Also reset the form when clicking the tab
-          setCreateForm({ teacher_id: "", resource_type: "book", grade: 3, item_name: "", price_egp: "" });
-        }}>
-            {t("tabs_items.create")}
+        <SubTabs>
+        {currentUser?.role === 'admin' && (
+            <SubTabButton $active={itemsTab==="create"} onClick={()=>{
+            setItemsTab("create");
+            setCreateForm({ teacher_id: "", resource_type: "book", grade: 3, item_name: "", price_egp: "" });
+            }}>
+                {t("tabs_items.create")}
+            </SubTabButton>
+        )}
+        <SubTabButton $active={itemsTab==="receive"} onClick={()=>setItemsTab("receive")}>
+            {t("tabs_items.receive")}
         </SubTabButton>
-      )}
-      <SubTabButton $active={itemsTab==="receive"} onClick={()=>setItemsTab("receive")}>
-          {t("tabs_items.receive")}
-      </SubTabButton>
-      <SubTabButton $active={itemsTab==="inventory"} onClick={()=>{ setItemsTab("inventory"); loadInventoryGrid(); }}>
-          {t("tabs_items.inventory")}
-      </SubTabButton>
-    </SubTabs>
+        <SubTabButton $active={itemsTab==="inventory"} onClick={()=>{ setItemsTab("inventory"); loadInventoryGrid(); }}>
+            {t("tabs_items.inventory")}
+        </SubTabButton>
+        </SubTabs>
 
-            {itemsTab === "create" && currentUser?.role === 'admin' && (
+        {itemsTab === "create" && currentUser?.role === 'admin' && (
             <>
 
                 <Row cols={3} style={{marginTop:8}}>
@@ -215,6 +216,16 @@ export default function Items({ apiBase, authToken, toast, branchId, branchCode,
                     placeholder={t("create.price_ph")}
                     value={createForm.price_egp}
                     onChange={(e)=>setCreateForm({...createForm, price_egp: e.target.value})}
+                    />
+                </div>
+
+                <div>
+                    <Label>{t("create.profit_egp")}</Label>
+                    <Input
+                        type="number"
+                        placeholder={t("create.price_ph")}
+                        value={createForm.profit_egp}
+                        onChange={(e)=>setCreateForm({...createForm, profit_egp: e.target.value})}
                     />
                 </div>
 

@@ -170,7 +170,8 @@
     "gross_instapay": "إجمالي المبيعات (انستاباي)",
     "adjustments": "التعديلات",
     "net": "صافي الإيراد (الإجمالي)",
-    "transactions": "عدد العمليات"
+    "transactions": "عدد العمليات",
+    "profit":"المكسب"
   },
   "toasts": {
     "load_daily_failed_title": "فشل في تحميل التقرير اليومي",
@@ -245,7 +246,8 @@
     "helper_saved_as": "سيتم حفظه كـ <0>{{fullName}}</0>",
     "price": "السعر (ج.م)",
     "price_ph": "مثال: 45.00",
-    "create_btn": "إنشاء مورد"
+    "create_btn": "إنشاء مورد",
+    "profit_egp": "المكسب (ج.م)"
   },
   "receive": {
     "teacher_filter": "المعلم (مرشح اختياري)",

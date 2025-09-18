@@ -195,6 +195,7 @@ export default function Reports({ apiBase, authToken, toast, branchId, currentUs
                                 <StatBox label={t("stats.gross_cash")} value={money(summaryData.sales_cash_cents)} />
                                 <StatBox label={t("stats.gross_voda")} value={money(summaryData.sales_voda_cents)} />
                                 <StatBox label={t("stats.gross_instapay")} value={money(summaryData.sales_instapay_cents)} />
+                                {currentUser?.role === 'admin' && (<StatBox label={t("stats.profit")} value={money(summaryData.total_profit_cents)} positive />)}
                                 <StatBox label={t("stats.adjustments")} value={money(summaryData.adjustments_total_cents)} positive={summaryData.adjustments_total_cents > 0} negative={summaryData.adjustments_total_cents < 0} />
                                 <StatBox label={t("stats.net")} value={money(summaryData.net_total_cents)} isTotal />
                                 <StatBox label={t("stats.transactions")} value={summaryData.sales_count} />

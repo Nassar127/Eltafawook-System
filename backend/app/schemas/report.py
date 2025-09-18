@@ -37,12 +37,10 @@ class DailySalesOut(BaseModel):
     branch_code: str
     day: date
     sales_count: int
-
-    # UPDATED: Replace the single total with three separate totals
     sales_cash_cents: int
     sales_voda_cents: int
     sales_instapay_cents: int
-
+    total_profit_cents: int
     adjustments_total_cents: int
     net_total_cents: int
     net_total_egp: float

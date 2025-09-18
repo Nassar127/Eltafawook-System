@@ -170,7 +170,8 @@
     "gross_instapay": "Gross Sales (InstaPay)",
     "adjustments": "Adjustments",
     "net": "Net Revenue (Total)",
-    "transactions": "Transactions"
+    "transactions": "Transactions",
+    "profit":"Profit"
   },
   "toasts": {
     "load_daily_failed_title": "Failed to load daily report",
@@ -245,7 +246,8 @@
     "helper_saved_as": "Will be saved as <0>{{fullName}}</0>",
     "price": "Price (EGP)",
     "price_ph": "e.g. 45.00",
-    "create_btn": "Create Resource"
+    "create_btn": "Create Resource",
+    "profit_egp": "Profit (EGP)"
   },
   "receive": {
     "teacher_filter": "Teacher (optional filter)",
