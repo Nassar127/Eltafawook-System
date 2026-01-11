@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  # 1. The Database Service
+  db:
+    image: postgres:17
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: eltafawook_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  # 2. The Backend Service
+  backend:
+    build: ./app
+    restart: always
+    # 'backend.app.main:app' must match your python module path
+    command: uvicorn backend.app.main:app --host 0.0.0.0 --port 8000
+    volumes:
+      - ./app:/code
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://${DB_USER}:${DB_PASSWORD}@db:5432/eltafawook_db
+      - PYTHONPATH=/code
+      - JWT_SECRET=${JWT_SECRET}
+      - TZ=${TZ}
+      - WA_PYWHATKIT_ENABLED=${WA_PYWHATKIT_ENABLED}
+      - WA_QUEUE_ALWAYS=${WA_QUEUE_ALWAYS}
+    depends_on:
+      - db
+
+  # 3. Cloudflare Tunnel (Replaces Playit)
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    restart: always
+    command: tunnel --url http://backend:8000
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
