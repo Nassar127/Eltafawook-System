@@ -22,7 +22,22 @@ import { StudentIcon, OrdersIcon, ItemsIcon, TransferIcon, ReportsIcon, KgIcon }
 import logo from './assets/logo.png';
 
 export default function App() {
-  const [apiBase, setApiBase] = useState(() => localStorage.getItem("apiBase_v3") || "https://api.eltafawook.site");
+  const DEFAULT_API_BASE = "https://api.eltafawook.site/api/v1";
+
+  const [apiBase, setApiBase] = useState(() => {
+    const saved = localStorage.getItem("apiBase_v5");
+
+    if (!saved) return DEFAULT_API_BASE;
+
+    // upgrade old values (no /api/v1)
+    if (saved === "https://api.eltafawook.site" || !saved.includes("/api/v1")) {
+      localStorage.setItem("apiBase_v3", DEFAULT_API_BASE);
+      return DEFAULT_API_BASE;
+    }
+
+    return saved;
+  });
+
   const [authToken, setAuthToken] = useState(() => localStorage.getItem("authToken") || sessionStorage.getItem("authToken"));
   const [currentUser, setCurrentUser] = useState(null);
   const [settings, setSettings] = useState(loadSettings());
