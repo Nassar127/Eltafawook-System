@@ -15,13 +15,14 @@ services:
       - "5432:5432"
 
   # 2. The Backend Service
+
   backend:
-    build: ./app
+    build: .
     restart: always
-    # 'backend.app.main:app' must match your python module path
+    # This looks for the file inside backend/app/main.py
     command: uvicorn backend.app.main:app --host 0.0.0.0 --port 8000
     volumes:
-      - ./app:/code
+      - .:/code
     ports:
       - "8000:8000"
     environment:
@@ -33,12 +34,14 @@ services:
       - WA_QUEUE_ALWAYS=${WA_QUEUE_ALWAYS}
     depends_on:
       - db
+    env_file:
+      - .env
 
   # 3. Cloudflare Tunnel (Replaces Playit)
   cloudflared:
     image: cloudflare/cloudflared:latest
     restart: always
-    command: tunnel --url http://backend:8000
+    command: tunnel run --protocol http2 --token eyJhIjoiMmM2NmI4MDAyY2U2NDkzNzk4Y2Y5ZDAzOWQ3NDkzN2EiLCJ0IjoiMjQzYjI0NzgtZDEwNS00NWI3LWFkNTMtZWNhYWI3ZGUzNTliIiwicyI6IlpXVXlPREJtWTJVdE5UTTRaQzAwTkRjMUxUa3dNbUV0TldVNU5qRTBNemxsWW1ObCJ9
     depends_on:
       - backend
 
