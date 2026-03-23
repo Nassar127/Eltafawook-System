@@ -3,14 +3,16 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
 from backend.app.db.session import get_db
+from backend.app.models.user import User
 from backend.app.schemas.order import QuickSaleRequest, QuickSaleResponse
 from backend.app.services.order_service import create_quick_sale
 from backend.app.services.inventory_service import get_inventory_summary
+from .auth import get_current_active_user
 
 router = APIRouter()
 
 @router.post("/quick-sale", response_model=QuickSaleResponse, status_code=201)
-def quick_sale(body: QuickSaleRequest, db: Session = Depends(get_db)):
+def quick_sale(body: QuickSaleRequest, db: Session = Depends(get_db), current_user: User = Depends(get_current_active_user)):
     try:
         order_id, line_id = create_quick_sale(
             db,
@@ -24,5 +26,5 @@ def quick_sale(body: QuickSaleRequest, db: Session = Depends(get_db)):
         raise HTTPException(status_code=400, detail=str(ve))
 
 @router.post("/lines/{line_id}/return", status_code=405)
-def return_order_line_disabled(line_id: UUID, db: Session = Depends(get_db)):
+def return_order_line_disabled(line_id: UUID, db: Session = Depends(get_db), current_user: User = Depends(get_current_active_user)):
     raise HTTPException(status_code=405, detail="Returns are not allowed.")

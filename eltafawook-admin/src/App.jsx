@@ -16,6 +16,9 @@ import KgStudents from './views/KgStudents';
 import KgItems from './views/KgItems';
 import KgOrders from './views/KgOrders';
 import KgReports from './views/KgReports';
+import Dashboard from './views/Dashboard';
+import Export from './views/Export';
+import AuditTrail from './views/AuditTrail';
 import { AppShell, Header, HeaderInner, Container, H1 } from './components/Layout';
 import { NavGrid, NavButton, Pill, MenuWrap, Hamburger, Dropdown, DropItem, ToastStack, Toast, SubTabs, SubTabButton } from './components/Misc';
 import { StudentIcon, OrdersIcon, ItemsIcon, TransferIcon, ReportsIcon, KgIcon } from "./components/Icons";
@@ -216,6 +219,11 @@ export default function App() {
                     {t('pageKindergarten')}
                 </SubTabButton>
             )}
+            {currentUser?.role === 'admin' && (
+                <SubTabButton $active={mainView === 'admin'} onClick={() => { setMainView('admin'); setView('dashboard'); }}>
+                    Admin
+                </SubTabButton>
+            )}
         </SubTabs>
 
         {mainView === 'bookshop' && (
@@ -272,6 +280,26 @@ export default function App() {
             </>
         )}
         
+        {mainView === 'admin' && currentUser?.role === 'admin' && (
+            <>
+                <NavGrid>
+                    <NavButton $active={view==="dashboard"} onClick={() => setView("dashboard")}>
+                        <ReportsIcon /><span className="label">Dashboard</span>
+                    </NavButton>
+                    <NavButton $active={view==="export"} onClick={() => setView("export")}>
+                        <ItemsIcon /><span className="label">Export</span>
+                    </NavButton>
+                    <NavButton $active={view==="audit"} onClick={() => setView("audit")}>
+                        <OrdersIcon /><span className="label">Audit Trail</span>
+                    </NavButton>
+                </NavGrid>
+
+                {view === "dashboard" && <Dashboard apiBase={apiBase} authToken={authToken} toast={toast} branches={branches} />}
+                {view === "export" && <Export apiBase={apiBase} authToken={authToken} toast={toast} branches={branches} />}
+                {view === "audit" && <AuditTrail apiBase={apiBase} authToken={authToken} toast={toast} />}
+            </>
+        )}
+
         {currentUser?.role === 'admin' && view === "teachers" && <Teachers apiBase={apiBase} authToken={authToken} toast={toast} teachers={teachers} setTeachers={setTeachers} />}
         {currentUser?.role === 'admin' && view === "settings" && 
             <Settings 

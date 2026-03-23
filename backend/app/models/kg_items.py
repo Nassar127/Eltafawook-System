@@ -16,6 +16,7 @@ class KgItem(Base):
     name: Mapped[str] = mapped_column(sa.Text)
     default_price_cents: Mapped[int] = mapped_column(sa.Integer)
     created_at: Mapped[datetime] = mapped_column(sa.DateTime(timezone=True), server_default=sa.text("now()"))
+    updated_at: Mapped[datetime] = mapped_column(sa.DateTime(timezone=True), server_default=sa.text("now()"), onupdate=sa.func.now())
 
     item_type: Mapped[str] = mapped_column(KgItemType, nullable=False, server_default='good')
 

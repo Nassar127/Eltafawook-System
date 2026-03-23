@@ -9,6 +9,8 @@ from backend.app.models.reservation import Reservation
 from backend.app.models.item import Item
 from backend.app.services.inventory_service import get_inventory_summary
 from backend.app.db.session import get_db
+from backend.app.models.user import User
+from .auth import get_current_active_user
 from backend.app.services.reservation_service import (
     create_reservation,
     prepay_reservation,
@@ -135,7 +137,7 @@ _OPS = {
 }
 
 @router.post("/batch")
-def sync_batch(body: dict[str, Any], db: Session = Depends(get_db)) -> dict[str, Any]:
+def sync_batch(body: dict[str, Any], db: Session = Depends(get_db), current_user: User = Depends(get_current_active_user)) -> dict[str, Any]:
     ops = body.get("operations") or []
     results: list[dict[str, Any]] = []
 

@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 
 from backend.app.db.session import get_db
 from backend.app.schemas.kg_student import KgStudentCreate, KgStudentUpdate, KgStudentOut, KgStudentStatusUpdate
+from backend.app.schemas.pagination import PaginationParams
 from backend.app.services import kg_student_service as service
 from .auth import get_current_active_user
 from backend.app.models.user import User
@@ -21,36 +22,48 @@ def create_kg_student(
     
     return service.create_kg_student(db=db, student_in=student_in)
 
-@router.get("", response_model=list[KgStudentOut])
+@router.get("")
 def list_kg_students(
     branch_id: UUID,
+    pg: PaginationParams = Depends(),
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_active_user)
+    current_user: User = Depends(get_current_active_user),
 ):
     if current_user.role != 'admin' and branch_id != current_user.branch_id:
         raise HTTPException(status_code=403, detail="Cannot list students for another branch")
-    return service.list_kg_students(db=db, branch_id=branch_id)
+    result = service.list_kg_students(db=db, branch_id=branch_id)
+    total = len(result)
+    items = result[pg.offset:pg.offset + pg.limit]
+    return {"items": items, "total": total, "offset": pg.offset, "limit": pg.limit, "has_more": pg.offset + pg.limit < total}
 
-@router.get("/search", response_model=list[KgStudentOut])
+@router.get("/search")
 def search_kg_students(
     branch_id: UUID,
     term: str,
+    pg: PaginationParams = Depends(),
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_active_user)
+    current_user: User = Depends(get_current_active_user),
 ):
     if current_user.role != 'admin' and branch_id != current_user.branch_id:
         raise HTTPException(status_code=403, detail="Cannot search students for another branch")
-    return service.search_kg_students(db=db, branch_id=branch_id, term=term)
+    result = service.search_kg_students(db=db, branch_id=branch_id, term=term)
+    total = len(result)
+    items = result[pg.offset:pg.offset + pg.limit]
+    return {"items": items, "total": total, "offset": pg.offset, "limit": pg.limit, "has_more": pg.offset + pg.limit < total}
 
-@router.get("/pending", response_model=list[KgStudentOut])
+@router.get("/pending")
 def get_pending_kg_students(
     branch_id: UUID,
+    pg: PaginationParams = Depends(),
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_active_user)
+    current_user: User = Depends(get_current_active_user),
 ):
     if current_user.role != 'admin' and branch_id != current_user.branch_id:
         raise HTTPException(status_code=403, detail="Not authorized")
-    return service.list_kg_students_by_status(db=db, branch_id=branch_id, status='pending')
+    result = service.list_kg_students_by_status(db=db, branch_id=branch_id, status='pending')
+    total = len(result)
+    items = result[pg.offset:pg.offset + pg.limit]
+    return {"items": items, "total": total, "offset": pg.offset, "limit": pg.limit, "has_more": pg.offset + pg.limit < total}
 
 @router.patch("/{student_id}/status", response_model=KgStudentOut)
 def update_student_status(

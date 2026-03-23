@@ -1,7 +1,8 @@
 from fastapi import APIRouter
 from . import (
     inventory, reservations, orders, branches, items, adjustments,
-    transfers, schools, students, reports, sync, notifications, teachers, uploads, auth, kg_students, kg_items, kg_sales, kg_inventory, kg_reports, public
+    transfers, schools, students, reports, sync, notifications, teachers, uploads, auth, kg_students, kg_items, kg_sales, kg_inventory, kg_reports, public,
+    dashboard, export, audit
 )
 
 api_router = APIRouter()
@@ -26,3 +27,6 @@ api_router.include_router(kg_sales.router, prefix="/kg-sales", tags=["kindergart
 api_router.include_router(kg_inventory.router, prefix="/kg-inventory", tags=["kindergarten"])
 api_router.include_router(kg_reports.router, prefix="/kg-reports", tags=["kindergarten"])
 api_router.include_router(public.router, prefix="/public", tags=["public"])
+api_router.include_router(dashboard.router, prefix="/dashboard", tags=["admin"])
+api_router.include_router(export.router, prefix="/export", tags=["admin"])
+api_router.include_router(audit.router, prefix="/audit", tags=["admin"])

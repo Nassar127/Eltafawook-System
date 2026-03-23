@@ -24,6 +24,9 @@ from backend.app.services.reservation_service import (
     prepay_reservation,
 )
 from backend.app.models.teacher import Teacher
+from backend.app.models.user import User
+from backend.app.schemas.pagination import PaginationParams
+from .auth import get_current_active_user
 
 router = APIRouter()
 
@@ -37,7 +40,7 @@ class MarkReadyIn(BaseModel):
     notify: bool = True
 
 @router.post("", response_model=ReservationOut)
-def create_reservation_route(payload: ReservationCreate, db: Session = Depends(get_db)):
+def create_reservation_route(payload: ReservationCreate, db: Session = Depends(get_db), current_user: User = Depends(get_current_active_user)):
     data = payload.canonical()
     payer_ref = data.payer_reference or data.payer_phone
     proof_url = data.payment_proof_url or data.proof_media_url
@@ -69,10 +72,11 @@ def search_reservations(
     status: str | None = None,
     start_from: datetime | None = None,
     start_to: datetime | None = None,
-    limit: int = 50,
     student_id: UUID | None = None,
+    pg: PaginationParams = Depends(),
     db: Session = Depends(get_db),
-) -> list[dict[str, Any]]:
+    current_user: User = Depends(get_current_active_user),
+) -> dict[str, Any]:
     lower = func.lower(Reservation.hold_window)
     upper = func.upper(Reservation.hold_window)
 
@@ -107,7 +111,6 @@ def search_reservations(
         .join(Teacher, Teacher.id == Item.teacher_id, isouter=True)
         .join(Student, Student.id == Reservation.student_id, isouter=True)
         .order_by(lower.desc())
-        .limit(limit)
     )
 
     conds = []
@@ -135,9 +138,11 @@ def search_reservations(
     if conds:
         stmt = stmt.where(and_(*conds))
 
-    rows = db.execute(stmt).all()
+    count_stmt = select(func.count()).select_from(stmt.subquery())
+    total = db.execute(count_stmt).scalar() or 0
+    rows = db.execute(stmt.offset(pg.offset).limit(pg.limit)).all()
 
-    return [
+    items = [
         dict(
             id=r.id,
             qty=int(r.qty),
@@ -163,9 +168,10 @@ def search_reservations(
         )
         for r in rows
     ]
+    return {"items": items, "total": total, "offset": pg.offset, "limit": pg.limit, "has_more": pg.offset + pg.limit < total}
 
 @router.get("/{reservation_id}", response_model=ReservationDetailOut)
-def get_res(reservation_id: UUID, db: Session = Depends(get_db)):
+def get_res(reservation_id: UUID, db: Session = Depends(get_db), current_user: User = Depends(get_current_active_user)):
     try:
         return get_reservation_summary(db, reservation_id=reservation_id)
     except ValueError as ve:
@@ -176,6 +182,7 @@ def prepay_reservation_route(
     reservation_id: UUID,
     body: PrepayIn,
     db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_active_user),
 ):
     try:
         return prepay_reservation(
@@ -192,6 +199,7 @@ def mark_ready_reservation_route(
     reservation_id: UUID,
     body: MarkReadyIn,
     db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_active_user),
 ):
     try:
         return mark_ready_reservation(
@@ -203,7 +211,7 @@ def mark_ready_reservation_route(
         raise HTTPException(status_code=404, detail=str(ve))
 
 @router.post("/{reservation_id}/cancel", status_code=204)
-def cancel_res(reservation_id: UUID, db: Session = Depends(get_db)):
+def cancel_res(reservation_id: UUID, db: Session = Depends(get_db), current_user: User = Depends(get_current_active_user)):
     try:
         cancel_reservation(db, reservation_id=reservation_id)
         return
@@ -211,18 +219,18 @@ def cancel_res(reservation_id: UUID, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail=str(ve))
 
 @router.post("/{reservation_id}/fulfill")
-def fulfill_res(reservation_id: UUID, db: Session = Depends(get_db)):
+def fulfill_res(reservation_id: UUID, db: Session = Depends(get_db), current_user: User = Depends(get_current_active_user)):
     try:
         return fulfill_reservation(db, reservation_id=reservation_id)
     except ValueError as ve:
         raise HTTPException(status_code=400, detail=str(ve))
 
 @router.post("/_maintenance/run-expire")
-def run_expire_now(db: Session = Depends(get_db)):
+def run_expire_now(db: Session = Depends(get_db), current_user: User = Depends(get_current_active_user)):
     from backend.app.workers.jobs.expire_reservations import run as expire_run
     n = expire_run(db)
     return {"expired": n}
 
 @router.post("/{reservation_id}/unfulfill")
-def unfulfill_reservation_route(reservation_id: UUID, db: Session = Depends(get_db)):
+def unfulfill_reservation_route(reservation_id: UUID, db: Session = Depends(get_db), current_user: User = Depends(get_current_active_user)):
     return rsvc.unfulfill_reservation(db, reservation_id=reservation_id)

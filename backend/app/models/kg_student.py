@@ -45,5 +45,5 @@ class KgStudent(Base):
     authorized_pickups: Mapped[Optional[List[str]]] = mapped_column(ARRAY(sa.Text))
     application_date: Mapped[date] = mapped_column(sa.Date, server_default=sa.text("CURRENT_DATE"))
     created_at: Mapped[datetime] = mapped_column(sa.DateTime(timezone=True), server_default=sa.text("now()"))
+    updated_at: Mapped[datetime] = mapped_column(sa.DateTime(timezone=True), server_default=sa.text("now()"), onupdate=sa.func.now())
     status: Mapped[str] = mapped_column(KgStudentStatus, nullable=False, server_default='pending')
-    

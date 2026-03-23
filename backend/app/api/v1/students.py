@@ -1,12 +1,15 @@
 from fastapi import APIRouter, Depends, Query, HTTPException
 from sqlalchemy import select, or_, func
 from sqlalchemy.orm import Session
-from ...db.session import SessionLocal
-from ...models.student import Student
-from ...schemas.student import StudentCreate, StudentUpdate, StudentOut
+from backend.app.db.session import get_db
+from backend.app.models.student import Student
+from backend.app.models.user import User
+from backend.app.schemas.student import StudentCreate, StudentUpdate, StudentOut
+from backend.app.schemas.pagination import PaginationParams
 from typing import Optional, cast
 from uuid import UUID
 from backend.app.services import student_service as service
+from .auth import get_current_active_user
 
 router = APIRouter()
 
@@ -17,25 +20,23 @@ def _to_phone_norm(e164: str | None) -> str | None:
         return "0" + e164[3:]
     return e164
 
-def get_db():
-    with SessionLocal() as s:
-        yield s
-
 @router.post("", response_model=StudentOut, status_code=201)
-def create_student(payload: StudentCreate, db: Session = Depends(get_db)):
+def create_student(payload: StudentCreate, db: Session = Depends(get_db), current_user: User = Depends(get_current_active_user)):
     try:
         student = service.create_student(db=db, student_in=payload)
         return student
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-@router.get("/search", response_model=list[StudentOut])
+@router.get("/search")
 def search_students(
     q: str | None = None,
     phone: str | None = None,
     parent_phone: str | None = None,
     public_id: int | None = None,
+    pg: PaginationParams = Depends(),
     db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_active_user),
 ):
     stmt = select(Student)
 
@@ -52,11 +53,12 @@ def search_students(
     if q:
         stmt = stmt.where(func.lower(Student.full_name).like(f"%{q.lower()}%"))
 
-    rows = db.execute(stmt.order_by(Student.full_name).limit(20)).scalars().all()
-    return rows
+    total = db.execute(select(func.count()).select_from(stmt.subquery())).scalar() or 0
+    rows = db.execute(stmt.order_by(Student.full_name).offset(pg.offset).limit(pg.limit)).scalars().all()
+    return {"items": rows, "total": total, "offset": pg.offset, "limit": pg.limit, "has_more": pg.offset + pg.limit < total}
 
 @router.put("/{student_id}", response_model=StudentOut)
-def update_student(student_id: UUID, payload: StudentUpdate, db: Session = Depends(get_db)):
+def update_student(student_id: UUID, payload: StudentUpdate, db: Session = Depends(get_db), current_user: User = Depends(get_current_active_user)):
     st = db.get(Student, student_id)
     if not st:
         raise HTTPException(status_code=404, detail="Student not found")
@@ -83,7 +85,7 @@ def update_student(student_id: UUID, payload: StudentUpdate, db: Session = Depen
     return st
 
 @router.get("/{student_id}", response_model=StudentOut)
-def get_student_by_id(student_id: UUID, db: Session = Depends(get_db)):
+def get_student_by_id(student_id: UUID, db: Session = Depends(get_db), current_user: User = Depends(get_current_active_user)):
     """
     Fetch a single student by their UUID.
     """

@@ -8,7 +8,10 @@ from sqlalchemy.orm import Session
 
 from backend.app.db.session import get_db
 from backend.app.models.item import Item
+from backend.app.models.user import User
 from backend.app.schemas.item import ItemCreate, ItemOut
+from backend.app.schemas.pagination import PaginationParams
+from .auth import get_current_active_user
 
 router = APIRouter()
 
@@ -33,7 +36,7 @@ def _teacher_scoped_sku_where(*, sku: str, grade: int, teacher_id: Optional[UUID
 
 
 @router.post("", response_model=ItemOut, status_code=201)
-def create_item(body: ItemCreate, db: Session = Depends(get_db)):
+def create_item(body: ItemCreate, db: Session = Depends(get_db), current_user: User = Depends(get_current_active_user)):
     exists = db.execute(
         select(Item.id).where(*_teacher_scoped_sku_where(
             sku=body.sku,
@@ -63,13 +66,16 @@ def create_item(body: ItemCreate, db: Session = Depends(get_db)):
 @router.get("", response_model=list[ItemOut])
 def list_items(
     teacher_id: Optional[UUID] = Query(default=None),
+    pg: PaginationParams = Depends(),
     db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_active_user),
 ):
     q = select(Item)
     if teacher_id is not None:
         q = q.where(Item.teacher_id == teacher_id)
-    rows = db.execute(q.order_by(func.lower(Item.sku))).scalars().all()
-    return rows
+    total = db.execute(select(func.count()).select_from(q.subquery())).scalar() or 0
+    rows = db.execute(q.order_by(func.lower(Item.sku)).offset(pg.offset).limit(pg.limit)).scalars().all()
+    return {"items": rows, "total": total, "offset": pg.offset, "limit": pg.limit, "has_more": pg.offset + pg.limit < total}
 
 
 @router.get("/{sku}", response_model=ItemOut)
@@ -78,6 +84,7 @@ def get_item_by_sku(
     teacher_id: Optional[UUID] = Query(...),
     grade: int = Query(...),
     db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_active_user),
 ):
     if teacher_id is None:
         rows = db.execute(
@@ -111,6 +118,7 @@ def update_item_price(
     teacher_id: UUID = Query(...),
     grade: int = Query(...),
     db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_active_user),
 ):
     if not hasattr(Item, "default_price_cents"):
         raise HTTPException(status_code=400, detail="Price column not enabled in this deployment")
@@ -151,7 +159,7 @@ def update_item_price(
     return row
 
 @router.get("/by-id/{item_id}", response_model=ItemOut)
-def get_item_by_id(item_id: UUID, db: Session = Depends(get_db)):
+def get_item_by_id(item_id: UUID, db: Session = Depends(get_db), current_user: User = Depends(get_current_active_user)):
     row = db.execute(select(Item).where(Item.id == item_id)).scalar_one_or_none()
     if not row:
         raise HTTPException(status_code=404, detail="Item not found")

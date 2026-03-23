@@ -1,8 +1,11 @@
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel, Field
 from typing import Optional, Dict, Any
 import os, json, uuid, time, contextlib
 import psycopg
+
+from backend.app.models.user import User
+from backend.app.api.v1.auth import get_current_active_user
 
 router = APIRouter()
 
@@ -32,7 +35,7 @@ def _send_wa(to: str, message: str) -> None:
         _send_noop(to, message)
 
 @router.post("/drain")
-def drain(limit: int = Query(10, ge=1, le=100)):
+def drain(limit: int = Query(10, ge=1, le=100), current_user: User = Depends(get_current_active_user)):
     """
     Pull up to `limit` queued messages, try to send each once.
     - On success: status=sent, sent_at=now(), attempts++
@@ -145,7 +148,7 @@ class EnqueueBody(BaseModel):
     tags: Optional[Dict[str, Any]] = None
 
 @router.post("/enqueue")
-def enqueue(b: EnqueueBody):
+def enqueue(b: EnqueueBody, current_user: User = Depends(get_current_active_user)):
     if not b.to or not b.message:
         raise HTTPException(status_code=400, detail="to and message required")
 

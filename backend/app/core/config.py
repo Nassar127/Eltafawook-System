@@ -15,6 +15,12 @@ class Settings(BaseModel):
     tz: str = os.getenv("TZ", "Africa/Cairo")
     wa_pywhatkit_enabled: bool = os.getenv("WA_PYWHATKIT_ENABLED", "false").lower() == "true"
     wa_queue_always: bool = bool(int(os.getenv("WA_QUEUE_ALWAYS", "1")))
+    cors_origins: list[str] = [
+        o.strip() for o in os.getenv(
+            "CORS_ORIGINS",
+            "http://localhost:5173,http://localhost:4173,https://eltafawook-admin.netlify.app"
+        ).split(",") if o.strip()
+    ]
 
 _SETTINGS: Final[Settings] = Settings()
 

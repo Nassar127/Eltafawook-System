@@ -43,6 +43,7 @@ class Reservation(Base):
     fulfilled_at: Mapped[Optional[datetime]] = mapped_column(sa.TIMESTAMP(timezone=True), nullable=True)
     expired_at:   Mapped[Optional[datetime]] = mapped_column(sa.TIMESTAMP(timezone=True), nullable=True)
     cancelled_at: Mapped[Optional[datetime]] = mapped_column(sa.TIMESTAMP(timezone=True), nullable=True)
+    updated_at: Mapped[datetime] = mapped_column(sa.TIMESTAMP(timezone=True), nullable=False, server_default=text("now()"), onupdate=sa.func.now())
 
     branch  = relationship("Branch",  lazy="joined")
     item    = relationship("Item",    lazy="joined")

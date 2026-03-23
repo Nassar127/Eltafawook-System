@@ -32,8 +32,7 @@
   - [Running the Application](#running-the-application)
 - [Environment Variables](#environment-variables)
 - [Scripts & Utilities](#scripts--utilities)
-- [Project Rating & Review](#project-rating--review)
-- [What Else to Add](#what-else-to-add)
+- [Testing](#testing)
 - [License](#license)
 
 ---
@@ -107,7 +106,7 @@ Eltafawook Academy Management System is an internal operations platform built to
 | Component       | Technology                                  |
 |-----------------|---------------------------------------------|
 | Containerization| **Docker Compose** (PostgreSQL service)     |
-| Deployment      | **Render** (backend), **Netlify** (frontend)|
+| Deployment      | **Self-hosted** (backend), **Netlify** (frontend)|
 | Build           | **Makefile** targets                        |
 
 ---
@@ -280,7 +279,7 @@ Eltafawook-System/
 
 #### Reservation System (Core Business Logic)
 - Full lifecycle: `queued` → `hold` → `active` → `fulfilled` / `cancelled` / `expired`
-- PostgreSQL `TSTZRANGE` hold windows with configurable duration
+- PostgreSQL `TSTZRANGE` for reservation hold windows
 - `pg_advisory_xact_lock` for atomic stock reservation (no double-booking)
 - Automatic queue-to-active promotion when stock arrives
 - Prepayment tracking with payment method (cash/vodafone_cash/instapay)
@@ -559,249 +558,33 @@ Create a `.env` file in the project root:
 
 ---
 
-## Project Rating & Review
+## Testing
 
-### Overall Rating: **7.2 / 10**
+### Backend Tests
 
-Below is a detailed breakdown across key software engineering dimensions:
+Run all backend tests (unit + integration):
 
----
+```bash
+python -m pytest backend/tests/ -v
+```
 
-### 1. Architecture & Design — **8 / 10**
-**Strengths:**
-- Clean layered architecture: API routes → Services → Models/DB. Separation of concerns is well respected.
-- The immutable event-sourced stock ledger is an excellent design choice — it enables full auditability and correct inventory calculations.
-- `pg_advisory_xact_lock` for concurrent reservation handling shows real-world concurrency awareness.
-- PostgreSQL `TSTZRANGE` for hold windows is the right tool for time-based reservation logic.
-- The outbox pattern for WhatsApp notifications is a proper distributed systems approach.
+- **Unit tests** for core services: `reservation_service`, `inventory_service`, `order_service`, `transfer_service`
+- **API integration tests** using `TestClient`: auth guards, structured errors, admin-only routes, pagination validation
+- Tests use mocked DB sessions — no live PostgreSQL required
 
-**Weaknesses:**
-- The bookshop and kindergarten modules share some models (branches, revenue adjustments) but have duplicated patterns (separate ledgers, separate sales). This could be unified with a context/domain flag.
-- No clear dependency injection container — settings and DB sessions are accessed via multiple patterns (global singletons, Depends, direct imports).
+### Frontend Tests
 
----
+Run all frontend tests:
 
-### 2. Code Quality & Consistency — **6.5 / 10**
-**Strengths:**
-- Models use proper SQLAlchemy 2.0 `Mapped` typing in newer models.
-- Pydantic v2 schemas for request/response validation.
-- Good use of `returning()` for INSERT statements.
+```bash
+cd eltafawook-admin
+npm test
+```
 
-**Weaknesses:**
-- Mixed ORM styles: some models use `Mapped[T]` + `mapped_column()` (modern) while others use `sa.Column()` (legacy). Should pick one consistently.
-- Some files (like `Orders.jsx` at 1700 lines) are extremely large and should be split into smaller components.
-- Several services have duplicate logic (e.g., `inventory_service.transfer_stock` and `transfer_service.transfer_stock` do the same thing).
-- Inconsistent `get_db` dependency — some routes import from `session.py`, others redefine it locally (e.g., `students.py`).
-- No type hints on many API route return types.
-
----
-
-### 3. Security — **5.5 / 10**
-**Strengths:**
-- JWT authentication with bcrypt password hashing.
-- Role-based access control on sensitive endpoints (transfers, KG management).
-- Branch-scoped authorization for staff users.
-
-**Weaknesses:**
-- **CORS is wide open** (`allow_origins=["*"]`) — should be restricted in production.
-- **JWT secret defaults to a hardcoded string** (`dev-secret-change-me`) — dangerous if `.env` is forgotten.
-- Many endpoints **lack authentication** — reservations, students, items, orders, adjustments, and sync endpoints are all public. Only reports, transfers, inventory, and KG routes enforce auth.
-- No rate limiting on any endpoint.
-- No input sanitization against SQL injection in raw `text()` queries (e.g., `report_service.py` uses parameterized queries, which is good, but the KG report service constructs SQL with f-strings for the WHERE clause).
-- Upload endpoints have no file type or size validation.
-- The WhatsApp sender disables `pyautogui.FAILSAFE` — risky on a server.
-
----
-
-### 4. Database Design — **8 / 10**
-**Strengths:**
-- UUIDs as primary keys (good for distributed systems).
-- Proper foreign keys with `ondelete` actions (`RESTRICT`, `SET NULL`, `CASCADE`).
-- Check constraints (phone format, grade range, non-zero adjustments).
-- Composite indexes on hot query paths.
-- 30 Alembic migrations show disciplined schema evolution.
-- The `inventory_view` SQL view is a smart optimization.
-
-**Weaknesses:**
-- No `updated_at` on most tables (only `items` has it).
-- No soft-delete pattern — records are mutated in place (status changes).
-- The stock ledger `on_hand` calculation excludes `reserve_hold/release` events, but these events still have non-zero `qty` in the ledger — this design is correct but fragile if someone adds new event types.
-
----
-
-### 5. Frontend Quality — **6.5 / 10**
-**Strengths:**
-- Full dark/light theme with CSS variables.
-- Internationalization (English/Arabic) with RTL support.
-- Responsive grid layout.
-- Toast notification system.
-- Reusable styled-components library.
-- Public KG application form is nicely structured.
-
-**Weaknesses:**
-- **Monolithic view files**: `Orders.jsx` is 1700 lines, `KgStudents.jsx` is 33K — these need to be broken into sub-components.
-- No state management library — all state is lifted to `App.jsx` and passed down as props (prop drilling).
-- No loading skeletons or proper loading states in many views.
-- No client-side form validation library (manual validation only).
-- No error boundary components.
-- styled-components are defined inline in view files rather than extracted.
-- No unit tests for frontend components.
-
----
-
-### 6. Testing — **1 / 10**
-**Strengths:**
-- Makefile has a `test` target.
-
-**Weaknesses:**
-- **No test files exist anywhere in the project.** Zero unit tests, zero integration tests, zero end-to-end tests. This is the single biggest gap.
-- No test fixtures or factories.
-- No CI pipeline to run tests.
-
----
-
-### 7. Documentation — **2 / 10**
-**Strengths:**
-- Some docstrings on key service functions.
-- The `LICENCE` file exists.
-
-**Weaknesses:**
-- README was completely empty before this update.
-- No API documentation beyond auto-generated FastAPI `/docs`.
-- No architectural decision records (ADRs).
-- No inline documentation for complex business logic.
-- No setup guide or contributing guide.
-
----
-
-### 8. DevOps & Deployment — **6 / 10**
-**Strengths:**
-- Docker Compose for PostgreSQL with init scripts.
-- Makefile with useful dev shortcuts.
-- Alembic for database migrations.
-- Frontend has Netlify `_redirects` file configured.
-- `.gitignore` is comprehensive.
-
-**Weaknesses:**
-- No Dockerfile for the backend application itself.
-- No CI/CD pipeline (GitHub Actions, etc.).
-- No staging/production environment configurations.
-- No health check beyond `/healthz`.
-- No logging configuration (no structured logging, no log levels).
-- `requirements.txt` has no version pins — builds are not reproducible.
-
----
-
-### 9. Error Handling — **6 / 10**
-**Strengths:**
-- API routes catch `ValueError` and return proper HTTP error codes.
-- Frontend has robust error handling in API client (retry patterns, fallback endpoints).
-- `cancelReservationRobust` in the frontend is impressively defensive.
-
-**Weaknesses:**
-- No global exception handler in FastAPI.
-- Many bare `except Exception: pass` blocks that silently swallow errors.
-- No structured error response format.
-- No logging of errors — failures are invisible.
-
----
-
-### 10. Performance & Scalability — **6.5 / 10**
-**Strengths:**
-- Connection pooling configured (`pool_size=5`, `max_overflow=5`, `pool_recycle=1800`).
-- Advisory locks prevent race conditions.
-- `pool_pre_ping` for stale connection detection.
-- Proper indexes on frequently queried columns.
-- `skip_locked` for non-blocking queue processing.
-
-**Weaknesses:**
-- Synchronous SQLAlchemy (not async) — limits throughput under high concurrency.
-- The reservation search joins 4 tables on every query without pagination cursor.
-- No caching layer (Redis, etc.).
-- WhatsApp sender is synchronous and blocks with `time.sleep()`.
-- No database query optimization (N+1 potential in some services).
-
----
-
-### Rating Summary Table
-
-| Dimension                  | Score   |
-|----------------------------|---------|
-| Architecture & Design      | 8.0/10  |
-| Code Quality & Consistency | 6.5/10  |
-| Security                   | 5.5/10  |
-| Database Design            | 8.0/10  |
-| Frontend Quality           | 6.5/10  |
-| Testing                    | 1.0/10  |
-| Documentation              | 2.0/10  |
-| DevOps & Deployment        | 6.0/10  |
-| Error Handling             | 6.0/10  |
-| Performance & Scalability  | 6.5/10  |
-| **Overall**                | **7.2/10** |
-
----
-
-## What Else to Add
-
-### Critical (Should be done ASAP)
-
-1. **Tests**: Add pytest unit tests for services (especially `reservation_service`, `inventory_service`), integration tests for API routes, and frontend component tests (Vitest + React Testing Library).
-
-2. **Secure unprotected endpoints**: Add `Depends(get_current_active_user)` to all routes that currently lack authentication (students, reservations, orders, items, adjustments, sync).
-
-3. **Lock down CORS**: Replace `allow_origins=["*"]` with specific allowed origins for production.
-
-4. **Pin dependency versions** in `requirements.txt` (e.g., `fastapi==0.115.0`).
-
-5. **Add a Dockerfile** for the backend to enable containerized deployment.
-
-### High Priority
-
-6. **Structured logging**: Add Python `logging` with JSON format, log levels, and request tracing (correlation IDs).
-
-7. **Global exception handler**: Add FastAPI exception handlers for consistent error responses.
-
-8. **CI/CD pipeline**: GitHub Actions for lint, test, build, and deploy.
-
-9. **Pagination**: Add cursor-based or offset pagination to all list/search endpoints (currently limited to hardcoded `limit=50`).
-
-10. **Client-side state management**: Adopt Zustand or React Context to replace prop drilling in the frontend.
-
-### Medium Priority
-
-11. **Split monolithic frontend views**: Break `Orders.jsx` (1700 lines), `KgStudents.jsx` (33K), and `Students.jsx` (25K) into sub-components.
-
-12. **Add `updated_at` timestamps** to all models for audit tracking.
-
-13. **Refresh token mechanism**: The current 8-hour JWT has no refresh — user must re-login.
-
-14. **File upload validation**: Restrict accepted MIME types and file sizes on upload endpoints.
-
-15. **Dashboard/analytics view**: A summary dashboard showing key metrics (total students, daily sales, active reservations, inventory health).
-
-16. **Audit trail UI**: Surface the `op_log` table in the admin panel for admins to review operation history.
-
-17. **Export functionality**: CSV/Excel export for reports, student lists, and inventory data.
-
-18. **Email notifications**: Add email as a notification channel alongside WhatsApp.
-
-### Nice to Have
-
-19. **PWA support**: Make the admin panel installable as a Progressive Web App for use on tablets in branches.
-
-20. **Barcode/QR scanning**: Scan book barcodes for faster inventory and order operations.
-
-21. **Student portal**: A student-facing app where students can check their reservation status and order history.
-
-22. **Attendance tracking**: Module for tracking student attendance at the academy.
-
-23. **Teacher settlement reports**: Calculate payouts owed to teachers based on book sales.
-
-24. **Automated backups**: Scheduled PostgreSQL backups to cloud storage.
-
-25. **API rate limiting**: Add rate limiting middleware (e.g., `slowapi`) to prevent abuse.
-
-26. **WebSocket real-time updates**: Live inventory/reservation updates for staff using multiple terminals.
+- **Vitest** + **React Testing Library** + **jsdom**
+- Component tests: `StudentSearch`, `Dashboard`, `Export`
+- Store tests: `useAppStore` (Zustand)
+- Pure function tests: `enrichReservation`, constants
 
 ---
 

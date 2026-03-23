@@ -18,6 +18,7 @@ class User(Base):
     
     is_active: Mapped[bool] = mapped_column(sa.Boolean, default=True, server_default=sa.text("true"))
     created_at: Mapped[datetime] = mapped_column(sa.TIMESTAMP(timezone=True), nullable=False, server_default=func.now())
+    updated_at: Mapped[datetime] = mapped_column(sa.TIMESTAMP(timezone=True), nullable=False, server_default=func.now(), onupdate=func.now())
 
     branch = relationship("Branch")
 
