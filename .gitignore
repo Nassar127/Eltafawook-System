@@ -34,3 +34,8 @@ pgdata/
 # Logs
 *.log
 logs/
+
+# Sensitive / large data folders
+Side Project (top secret)/
+Centre Data/
+Courses/
